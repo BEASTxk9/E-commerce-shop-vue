@@ -70,7 +70,6 @@ login: async(context, payload) => {
   })
   if(result){
     router.push({name: "landing"})
-    alert('Welcome')
   } else {
     alert('Password or Email is wrong. Please try again.')
     router.push({name: "login"})
