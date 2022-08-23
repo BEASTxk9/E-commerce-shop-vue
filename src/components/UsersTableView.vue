@@ -1,5 +1,8 @@
 <template>
-  <h1>Users table</h1>
+<section>
+<h1>user admin</h1>
+
+</section>
 </template>
 
 <script>
