@@ -55,27 +55,27 @@ export default createStore({
           .catch(e => context.commit('setMessage', e.message="Email/Phone Number Already Exists."));
     },
 
-    // login
-    login: async(context, payload) => {
-      // fetch from body
-      const { email, password } = payload;
-      // fetch method from api
-      let result = await fetch("https://e-commerce-shop-api.herokuapp.com/login", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-        body: JSON.stringify({
-          email: email,
-          password: password
-        }),
-      })
-      if(result){
-          router.push({name: "landing"});
-      } else {
-     alert('Email/Password is Incorrect.');
-      }
-    }
+ // login
+login: async(context, payload) => {
+  const {  email, password } = payload;
+  let result = await fetch(RoastedBeansUrl+"login", {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+    body: JSON.stringify({
+      email: email,
+      password: password,
+    }),
+  })
+  if(result){
+    router.push({name: "landing"})
+    alert('Welcome')
+  } else {
+    alert('Password or Email is wrong. Please try again.')
+    router.push({name: "login"})
+  }
+},
 
 
   },

@@ -1,7 +1,7 @@
 <template>
 <section>
 
-    <div v-if="login" class="container">
+    <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-sm-10">
 
@@ -22,10 +22,6 @@
 
         </div>
       </div>
-    </div>
-
-    <div v-else class="container">
-      <h1>loading</h1>
     </div>
 
   </section>
