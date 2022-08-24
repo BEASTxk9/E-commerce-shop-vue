@@ -32,6 +32,9 @@
                       <i class="fa-solid fa-trash" @click="reloadPage"></i>
                     </button>
         </div>
+        <div class="col-sm-5">
+            <update></update>
+        </div>
     </div>
 </td>
     </tr>
@@ -42,8 +45,13 @@
 </template>
 
 <script>
+import update from './UpdateUserView.vue';
+
 export default {
-    
+    components: {
+update
+    },
+
 computed: {
     users(){
         return this.$store.state.users;

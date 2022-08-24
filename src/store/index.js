@@ -108,6 +108,34 @@ export default createStore({
         .then(() => context.dispatch('getUsers'));
     },
 
+    // update user
+    updateuser: async (context, user) => {
+            // fecth from body
+            const { fullName, email, gender, dateOfBirth, phoneNO, password } = payload;
+            // fetch method from api
+      fetch("https://e-commerce-shop-api.herokuapp.com/users/" + user.id, {
+          method: "PUT",
+          body: JSON.stringify(product),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+                // fetch data from form
+        body: JSON.stringify({
+          fullName: fullName,
+          email: email,
+          gender: gender,
+          dateOfBirth: dateOfBirth,
+          phoneNO: phoneNO,
+          password: password,
+        }),
+        })
+        .then((res) => res.json())
+        .then((data) => {
+          alert(data.msg);
+          context.dispatch("getUsers");
+        });
+    },
+
   },
   modules: {
   }
