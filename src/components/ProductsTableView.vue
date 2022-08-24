@@ -20,9 +20,9 @@
 <td>{{product.Prod_name}}</td>
 <td>{{product.category}}</td>
 <td>R{{product.price}}</td>
-<td>{{product.description}}</td>
-<td>{{product.img1}}</td>
-<td>{{product.img2}}</td>
+<td id="description">"{{product.description}}"</td>
+<td> <img class="img-fluid rounded" id="img1" :src="product.img1"></td>
+<td>  <img class="img-fluid rounded" id="img2" :src="product.img2"></td>
 <td>{{product.dateAdded}}</td>
 <td>
     <div class="row">
@@ -69,6 +69,16 @@ AddProduct
 }
 </script>
 
-<style>
+<style scoped>
+#img1, #img2{
+  display: block;
+  object-fit: cover;
+  width: 8vw;
+  height: 8vh;
+}
+
+#description{
+  font-size: 13px;
+}
 
 </style>

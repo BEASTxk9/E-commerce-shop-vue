@@ -35,7 +35,19 @@
     <input type="text" v-model="Prod_name" placeholder="Enter Prod_name" required><br>
 
 <label for="category">category:</label><br>
-    <input type="text" v-model="category" placeholder="Enter the category" required><br>
+   <select name="category" id="category">
+    <option value="coffee">coffee</option>
+    <option value="tea">tea</option>
+    <option value="hot drink">hot drink</option>
+    <option value="cold drink">cold drink</option>
+    <option value="sandwhich">SANDWICHES</option>
+    <option value="burgers">burgers</option>
+    <option value="breakfast">breakfast</option>
+    <option value="lunch">lunch</option>
+    <option value="salads">salads</option>
+    <option value="cakes">cakes</option>
+    <option value="backery items">backery items</option>
+   </select><br>
 
 <label for="price">price:</label><br>
     <input type="text" v-model="price" placeholder="Enter price" required><br>
