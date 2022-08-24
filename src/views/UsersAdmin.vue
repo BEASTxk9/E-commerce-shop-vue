@@ -1,8 +1,13 @@
 <template>
 <Nav></Nav>
-
-  <h1>Admin Users</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10">
 <Admin></Admin>
+    </div>
+  </div>
+</div>
+
 
 </template>
 

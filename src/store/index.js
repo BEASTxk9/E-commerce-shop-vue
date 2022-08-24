@@ -29,7 +29,6 @@ export default createStore({
     }
   },
   actions: {
-
     // register
     register: async (context, payload) => {
       // fecth from body
@@ -78,7 +77,7 @@ export default createStore({
     },
 
     // get users
-    getusersAD: async (context) => {
+    getusers: async (context) => {
       let res = await fetch(RoastedBeansUrl + 'users');
       let data = await res.json();
       let result = data.results;
@@ -135,6 +134,86 @@ export default createStore({
           context.dispatch("getUsers");
         });
     },
+    // _____________
+    // get products
+getproducts: async (context) => {
+  let res = await fetch('https://e-commerce-shop-api.herokuapp.com/products');
+  let data = await res.json();
+  let result = data.results;
+  if(result){
+    context.commit('setProducts', result)
+  }else{
+    console.log('loading...')
+  }
+},
+
+// get single product  
+getproduct: async (context, Prod_id) => {
+  // Product_id = 1
+  fetch(RoastedBeansUrl+'products/' + Prod_id)
+  .then((res) => res.json())
+  .then((data) =>{
+  console.log(data)
+    context.commit("setProduct", data.results);
+  })
+},
+
+ // add product
+ addProduct: async(context, payload) => {
+  const { Prod_name, category, price, description, img1, img2, dateAdded } = payload;
+  
+  try{
+    await fetch(RoastedBeansUrl+"products", {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+    body: JSON.stringify({
+      Prod_name: Prod_name,
+       category: category,
+       price: price,
+       description: description,
+       img1: img1, 
+       img2: img2,
+       dateAdded: dateAdded
+    }),
+  })
+    .then((response) => response.json)
+    .then((json) => context.commit("setProducts", json.data));
+    router.push({name: "admin"});
+    
+  }catch(e) {
+  console.log(e);
+}
+},
+
+// delete product
+deleteProduct: async (context, Prod_id) => {
+  fetch("https://e-commerce-shop-api.herokuapp.com/products/" + Prod_id, {
+    method: "DELETE",
+  })
+    .then((res) => res.json())
+    .then(() => context.dispatch('getProducts'));
+},
+
+
+// updates list
+    updateProduct: async (context, product) => {
+      // fetch("http://localhost:3000/products/" + product.id, {
+      fetch("https://mangastore-end-of-module.herokuapp.com/products/" + product.Prod_id, {
+          method: "PUT",
+          body: JSON.stringify(product),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        })
+        .then((res) => res.json())
+        .then((data) => {
+          alert(data.msg);
+          context.dispatch("getProducts");
+        });
+    },
+
 
   },
   modules: {

@@ -21,7 +21,7 @@
 <td>{{user.email}}</td>
 <td>{{user.gender}}</td>
 <td>{{user.dateOfBirth}}</td>
-<td>{{user.phoneNO}}</td>
+<td>+27 {{user.phoneNO}}</td>
 <td>{{user.password}}</td>
 <td>{{user.joinDate}}</td>
 <td>
@@ -51,16 +51,14 @@ export default {
     components: {
 update
     },
-
+mounted(){
+    this.$store.dispatch('getusers');
+},
 computed: {
     users(){
         return this.$store.state.users;
     }
 },
-mounted(){
-    this.$store.dispatch('getusersAD');
-},
-
   methods: {
     reloadPage() {
       window.location.reload();
