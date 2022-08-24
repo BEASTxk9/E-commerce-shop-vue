@@ -78,7 +78,7 @@ export default {
         phoneNO: this.phoneNO,
         password: this.password,
       });
-      if(!this.$store.state.users){
+      if(this.$store.state.users){
         this.message = this.$store.state.message;
       } 
        else{
