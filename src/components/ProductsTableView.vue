@@ -70,6 +70,17 @@ AddProduct
 </script>
 
 <style scoped>
+table{
+  background-color: rgba(0, 0, 0, 0.771);
+}
+
+thead{
+  border-left: 0.3px solid grey;
+    border-right: 0.3px solid grey;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 #img1, #img2{
   display: block;
   object-fit: cover;
@@ -80,5 +91,6 @@ AddProduct
 #description{
   font-size: 13px;
 }
+
 
 </style>

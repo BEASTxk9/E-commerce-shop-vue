@@ -32,10 +32,10 @@
 <form @submit.prevent="addProduct" method="POST">
 
 <label for="Prod_name">Prod_name</label><br>
-    <input type="text" v-model="Prod_name" placeholder="Enter Prod_name" required><br>
+    <input class="w-50" type="text" v-model="Prod_name" placeholder="Enter Prod_name" required><br>
 
 <label for="category">category:</label><br>
-   <select name="category" id="category">
+   <select class="w-50" name="category" id="category">
     <option value="coffee">coffee</option>
     <option value="tea">tea</option>
     <option value="hot drink">hot drink</option>
@@ -50,16 +50,16 @@
    </select><br>
 
 <label for="price">price:</label><br>
-    <input type="text" v-model="price" placeholder="Enter price" required><br>
+    <input class="w-50" type="text" v-model="price" placeholder="Enter price" required><br>
 
 <label for="description">Description:</label><br>
-    <input type="text" v-model="description" placeholder="Enter description" required><br>
+    <input class="w-50" type="text" v-model="description" placeholder="Enter description" required><br>
 
 <label for="img1">Image 1:</label><br>
-    <input type="text" v-model="img1" placeholder="Add image url" required><br>
+    <input class="w-50" type="text" v-model="img1" placeholder="Add image url" required><br>
 
      <label for="img2">image 2:</label><br>
-    <input type="text" v-model="img2" placeholder="img2" required><br>
+    <input class="w-50" type="text" v-model="img2" placeholder="img2" required><br>
 
     <button class="mt-4 b btn-layout" @click="submit" 
     data-bs-target="#exampleModal"  data-bs-dismiss="modal"
@@ -108,6 +108,15 @@ this.$store.dispatch('addProduct', {
 }
 </script>
 
-<style>
+<style scoped>
+.modal-content{
+    text-align: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.btn-close{
+    background-color: white;
+}
 
 </style>
