@@ -72,6 +72,7 @@ AddProduct
 <style scoped>
 table{
   background-color: rgba(0, 0, 0, 0.771);
+  margin-bottom: 5rem;
 }
 
 thead{
