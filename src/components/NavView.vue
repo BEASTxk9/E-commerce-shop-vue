@@ -12,7 +12,7 @@
            <router-link to="/productsadmin"><i class="fa-solid fa-bag-shopping"></i></router-link> |
            <!-- logout -->
                <router-link to="/"><i class="fa-solid fa-right-from-bracket"></i></router-link> 
-           <Cart></Cart>
+  
   </nav>
 </template>
 
