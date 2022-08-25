@@ -6,9 +6,12 @@
         <router-link to="/single">Single</router-link> |
           <router-link to="/menu">Menu</router-link> |
          <router-link to="/contact">Contact</router-link> |
-          <router-link to="/usersadmin">Users Admin</router-link> |
-           <router-link to="/productsadmin">Products Admin</router-link> |
-               <router-link to="/">Logout</router-link> 
+         <!-- user admin -->
+          <router-link to="/usersadmin"><i class="fa-solid fa-user-lock"></i></router-link> |
+          <!-- products admin -->
+           <router-link to="/productsadmin"><i class="fa-solid fa-bag-shopping"></i></router-link> |
+           <!-- logout -->
+               <router-link to="/"><i class="fa-solid fa-right-from-bracket"></i></router-link> 
            <Cart></Cart>
   </nav>
 </template>
