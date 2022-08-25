@@ -39,6 +39,12 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   color: #ffffff;
 }
 
+/* scroll */
+::-webkit-scrollbar {
+    width: 100%;
+    background-color: transparent;
+}
+
 /* nav */
 nav {
   text-align: end;

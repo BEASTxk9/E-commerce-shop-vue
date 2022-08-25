@@ -8,7 +8,7 @@
             <p>{{ product.Prod_name }} <span></span> R{{ product.price }}</p>
             <p>{{ product.description }}</p>
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -28,5 +28,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
 </style>

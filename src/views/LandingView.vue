@@ -1,8 +1,6 @@
 <template>
-<Nav></Nav>
-
-  <h1>Home</h1>
 <Home></Home>
+<Nav></Nav>
 
 <About></About>
 
@@ -23,3 +21,7 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+</style>
