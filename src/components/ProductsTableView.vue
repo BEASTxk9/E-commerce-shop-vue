@@ -12,7 +12,7 @@
     <th>img1</th>
     <th>img2</th>
     <th>Date Added</th>
-    <th>Action</th>
+    <th class="px-2">Action</th>
 </thead>
 <tbody>
     <tr v-for="(product, index) in products" :key="index">

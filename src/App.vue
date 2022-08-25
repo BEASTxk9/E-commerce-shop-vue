@@ -41,6 +41,8 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 /* nav */
 nav {
+  text-align: end;
+  justify-content: end;
   padding: 30px;
   border-bottom: 0.3px solid goldenrod;
   border-top: 0.3px solid goldenrod;
