@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="fixed-top">
 
       <router-link to="/landing">Home</router-link> |
        <router-link to="/shop">Shop</router-link> |
