@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="register">
 
     <div v-if="register" class="container">
       <div class="row justify-content-center text-center">
@@ -17,7 +17,7 @@
 
             <!-- gender -->
             <label for="gender">Gender:</label><br>
-            <select class="w-50" v-model="gender" required>
+            <select class="w-50 py-1" v-model="gender"  required>
               <option value="male">Male</option>
               <option value="female">Female</option>
               <option value="non-binary">Non-Binary</option>
@@ -91,4 +91,7 @@ export default {
 </script>
 
 <style scoped>
+#register{
+  height: 89vh;
+}
 </style>

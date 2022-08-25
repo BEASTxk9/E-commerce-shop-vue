@@ -1,7 +1,13 @@
 <template>
 <Nav></Nav>
+<section>
+
+
 
   <h1>landing</h1>
+
+</section>
+
 </template>
 
 <script>
@@ -15,3 +21,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+section{
+  height: 97vh;
+}
+</style>
