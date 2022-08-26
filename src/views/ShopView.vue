@@ -25,4 +25,5 @@ export default {
   Search
   }
 }
+
 </script>

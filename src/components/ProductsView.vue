@@ -1,8 +1,8 @@
 <template>
 <section v-if="products">
 <div id="card" class="container">
-  <div class="row justify-content-center text-center" v-for="(product, index) in products" :key="index">
-    <div class="col-sm-5">
+  <div class="row justify-content-center text-center">
+    <div v-for="(product, index) in products" :key="index" class="col-sm-5">
 
       <h4>{{product.Prod_name}} <span class="px-5">R{{product.price}}</span></h4>
       <p>"{{product.description}}"</p>
