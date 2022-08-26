@@ -34,9 +34,10 @@ const routes = [
   },
   // single
   {
-    path: '/single',
+    path: '/shop/:id',
     name: 'single',
-    component: () => import('../views/SingleView.vue')
+    component: () => import('../views/SingleView.vue'),
+    props : true
   },
   // menu
   {

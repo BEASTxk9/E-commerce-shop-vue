@@ -12,7 +12,8 @@ export default createStore({
   },
   getters: {
     getUsers: state => state.users,
-    getProducts: state => state.products
+    getProducts: state => state.products,
+    getProduct: state => state.product,
   },
   mutations: {
     setUsers(state, users) {
