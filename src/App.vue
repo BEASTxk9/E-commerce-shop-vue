@@ -89,16 +89,16 @@ form{
 input{
   border-radius: 5px;
   padding: 5px;
-  border: 0.3px solid goldenrod;
-   background-color: rgb(25, 24, 24);
+  border:none;
+     background-color: rgb(29, 26, 26);
     color: grey;
 }
 
 select{
     border-radius: 5px;
   padding: 7px;
-  border: 0.3px solid goldenrod;
-     background-color: rgb(25, 24, 24);
+  border: none;
+       background-color: rgb(29, 26, 26);
     color: grey;
       text-align: center;
 }
@@ -107,7 +107,7 @@ option{
    border-radius: 5px;
   padding: 5px;
   border: 0.3px solid goldenrod;
-     background-color: rgb(25, 24, 24);
+       background-color: rgb(29, 26, 26);
       color: grey;
       transition: all 0.3s ease-in-out;
       text-align: center;
@@ -120,7 +120,7 @@ option:hover{
 ::placeholder{
   text-align: center;
    color: grey;
-  background-color: rgb(25, 24, 24);
+   background-color: rgb(29, 26, 26);
 }
 
 /* button */
