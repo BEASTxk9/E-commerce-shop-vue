@@ -8,7 +8,7 @@
          
 
           <form @submit.prevent="login" method="POST">
-           <h1>Login Form</h1>
+           <h1>LOGIN</h1>
 
             <!-- email -->
             <label for="email">Email:</label><br>
@@ -61,6 +61,11 @@ this.$store.dispatch('login', {
 form{
   position: relative;
   top: 12vh;
+}
+
+h1{
+  color: goldenrod;
+    font-family: 'Libre Baskerville', serif;
 }
 
 #link{

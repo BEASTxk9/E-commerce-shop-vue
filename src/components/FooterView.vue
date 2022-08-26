@@ -35,6 +35,7 @@ section {
     border-top: 0.3px solid goldenrod;
     border-bottom: 0.3px solid goldenrod;
     font-family: 'Libre Baskerville', serif;
+    color: grey;
 }
 
 #heading {

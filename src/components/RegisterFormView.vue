@@ -9,7 +9,7 @@
 
           <form @submit.prevent="register" method="POST">
 
-        <h1>Register Form</h1>
+        <h1>REGISTER</h1>
 
             <!-- fullName -->
             <label for="fullName">Full Name:</label><br>
@@ -96,5 +96,10 @@ export default {
 <style scoped>
 #register{
   height: 89vh;
+}
+
+h1{
+  color: goldenrod;
+    font-family: 'Libre Baskerville', serif;
 }
 </style>
