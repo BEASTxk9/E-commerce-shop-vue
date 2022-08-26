@@ -1,7 +1,6 @@
 <template>
 <Nav></Nav>
 
-  <h1>Register</h1>
 <Register></Register>
 
 </template>
