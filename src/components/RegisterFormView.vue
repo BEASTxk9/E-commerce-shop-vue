@@ -3,21 +3,24 @@
 
     <div v-if="register" class="container">
       <div class="row justify-content-center text-center">
-        <div class="col-sm-10">
+        <div class="col-sm-5">
 
-          <h1>Register Form</h1>
+          
 
           <form @submit.prevent="register" method="POST">
+
+        <h1>Register Form</h1>
+
             <!-- fullName -->
-            <label for="fullName">Fullname:</label><br>
-            <input class="w-25" type="text" v-model="fullName" placeholder="Insert your Fullname" required><br>
+            <label for="fullName">Full Name:</label><br>
+            <input class="w-50" type="text" v-model="fullName" placeholder="Insert your Full Name" required><br>
             <!-- email -->
             <label for="email">Email:</label><br>
-            <input class="w-25" type="email" v-model="email" placeholder="Insert your email" required><br>
+            <input class="w-50" type="email" v-model="email" placeholder="Insert your Email" required><br>
 
             <!-- gender -->
             <label for="gender">Gender:</label><br>
-            <select class="w-25 py-1" v-model="gender"  required>
+            <select class="w-50" v-model="gender"  required>
               <option value="male">Male</option>
               <option value="female">Female</option>
               <option value="non-binary">Non-Binary</option>
@@ -25,19 +28,19 @@
 
             <!-- dateOfBirth -->
             <label for="dateOfBirth">Date Of Birth:</label><br>
-            <input class="w-25" type="date" v-model="dateOfBirth" maxlength="10" placeholder="Insert your Date Of Birth"
+            <input class="w-50" type="date" v-model="dateOfBirth" maxlength="10" placeholder="Insert your Date Of Birth"
               required><br>
 
             <!-- phoneNo -->
             <label for="phoneNO">Phone Number:</label><br>
-            <input class="w-25" type="tel" v-model="phoneNO" placeholder="Insert your Phone Number" maxlength="10"
+            <input class="w-50" type="tel" v-model="phoneNO" placeholder="Insert your Phone Number" maxlength="10"
               required><br>
 
             <!-- password -->
             <label for="password">Password:</label><br>
-            <input class="w-25" type="password" v-model="password" minlength="8" maxlength="15"
+            <input class="w-50" type="password" v-model="password" minlength="8" maxlength="15"
               placeholder="Insert your Password" required><br>
-            <button class="mt-3" type="submit">Register</button>
+            <button class="mt-3 b btn-layout w-50" type="submit">Register</button>
              <p v-if="message">{{message}}</p>
           </form>
 

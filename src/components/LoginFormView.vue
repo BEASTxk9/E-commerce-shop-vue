@@ -3,11 +3,12 @@
 
     <div class="container">
       <div class="row justify-content-center text-center">
-        <div class="col-sm-10">
+        <div class="col-sm-5">
 
-          <h1>Login Form</h1>
+         
 
           <form @submit.prevent="login" method="POST">
+           <h1>Login Form</h1>
 
             <!-- email -->
             <label for="email">Email:</label><br>
@@ -17,7 +18,10 @@
             <label for="password">Password:</label><br>
             <input class="w-50" type="password" v-model="password" minlength="8" maxlength="15"
               placeholder="Insert your Password" required><br>
-            <button class="mt-3" type="submit">Register</button>
+            <button class="mt-3 b btn-layout w-50" type="submit">Register</button>
+
+<p class="pt-3">Not Registered? <router-link id="link" to="/register">Create an account.</router-link> </p>
+
           </form>
 
         </div>
@@ -52,5 +56,15 @@ this.$store.dispatch('login', {
 <style scoped>
 #login{
   height: 89vh;
+}
+
+form{
+  position: relative;
+  top: 12vh;
+}
+
+#link{
+  text-decoration: none;
+  color: goldenrod;
 }
 </style>

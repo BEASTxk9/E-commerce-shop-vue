@@ -25,6 +25,7 @@ Footer
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 body{
+  scroll-behavior: smooth;
   margin-top: 6.4rem;
   color: white;
   background-color: #000000;
@@ -77,26 +78,35 @@ nav a.router-link-exact-active {
 }
 
 /* forms */
+form{
+  background-color: rgb(21, 20, 20);
+  color: grey;
+  padding: 20px;
+}
+
 input{
-  border-radius: 10px;
+  border-radius: 5px;
+  padding: 5px;
   border: 0.3px solid goldenrod;
    background-color: rgb(25, 24, 24);
-    color: white;
+    color: grey;
 }
 
 select{
-    border-radius: 10px;
+    border-radius: 5px;
+  padding: 7px;
   border: 0.3px solid goldenrod;
      background-color: rgb(25, 24, 24);
-      color: white;
+    color: grey;
       text-align: center;
 }
 
 option{
-   border-radius: 10px;
+   border-radius: 5px;
+  padding: 5px;
   border: 0.3px solid goldenrod;
      background-color: rgb(25, 24, 24);
-      color: white;
+      color: grey;
       transition: all 0.3s ease-in-out;
       text-align: center;
 }
@@ -107,7 +117,101 @@ option:hover{
 
 ::placeholder{
   text-align: center;
-  color: white;
+   color: grey;
   background-color: rgb(25, 24, 24);
 }
+
+/* button */
+button{
+  text-align: center;
+}
+
+.btn-layout, .b {	
+  text-align: center;	
+	margin: 0 5px 0 0;		
+	position: relative;
+	opacity: 0.999;
+	padding: 8px 8px;		
+	text-align:center;
+  background-color: rgb(29, 26, 26);
+	color: grey;
+	border-radius:3px;		
+	border: none;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	-webkit-transition: 0.5s;
+    transition: 0.5s;
+	overflow:hidden; 
+}
+
+.b:before{
+  text-align: center;
+    transition: all 0.3s ease-in-out;
+	content: ""; 
+	width: 0; 
+	height: 100%; 
+	position: absolute; 
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	left: 0; 
+	top: 0; 
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s; 
+	z-index: -1;
+}
+
+.b:hover:before{
+	color: rgb(0, 0, 0);
+    box-shadow: 12px 31px 37px rgba(255, 255, 255, 0.5);
+	width: 100%; 
+	left: auto; 
+	right: 0;
+  
+}
+
+.btn-layout:hover{
+    color: rgb(0, 0, 0);
+  transition: all 0.5s ease-in-out;
+ box-shadow: 0px 0px 50px 3px goldenrod;
+}
+
+/* AOS-"LIKE" EFFECT */
+.slide-right-enter-from{
+    opacity: 0;
+    transform: translateX(-1500px);
+}
+.slide-right-enter-to{
+    opacity: 1;
+    transform: translateX(0px);
+}
+.slide-right-enter-active{
+    transition: all 2s ease;
+}
+.slide-left-enter-from{
+    opacity: 0;
+    transform: translateX(1500px);
+}
+.slide-left-enter-to{
+    opacity: 1;
+    transform: translateX(0px);
+}
+.slide-left-enter-active{
+    transition: all 2s ease;
+}
+.fade-enter-from{
+    opacity: 0;
+    transform: scale(0.1);
+}
+.fade-enter-to{
+    opacity: 1;
+    transform: scale(1);
+}
+.fade-enter-active{
+    transition: all 2s ease;
+}
+
 </style>
