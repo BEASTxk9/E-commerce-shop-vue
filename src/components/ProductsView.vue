@@ -1,6 +1,16 @@
 <template>
 <section v-if="products">
-<h1>products card</h1>
+<div id="card" class="container">
+  <div class="row justify-content-center text-center" v-for="(product, index) in products" :key="index">
+    <div class="col-sm-5">
+
+      <h4>{{product.Prod_name}} <span class="px-5">R{{product.price}}</span></h4>
+      <p>"{{product.description}}"</p>
+     
+
+    </div>
+  </div>
+</div>
 </section>
   
   <div v-else class="container">
@@ -21,10 +31,25 @@
 
 <script>
 export default {
-
+ mounted() {
+    this.$store.dispatch("getproducts");
+  },
+  computed: {
+    products() {
+      return this.$store.state.products;
+    },
+  },
 }
 </script>
 
-<style>
+<style scoped>
+section{
+  color: grey;
+}
 
+h4{
+  color: goldenrod;
+    font-family: 'Libre Baskerville', serif;
+    padding-bottom: 1rem;
+}
 </style>
