@@ -2,6 +2,8 @@
 <section v-if="products">
 <div id="card" class="container">
   <div class="row justify-content-center text-center">
+
+    <input type="text" placeholder="search" v-model="search">
   
     <div v-for="(product, index) in products" :key="index" class="col-sm-5">
 
@@ -39,12 +41,18 @@
 export default {
   name: "shop",
       props: ["product"],
+data(){
+return{
+  search: ''
+}
+},
+
  mounted() {
     this.$store.dispatch("getproducts");
   },
   computed: {
     products() {
-      return this.$store.state.products;
+      return this.$store.state.products?.filter(products => { let isMatch = true; if (!products.Prod_name.toLowerCase().includes(this.search.toLowerCase())) { isMatch = false; } return isMatch })
     },
   },
 }
@@ -53,6 +61,7 @@ export default {
 <style scoped>
 section{
   color: grey;
+  min-height: 87vh;
 }
 
 h4{
