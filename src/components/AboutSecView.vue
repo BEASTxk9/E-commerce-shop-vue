@@ -1,15 +1,45 @@
 <template>
-  <h1>about sec</h1>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit optio vitae accusamus soluta voluptates expedita distinctio saepe quis, animi iste commodi totam odio id eveniet, obcaecati repudiandae, adipisci earum fuga?
-  Fugit debitis consequatur sint, totam cupiditate rerum optio assumenda possimus provident eligendi ipsum repellat doloremque minus dolor omnis soluta at ut reiciendis iure incidunt aspernatur veritatis perspiciatis? Quo, quas maiores?
-  Consequuntur, possimus quo et fugit praesentium voluptate iure labore non saepe aut impedit iste, cum nisi perferendis dolores? Nesciunt praesentium possimus tempore officia labore dolorem sunt consectetur eligendi, ab repudiandae.
-  Voluptatibus, debitis consectetur architecto dolores, ullam et ea incidunt pariatur consequatur, placeat unde natus illum maiores optio dolore. Odit debitis corporis eum dicta sapiente ducimus tempora architecto quisquam cumque maxime.
-  Iure autem, expedita amet vero ad minus fugit, magnam reiciendis corporis molestiae nulla repellat soluta quaerat? Quisquam eos voluptatibus, enim velit quae suscipit consequatur maiores at! Illo eligendi reprehenderit hic!
-  Cupiditate mollitia quaerat officia, dolore, soluta esse a expedita quidem doloribus, reprehenderit nemo magnam tempore? Repellendus laudantium nam tenetur officiis iure dolores. Totam tempore modi ratione dolores autem consequuntur eligendi.
-  Blanditiis omnis voluptates, natus eos ullam tenetur distinctio repudiandae ipsum aliquam illum, velit consectetur earum sunt facilis. Ex odio, voluptates pariatur, modi voluptatum reiciendis esse quo placeat vel atque voluptatem?
-  Facere tenetur quam eveniet expedita reiciendis in obcaecati non laudantium aliquam sint natus totam placeat, libero doloribus neque adipisci deleniti, numquam assumenda quos, provident eligendi odit repudiandae! Ullam, id recusandae.
-  Fuga quo commodi perspiciatis repellat tempora quas omnis voluptatem voluptates aliquam a fugiat nemo nostrum optio ducimus, dicta aspernatur! Deleniti eaque maxime enim illo dolor ut vitae obcaecati pariatur commodi.
-  Natus odit animi numquam omnis atque. Aliquam delectus eaque veritatis similique ullam vitae neque fugiat? Ullam, voluptatibus ab tenetur deserunt officiis provident. Itaque quisquam officiis libero consectetur dicta officia sed.</p>
+  <section class="py-1">
+    <div id="data">
+    <h1>ABOUT US.</h1>
+    <div class="container">
+      <div class="row text-start justify-content-center">
+        <!-- img col -->
+        <div class="col-sm-12 col-md-5">
+<img src="https://i.postimg.cc/3NxTQ3tB/images.jpg img-fluid" defer>
+        </div>
+
+        <!-- text col -->
+        <div class="col-sm-12 col-md-5">
+
+<h5 class="text-center py-5">ROASTED BEANS</h5>
+
+          <p>Roasted Beans is a well established restaurant that
+            specialises in coffee however we also sell some of
+            the best bakery items, pastries, breakfast, lunch
+            and supper meals.</p>
+
+          <p>Roasted Beans was created in 2010 in the USA. Our
+            coffee beans were imported from Colombia which is
+            one of the top five countries with the highest quality
+            of coffee beans.</p>
+
+          <p>
+            We have recently expanded our business to Cape
+            Town, South Africa. You can visit us in Plumstead,
+            49 Cocolain rd (fake address) or you can order online.<br>
+           
+            We hope to hear from you soon.
+            Kind regards -  <span>Staff of Roasted Beans.
+            </span>
+          </p>
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </section>
+
 </template>
 
 <script>
@@ -18,6 +48,28 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+section {
+  z-index: 10;
+  margin-top: 100vh;
+}
 
+h1, h5{
+  color: goldenrod;
+    font-family: 'Libre Baskerville', serif;
+    padding-bottom: 1rem;
+}
+
+span{
+  color: goldenrod;
+}
+
+.container{
+  margin-bottom:48.5vh;
+}
+
+#data{
+  position: relative;
+  top: 14vh;
+}
 </style>

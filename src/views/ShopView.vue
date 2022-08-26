@@ -1,8 +1,13 @@
 <template>
 <Nav></Nav>
+<section>
 
   <h1>Shop</h1> <Search></Search>
 <Card></Card> 
+
+</section>
+
+
 
 </template>
 

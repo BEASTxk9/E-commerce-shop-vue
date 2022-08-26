@@ -1,8 +1,14 @@
 <template>
 <Nav></Nav>
+<section>
 
   <Login></Login>
+
+</section>
+
   
+
+
 </template>
 
 <script>

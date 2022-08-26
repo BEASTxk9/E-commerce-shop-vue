@@ -1,7 +1,22 @@
 <template>
 <Nav></Nav>
+<section v-if="true">
 
 <Register></Register>
+
+</section>
+
+<div v-else class="container">
+<div class="loader">
+<div class="loader-square"></div>
+<div class="loader-square"></div>
+<div class="loader-square"></div>
+<div class="loader-square"></div>
+<div class="loader-square"></div>
+<div class="loader-square"></div>
+<div class="loader-square"></div>
+</div>
+</div>
 
 </template>
 

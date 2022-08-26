@@ -1,5 +1,5 @@
 <template>
-<section>
+<div v-if="products">
 <h1>product admin</h1>
 <AddProduct></AddProduct>
 <table class="table-fluid table-bordered">
@@ -41,7 +41,22 @@
 </tbody>
 </table>
 
-</section>
+</div>
+
+<div v-else class="container">
+  <div class="row justify-content-center text-center h-100">
+<div class="loader">
+<div class="loader-square"></div>
+<div class="loader-square"></div>
+<div class="loader-square"></div>
+<div class="loader-square"></div>
+<div class="loader-square"></div>
+<div class="loader-square"></div>
+<div class="loader-square"></div>
+</div>
+  </div>
+</div>
+
 </template>
 
 <script>

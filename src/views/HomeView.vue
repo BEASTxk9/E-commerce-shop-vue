@@ -1,6 +1,6 @@
 <template>
   <Nav></Nav>
-  <section class="showcase">
+  <section v-if="true" class="showcase">
     <div class="video-container">
       <div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe
           src="https://streamable.com/e/ex64s5?autoplay=1&nocontrols=1" frameborder="0" width="100%" height="100%"
@@ -21,6 +21,20 @@
 
 
   </section>
+
+<div v-else class="container">
+  <div class="row justify-content-center text-center h-100">
+<div class="loader">
+<div class="loader-square"></div>
+<div class="loader-square"></div>
+<div class="loader-square"></div>
+<div class="loader-square"></div>
+<div class="loader-square"></div>
+<div class="loader-square"></div>
+<div class="loader-square"></div>
+</div>
+  </div>
+</div>
 
 </template>
 
