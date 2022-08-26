@@ -1,6 +1,8 @@
 <template>
 <div class="container" v-if="product">
+<img class="img-fluid rounded" :src="product[0].img1">
 <h1>{{product[0].Prod_name}}</h1>
+<p>{{product[0].description}}</p>
 </div>
   
   <div v-else class="container">
@@ -20,19 +22,18 @@
 
 <script>
 export default {
-    props: ["Prod_id"],
 
-  mounted() {
-        this.$store.dispatch("getproduct", this.Prod_id)
-    },
     computed: {
         product() {
-            return this.$store.state.product
+            return this.$store.state.product;
         }
+    },
+      mounted() {
+        this.$store.dispatch("getproduct", this.$route.params.id)
     },
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

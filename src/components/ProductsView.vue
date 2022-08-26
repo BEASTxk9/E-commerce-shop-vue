@@ -8,9 +8,11 @@
       <h4>{{product.Prod_name}} <span class="px-5">R{{product.price}}</span></h4>
       <p>"{{product.description}}"</p>
 
- <!-- <router-link :to="{ name: 'single', params: { Prod_id: product.Prod_id } }">
+
+ <router-link :to="{ name:'single', params: { id: product.Prod_id } }">
        view
-         </router-link> -->
+         </router-link>
+
 
     </div>
   </div>
@@ -35,6 +37,8 @@
 
 <script>
 export default {
+  name: "shop",
+      props: ["product"],
  mounted() {
     this.$store.dispatch("getproducts");
   },
