@@ -80,6 +80,7 @@ nav a.router-link-exact-active {
 /* forms */
 form{
   background-color: rgb(21, 20, 20);
+  box-shadow: 0px 0px 20px 5px rgba(247, 247, 247, 0.1);
   color: grey;
   padding: 20px;
 }
