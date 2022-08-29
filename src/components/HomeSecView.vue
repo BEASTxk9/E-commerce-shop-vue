@@ -83,7 +83,7 @@ iframe {
 }
 
 
-/* logo */
+/*  */
 div {
 	display: flex;
 	align-items: center;
@@ -94,7 +94,7 @@ h1 {
     background: linear-gradient(to bottom, #cfc09f 22%,#634f2c 24%, #cfc09f 26%, #cfc09f 27%,#ffecb3 40%,#3a2c0f 78%); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: #fff;
+    color: goldenrod;
 font-family: 'Playfair Display', serif;
     position: relative;
 	text-transform: uppercase;	
