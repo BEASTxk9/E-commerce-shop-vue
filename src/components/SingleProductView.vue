@@ -48,9 +48,10 @@
 export default {
 
     computed: {
+      
         product() {
             return this.$store.state.product;
-        }
+        },
     },
       mounted() {
         this.$store.dispatch("getproduct", this.$route.params.id)

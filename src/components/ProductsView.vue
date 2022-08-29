@@ -85,6 +85,7 @@ return{
       return this.$store.state.products?.filter(products => { let isMatch = true; if (!products.category.toLowerCase().includes(this.search.toLowerCase())) { isMatch = false; } return isMatch })
     },
   },
+  
 }
 </script>
 
@@ -148,6 +149,8 @@ img{
  font-weight: 900;
  font-size: 0.9em;
  line-height: 1.5;
+ color: goldenrod;
+ font-family: 'Libre Baskerville', serif;
 }
 
 .text-body {
