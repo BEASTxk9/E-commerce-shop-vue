@@ -1,13 +1,10 @@
 <template>
 <Nav></Nav>
+
 <section>
-  <h1>Single</h1>
 <Card></Card>
 </section>
   
-
-
-
 </template>
 
 <script>
@@ -23,3 +20,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+section{
+  padding-bottom: 5vh;
+}
+</style>

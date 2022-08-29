@@ -1,8 +1,42 @@
 <template>
 <section v-if="users">
-<h1>user admin</h1>
 
-<table class="table-fluid table-bordered">
+    <div class="container">
+
+      <div id="header" class="row">
+
+        <div class="col-sm-1 text-start">
+          <AddProduct></AddProduct>
+        </div>
+
+        <div class="col-sm-11 text-end">
+          <h1>USERS</h1>
+        </div>
+
+      </div>
+
+      <div id="sidenav" class="row">
+
+        <div class="col-sm-1 px-2">
+          <nav class="text-start">
+            <router-link to="/landing">Home</router-link> <br><br>
+
+            <router-link to="/shop">Shop</router-link> <br><br>
+
+            <router-link to="/menu">Menu</router-link> <br><br>
+
+            <router-link to="/contact">Contact</router-link> <br><br>
+            
+            <!-- user admin -->
+            <router-link to="/usersadmin"><i class="fa-solid fa-user-lock"></i></router-link> <br><br>
+
+            <!-- products admin -->
+            <router-link to="/productsadmin"><i class="fa-solid fa-bag-shopping"></i></router-link> <br><br>
+          </nav>
+        </div>
+
+        <div class="col-sm-10 px-2">
+         <table class="table-fluid table-bordered">
 <thead>
     <th>ID</th>
     <th>Full Name</th>
@@ -22,7 +56,7 @@
 <td>{{user.gender}}</td>
 <td>{{user.dateOfBirth}}</td>
 <td>+27 {{user.phoneNO}}</td>
-<td>{{user.password}}</td>
+<td id="password">{{user.password}}</td>
 <td>{{user.joinDate}}</td>
 <td>
     <div class="row">
@@ -40,6 +74,17 @@
     </tr>
 </tbody>
 </table>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+
+
 
 </section>
 
@@ -84,6 +129,10 @@ computed: {
 </script>
 
 <style scoped>
+section{
+  min-height: 89vh;
+}
+
 table{
   background-color: rgba(0, 0, 0, 0.771);
   margin-bottom: 5rem;
@@ -94,5 +143,28 @@ thead{
     border-right: 0.3px solid grey;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+h1{
+  color: goldenrod;
+}
+
+#sidenav {
+  border-left: 1px solid grey;
+}
+
+nav {
+  border: none;
+}
+
+#header {
+  overflow-x: scroll;
+  border: 1px solid grey;
+  width: 118.1%;
+  padding-top: 10px;
+}
+
+#password{
+  font-size: 10px;
 }
 </style>

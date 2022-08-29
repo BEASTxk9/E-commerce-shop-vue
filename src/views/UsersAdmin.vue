@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import Nav from '../components/NavView.vue';
+import Nav from '../components/FakeNavView.vue';
 import Admin from '../components/UsersTableView.vue';
 
 export default {

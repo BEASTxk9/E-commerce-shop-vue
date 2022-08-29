@@ -1,8 +1,32 @@
 <template>
 <div class="container" v-if="product">
-<img class="img-fluid rounded" :src="product[0].img1">
-<h1>{{product[0].Prod_name}}</h1>
-<p>{{product[0].description}}</p>
+
+<div class="row">
+
+<div class="col-sm-6 text-start">
+  <h5 class="pt-2 pb-3">({{product[0].category}})</h5>
+  <h1>{{product[0].Prod_name}}.</h1>
+  <h4 class="pb-3 pt-3">R{{product[0].price}}</h4>
+  <h3 class="pt-5">"{{product[0].description}}"</h3>
+
+<button type="submit" class="b btn-layout">Add To Cart</button>
+
+</div>
+
+<div class="col-sm-6">
+<div class="row">
+  <div class="col-sm-12 text-end">
+    <p>{{product[0].Prod_id}}/40</p>
+  </div>
+</div>
+<img class="img-fluid rounded-pill" :src="product[0].img1">
+</div>
+
+</div>
+
+
+
+
 </div>
   
   <div v-else class="container">
@@ -35,5 +59,24 @@ export default {
 </script>
 
 <style scoped>
+.container{
+  color: grey;
+  height: 89vh;
+}
+
+h5, h1{
+  color: goldenrod;
+}
+
+h1{
+  font-size: 6rem;
+   font-family: 'Libre Baskerville', serif;
+}
+
+img{
+  border: 1px solid goldenrod;
+  height: 80vh;
+  width: 37vw;
+}
 
 </style>

@@ -1,8 +1,6 @@
 <template>
-  
-<div class="container">
-<h1>data</h1>
-</div>
+  <button data-bs-toggle="modal"
+          data-bs-target="#exampleModal"><i class="fa-solid fa-pen-to-square"></i></button>
 
 
 </template>

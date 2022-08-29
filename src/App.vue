@@ -87,6 +87,7 @@ form{
 }
 
 input{
+  outline: none;
   border-radius: 5px;
   border:none;
      background-color: rgb(29, 26, 26);
@@ -94,6 +95,7 @@ input{
 }
 
 select{
+    outline: none;
     border-radius: 5px;
   padding: 5px;
   border: none;
@@ -103,6 +105,7 @@ select{
 }
 
 option{
+    outline: none;
    border-radius: 5px;
   padding: 5px;
   border: 0.3px solid goldenrod;
