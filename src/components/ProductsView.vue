@@ -53,25 +53,21 @@
 </section>
   
   <div v-else class="container">
-  <div class="row justify-content-center text-center h-100">
-<div class="loader">
-<div class="loader-square"></div>
-<div class="loader-square"></div>
-<div class="loader-square"></div>
-<div class="loader-square"></div>
-<div class="loader-square"></div>
-<div class="loader-square"></div>
-<div class="loader-square"></div>
-</div>
-  </div>
+<Load></Load>
 </div>
 
 </template>
 
 <script>
+import Load from './LoaderComponenetView.vue';
+
 export default {
   name: "shop",
       props: ["product"],
+components: {
+  Load
+},
+
 data(){
 return{
   search: ''

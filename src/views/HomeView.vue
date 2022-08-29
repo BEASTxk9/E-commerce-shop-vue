@@ -20,29 +20,20 @@
   </section>
 
 <div v-else class="container">
-  <div class="row justify-content-center text-center h-100">
-<div class="loader">
-<div class="loader-square"></div>
-<div class="loader-square"></div>
-<div class="loader-square"></div>
-<div class="loader-square"></div>
-<div class="loader-square"></div>
-<div class="loader-square"></div>
-<div class="loader-square"></div>
-</div>
-  </div>
+  <Load></Load>
 </div>
 
 </template>
 
 <script>
-import Nav from '../components/LandingNavView.vue'
-
+import Nav from '../components/LandingNavView.vue';
+import Load from '../components/LoaderComponenetView.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    Nav
+    Nav,
+    Load
   }
 }
 </script>

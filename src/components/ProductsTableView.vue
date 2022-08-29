@@ -99,17 +99,7 @@
   </div>
 
   <div v-else class="container">
-    <div class="row justify-content-center text-center h-100">
-      <div class="loader">
-        <div class="loader-square"></div>
-        <div class="loader-square"></div>
-        <div class="loader-square"></div>
-        <div class="loader-square"></div>
-        <div class="loader-square"></div>
-        <div class="loader-square"></div>
-        <div class="loader-square"></div>
-      </div>
-    </div>
+ <Load></Load>
   </div>
 
 </template>
@@ -117,11 +107,13 @@
 <script>
 import AddProduct from './AddProductView.vue';
 import update from './UpdateProductView.vue';
+import Load from './LoaderComponenetView.vue';
 
 export default {
   components: {
     AddProduct,
-    update
+    update,
+    Load
   },
 
   mounted() {
