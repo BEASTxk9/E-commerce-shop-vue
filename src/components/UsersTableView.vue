@@ -27,11 +27,22 @@
 
             <router-link to="/contact">Contact</router-link> <br><br>
             
-            <!-- user admin -->
-            <router-link to="/usersadmin"><i class="fa-solid fa-user-lock"></i></router-link> <br><br>
+            <div class="row">
 
-            <!-- products admin -->
-            <router-link to="/productsadmin"><i class="fa-solid fa-bag-shopping"></i></router-link> <br><br>
+              <div class="col-sm-5">
+                       <!-- user admin -->
+            <router-link to="/usersadmin"><i class="fa-solid fa-user-lock"></i></router-link> 
+              </div>
+
+              <div class="col-sm-5">
+                <!-- products admin -->
+            <router-link to="/productsadmin"><i class="fa-solid fa-bag-shopping"></i></router-link> 
+              </div>
+
+            </div>
+     
+
+            
           </nav>
         </div>
 
@@ -88,19 +99,19 @@
 
 </section>
 
-  <div v-else class="container">
-  <div class="row justify-content-center text-center h-100">
-<div class="loader">
-<div class="loader-square"></div>
-<div class="loader-square"></div>
-<div class="loader-square"></div>
-<div class="loader-square"></div>
-<div class="loader-square"></div>
-<div class="loader-square"></div>
-<div class="loader-square"></div>
-</div>
+ <div v-else class="container">
+    <div class="row justify-content-center text-center h-100">
+      <div class="loader">
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+      </div>
+    </div>
   </div>
-</div>
 
 </template>
 
@@ -147,14 +158,19 @@ thead{
 
 h1{
   color: goldenrod;
+  font-family: 'Libre Baskerville', serif;
 }
 
 #sidenav {
   border-left: 1px solid grey;
+    background-image: transparent;
+  background: transparent;
 }
 
 nav {
   border: none;
+    background-image: transparent;
+  background: transparent;
 }
 
 #header {

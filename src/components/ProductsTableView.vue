@@ -10,7 +10,7 @@
         </div>
 
         <div class="col-sm-11 text-end">
-          <h1>product</h1>
+          <h1>PRODUCT</h1>
         </div>
 
       </div>
@@ -27,11 +27,20 @@
 
             <router-link to="/contact">Contact</router-link> <br><br>
             
-            <!-- user admin -->
-            <router-link to="/usersadmin"><i class="fa-solid fa-user-lock"></i></router-link> <br><br>
+              <div class="row">
+              
+              <div class="col-sm-5">
+                       <!-- user admin -->
+            <router-link to="/usersadmin"><i class="fa-solid fa-user-lock"></i></router-link> 
+              </div>
 
-            <!-- products admin -->
-            <router-link to="/productsadmin"><i class="fa-solid fa-bag-shopping"></i></router-link> <br><br>
+              <div class="col-sm-5">
+                <!-- products admin -->
+            <router-link to="/productsadmin"><i class="fa-solid fa-bag-shopping"></i></router-link> 
+              </div>
+
+            </div>
+
           </nav>
         </div>
 
@@ -161,11 +170,15 @@ thead {
 
 #sidenav {
   border-left: 1px solid grey;
+  background-image: transparent;
+  background: transparent;
 }
 
 nav {
   position: fixed;
   border: none;
+    background-image: transparent;
+  background: transparent;
 }
 
 #header {
