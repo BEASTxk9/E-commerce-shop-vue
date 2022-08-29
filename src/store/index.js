@@ -198,21 +198,19 @@ deleteProduct: async (context, Prod_id) => {
     .then(() => context.dispatch('getProducts'));
 },
 
-
-// updates list
-    updateProduct: async (context, product) => {
-      // fetch("http://localhost:3000/products/" + product.id, {
-      fetch("https://mangastore-end-of-module.herokuapp.com/products/" + product.Prod_id, {
-          method: "PUT",
-          body: JSON.stringify(product),
-          headers: {
-            "Content-type": "application/json; charset=UTF-8",
-          },
-        })
-        .then((res) => res.json())
+// edit product
+    editproduct(context, product) {
+        fetch("https://e-commerce-shop-api.herokuapp.com/products/" + product.Prod_id, {
+        method: "PUT",
+        body: JSON.stringify(product),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((editproduct) => editproduct.json())
         .then((data) => {
-          alert(data.msg);
-          context.dispatch("getProducts");
+          console.log(data);
+          context.dispatch("getProducts")
         });
     },
 
