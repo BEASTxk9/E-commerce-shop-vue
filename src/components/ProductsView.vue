@@ -3,7 +3,7 @@
 <div id="card" class="container">
   <div class="row justify-content-center text-center">
 
-    <input type="text" placeholder="search" v-model="search">
+    <input type="text" placeholder="What are you looking for?" v-model="search">
   
     <div v-for="(product, index) in products" :key="index" class="col-sm-5">
 

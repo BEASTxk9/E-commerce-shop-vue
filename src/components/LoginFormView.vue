@@ -7,7 +7,7 @@
 
          
 
-          <form @submit.prevent="login" method="POST">
+          <form @submit.prevent="login" method="POST" autocomplete="on">
            <h1>LOGIN</h1>
 
             <!-- email -->
@@ -18,7 +18,8 @@
             <label for="password">Password:</label><br>
             <input class="w-50" type="password" v-model="password" minlength="8" maxlength="15"
               placeholder="Insert your Password" required><br>
-            <button class="mt-3 b btn-layout w-50" type="submit">Login</button>
+
+            <button class="mt-3 b btn-layout w-50" type="submit" onclick="this.classList.toggle('button--loading')"><span class="button__text">Login</span></button>
 
 <p class="pt-3">Not Registered? <router-link id="link" to="/register">Create an account.</router-link> </p>
 

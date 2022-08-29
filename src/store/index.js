@@ -151,11 +151,6 @@ getproducts: async (context) => {
 // get single product  
 getproduct: async (context, Prod_id) => {
  let res = await fetch('https://e-commerce-shop-api.herokuapp.com/products/'+ Prod_id);
-  // .then((res) => res.json())
-  // .then((data) =>{
-  // console.log(data)
-  //   context.commit("setProduct", data.results);
-  // })
   let data = await res.json();
   let result = data.results;
   if(result){

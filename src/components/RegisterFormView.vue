@@ -7,7 +7,7 @@
 
           
 
-          <form @submit.prevent="register" method="POST">
+          <form @submit.prevent="register" method="POST" autocomplete="on">
 
         <h1>REGISTER</h1>
 
@@ -40,8 +40,11 @@
             <label for="password">Password:</label><br>
             <input class="w-50" type="password" v-model="password" minlength="8" maxlength="15"
               placeholder="Insert your Password" required><br>
-            <button class="mt-3 b btn-layout w-50" type="submit">Register</button>
+              
+            <button class="mt-3 b btn-layout w-50" type="submit" onclick="this.classList.toggle('button--loading')"><span class="button__text">Register</span></button>
+
              <p v-if="message">{{message}}</p>
+             
           </form>
 
         </div>

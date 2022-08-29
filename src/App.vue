@@ -88,7 +88,6 @@ form{
 
 input{
   border-radius: 5px;
-  padding: 5px;
   border:none;
      background-color: rgb(29, 26, 26);
     color: grey;
@@ -96,7 +95,7 @@ input{
 
 select{
     border-radius: 5px;
-  padding: 7px;
+  padding: 5px;
   border: none;
        background-color: rgb(29, 26, 26);
     color: grey;
@@ -180,6 +179,45 @@ button{
   transition: all 0.5s ease-in-out;
  box-shadow: 0px 0px 20px 3px goldenrod;
 }
+
+/* button loader */
+
+.button__text {
+  font: bold 20px "Quicksand", san-serif;
+  transition: all 0.2s;
+}
+
+.button--loading .button__text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.button--loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: goldenrod;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 
 /* AOS-"LIKE" EFFECT */
 .slide-right-enter-from{
