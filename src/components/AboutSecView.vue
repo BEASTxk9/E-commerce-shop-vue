@@ -12,7 +12,7 @@
         <!-- text col -->
         <div class="col-sm-12 col-md-5">
 
-<h2 class="text-center py-5">ROASTED BEANS</h2>
+<h2 class="text-center py-3">ROASTED BEANS</h2>
 
           <p>Roasted Beans is a well established restaurant that
             specialises in coffee however we also sell some of
