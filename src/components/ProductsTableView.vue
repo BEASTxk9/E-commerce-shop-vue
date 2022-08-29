@@ -23,8 +23,6 @@
 
             <router-link to="/shop">Shop</router-link> <br><br>
 
-            <router-link to="/menu">Menu</router-link> <br><br>
-
             <router-link to="/contact">Contact</router-link> <br><br>
             
               <div class="row">
