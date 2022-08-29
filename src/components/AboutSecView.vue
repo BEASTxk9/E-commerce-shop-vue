@@ -6,13 +6,13 @@
       <div class="row text-start justify-content-center">
         <!-- img col -->
         <div class="col-sm-12 col-md-5">
-<img src="https://i.postimg.cc/3NxTQ3tB/images.jpg img-fluid" defer>
+<img class="rounded" src="https://i.postimg.cc/wxk7ptDY/robert-euro-djojoseputro-ot-Eky1qwe-Cg-unsplash-2.jpg" defer>
         </div>
 
         <!-- text col -->
         <div class="col-sm-12 col-md-5">
 
-<h5 class="text-center py-5">ROASTED BEANS</h5>
+<h2 class="text-center py-5">ROASTED BEANS</h2>
 
           <p>Roasted Beans is a well established restaurant that
             specialises in coffee however we also sell some of
@@ -30,7 +30,7 @@
             49 Cocolain rd (fake address) or you can order online.<br>
            
             We hope to hear from you soon.
-            Kind regards -  <span>Staff of Roasted Beans.
+           <br>Kind regards -  <span>"Staff of Roasted Beans."
             </span>
           </p>
         </div>
@@ -54,10 +54,20 @@ section {
   margin-top: 100vh;
 }
 
-h1, h5{
+img{
+  height: 80vh;
+  position: relative;
+  top: 1vh;
+}
+
+h1, h2{
   color: goldenrod;
     font-family: 'Libre Baskerville', serif;
     padding-bottom: 1rem;
+}
+
+p{
+  font-size: 1.3rem;
 }
 
 span{

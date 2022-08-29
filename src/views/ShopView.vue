@@ -2,12 +2,9 @@
 <Nav></Nav>
 <section>
 
-  <h1>Shop</h1>
 <Card></Card> 
 
 </section>
-
-
 
 </template>
 
