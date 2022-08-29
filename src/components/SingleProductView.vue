@@ -19,7 +19,7 @@
     <p> <span>({{product[0].category}})</span> {{product[0].Prod_id}}/40</p>
   </div>
 </div>
-<img class="img-fluid rounded-pill" :src="product[0].img1">
+<img class="img-fluid rounded-pill" :src="product[0].img2">
 </div>
 
 </div>

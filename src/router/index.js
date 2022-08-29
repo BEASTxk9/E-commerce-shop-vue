@@ -39,12 +39,6 @@ const routes = [
     component: () => import('../views/SingleView.vue'),
     props : true
   },
-  // menu
-  {
-    path: '/menu',
-    name: 'menu',
-    component: () => import('../views/MenuView.vue')
-  },
   // contact
   {
     path: '/contact',

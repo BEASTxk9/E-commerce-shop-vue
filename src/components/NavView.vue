@@ -8,7 +8,6 @@
     <div id="links" class="col-sm-11">
      <router-link to="/landing">Home</router-link> |
        <router-link to="/shop">Shop</router-link> |
-          <router-link to="/menu">Menu</router-link> |
          <router-link to="/contact">Contact</router-link> |
          <!-- user admin -->
           <router-link to="/usersadmin"><i class="fa-solid fa-user-lock"></i></router-link> |

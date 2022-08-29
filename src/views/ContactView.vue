@@ -2,7 +2,7 @@
 <Nav></Nav>
 <section v-if="true">
 
-  <h1>Contact</h1>
+<Form></Form>
 
 </section>
 
@@ -21,13 +21,15 @@
 </template>
 
 <script>
-import Nav from '../components/NavView.vue'
+import Nav from '../components/NavView.vue';
+import Form from '../components/ContactFormView.vue';
 
 
 export default {
   name: 'HomeView',
   components: {
-  Nav
+  Nav,
+  Form
   }
 }
 </script>
