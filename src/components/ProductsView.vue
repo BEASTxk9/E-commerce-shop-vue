@@ -3,6 +3,7 @@
 <div class="container">
   <div class="row justify-content-center text-center">
 
+<!-- search -->
 <div class="row">
   <div class="col-sm-2 text-end">
     <input type="text" placeholder="What are you looking for?" v-model="search" class="mb-5">
@@ -20,7 +21,7 @@
   </div>
 </div>
 
-  
+  <!-- card -->
     <div v-for="(product, index) in products" :key="index" class="col-sm-3" id="card">
 
  <router-link class="text-decoration-none" :to="{ name:'single', params: { id: product.Prod_id } }">
@@ -105,7 +106,7 @@ h4{
 }
 
 .card {
-  height: 48vh;
+  height: 43vh;
 padding: 10px;
 background-color: rgb(29, 26, 26);
 color: grey;
@@ -144,7 +145,7 @@ img{
 /*Text*/
 .text-title {
  font-weight: 900;
- font-size: 1.5em;
+ font-size: 0.9em;
  line-height: 1.5;
 }
 
