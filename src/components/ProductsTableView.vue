@@ -55,8 +55,8 @@
                 <td>{{ product.category }}</td>
                 <td>R{{ product.price }}</td>
                 <td id="description">"{{ product.description }}"</td>
-                <td> <img class="img-fluid rounded" id="img1" :src="product.img1"></td>
-                <td> <img class="img-fluid rounded" id="img2" :src="product.img2"></td>
+                <td> <img class="img-fluid rounded" id="img1" :src="product.img1" defer></td>
+                <td> <img class="img-fluid rounded" id="img2" :src="product.img2" defer></td>
                 <td>{{ product.dateAdded }}</td>
                 <td>
                   <div class="row">
