@@ -97,7 +97,7 @@ section{
 }
 
 input{
-  padding: 4px;
+  padding: 3.5px;
   outline: none;
 }
 
