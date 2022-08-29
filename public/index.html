@@ -33,5 +33,13 @@
 ></script>
 <script src="https://kit.fontawesome.com/7c333af6fe.js" crossorigin="anonymous"></script>
 
+<script>
+  var h1 = document.querySelector("h1");
+
+h1.addEventListener("input", function() {
+    this.setAttribute("data-heading", this.innerText);
+});
+</script>
+
   </body>
 </html>

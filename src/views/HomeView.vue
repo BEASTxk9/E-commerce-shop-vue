@@ -7,8 +7,8 @@
 
     <div id="data" class="container">
       <div class="row justify-content-center text-center">
-        <div class="col-sm-10">
-          <h1 id="logo">ROASTED BEANS</h1>
+        <div class="col-sm-12">
+          <h1>ROASTED BEANS</h1>
         </div>
       </div>
 
@@ -108,26 +108,38 @@ iframe {
   margin-top: -10rem;
 }
 
-#logo{
-   color: goldenrod;
-  font-size: 4rem;
-  font-family: 'Libre Baskerville', serif;
-  text-shadow: 1px 7px 6px rgba(0, 0, 0, 1);
-  text-shadow:     0 1px 0 rgb(37, 36, 26),
-	                 0 2px 0 rgb(37, 36, 26),
-	                 0 3px 0 rgb(37, 36, 26),
-	                 0 4px 0 rgb(37, 36, 26),
-	                 0 5px 0 rgb(37, 36, 26),
-	                 0 6px 0 rgb(37, 36, 26),
-	                 0 7px 0 rgb(37, 36, 26),
-	                 0 8px 0 rgb(37, 36, 26),
-	
-	                 0 0 5px rgba(0,0,0,.05),
-	                0 1px 3px rgba(0,0,0,.2),
-	                0 3px 5px rgba(0,0,0,.2),
-	               0 5px 10px rgba(0,0,0,.2),
-	              0 10px 10px rgba(0,0,0,.2),
-	              0 20px 20px rgba(0,0,0,.3);
+/* logo */
+div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+    background: linear-gradient(to bottom, #cfc09f 22%,#634f2c 24%, #cfc09f 26%, #cfc09f 27%,#ffecb3 40%,#3a2c0f 78%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+font-family: 'Playfair Display', serif;
+    position: relative;
+	text-transform: uppercase;	
+	font-size: 7rem;
+	margin: 0;
+	font-weight: 400;
+}
+
+h1:after {
+    background: none;
+    content: attr(data-heading);
+    left: 0;
+	top: 0;
+    z-index: -1;
+    position: absolute;
+    text-shadow: 
+		-1px 0 1px #c6bb9f, 
+		0 1px 1px #c6bb9f, 
+		5px 5px 10px rgba(0, 0, 0, 0.4),
+		-5px -5px 10px rgba(0, 0, 0, 0.4);
 }
 
 

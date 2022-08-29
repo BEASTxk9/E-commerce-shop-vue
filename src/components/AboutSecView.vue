@@ -27,10 +27,8 @@
           <p>
             We have recently expanded our business to Cape
             Town, South Africa. You can visit us in Plumstead,
-            49 Cocolain rd (fake address) or you can order online.<br>
-           
-            We hope to hear from you soon.
-           <br>Kind regards -  <span>"Staff of Roasted Beans."
+            49 Cocolain rd (fake address) or you can order online. We hope to hear from you soon.
+           <br>Kind regards - <span>"Staff of Roasted Beans."
             </span>
           </p>
         </div>
