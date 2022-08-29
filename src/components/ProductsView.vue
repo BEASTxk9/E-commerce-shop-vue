@@ -29,7 +29,7 @@
   <div class="card mt-2">
 
   <div class="card-img">
-     <img class="img-fluid rounded-pill" :src="product.img1">
+     <img class="img-fluid rounded-pill" :src="product.img1" defer>
   </div>
   <div class="card-info">
     <p class="text-title">{{product.Prod_name}}</p>
