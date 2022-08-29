@@ -12,7 +12,7 @@
         <!-- text col -->
         <div class="col-sm-12 col-md-5">
 
-<h2 class="text-center py-3">ROASTED BEANS</h2>
+<h2 class="text-center py-1">ROASTED BEANS</h2>
 
           <p>Roasted Beans is a well established restaurant that
             specialises in coffee however we also sell some of
@@ -58,6 +58,7 @@ img{
   height: 80vh;
   position: relative;
   top: 1vh;
+  box-shadow: 0px 0px 21px rgba(255, 255, 255, 0.5);
 }
 
 h1, h2{
@@ -67,7 +68,7 @@ h1, h2{
 }
 
 p{
-  font-size: 1.3rem;
+  font-size: 1.41rem;
 }
 
 span{
