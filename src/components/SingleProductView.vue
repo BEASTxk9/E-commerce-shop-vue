@@ -6,10 +6,10 @@
 <div class="col-sm-6 text-start">
 
   <h1>{{product[0].Prod_name}}.</h1>
-  <h4 class="pb-3 pt-3">R{{product[0].price}}</h4>
-  <h3 class="pt-5">"{{product[0].description}}"</h3>
+  <h4 class="pb-3 pt-1">R{{product[0].price}}</h4>
+  <h3 class="pt-3">"{{product[0].description}}"</h3>
 
-<button type="submit" class="b btn-layout">Add To Cart</button>
+<button type="submit" class="b btn-layout mt-2">Add To Cart</button>
 
 </div>
 
