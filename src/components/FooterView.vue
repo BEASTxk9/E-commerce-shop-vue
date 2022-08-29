@@ -4,7 +4,7 @@
 
             <!-- location img -->
             <div class="row">
-                <!-- _______img_________ -->
+           
             </div>
 
             <!-- heading -->
@@ -25,8 +25,12 @@
 </template>
 
 <script>
-export default {
 
+
+export default {
+components: {
+
+}
 }
 </script>
 

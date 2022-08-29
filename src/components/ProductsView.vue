@@ -17,6 +17,7 @@
 <option value="sandwich">Sandwich</option>
 <option value="breakfast">Breakfast</option>
 
+
 </select>
   </div>
 </div>
@@ -24,7 +25,7 @@
   <!-- card -->
     <div v-for="(product, index) in products" :key="index" class="col-sm-3" id="card">
 
- <router-link class="text-decoration-none" :to="{ name:'single', params: { id: product.Prod_id } }">
+
       
   <div class="card mt-2">
 
@@ -36,11 +37,14 @@
   </div>
   <div class="card-footer">
   <span class="text-title">R{{product.price}}</span>
+   <router-link class="text-decoration-none bg-transparent b btn-layout" :to="{ name:'single', params: { id: product.Prod_id } }">
+ View
+ </router-link>
 </div>
 
 </div>
 
-</router-link>
+
 
 
     </div>
