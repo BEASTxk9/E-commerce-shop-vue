@@ -92,6 +92,7 @@ return{
 section{
   color: grey;
   min-height: 87vh;
+  padding-bottom: 2rem;
 }
 
 input{
