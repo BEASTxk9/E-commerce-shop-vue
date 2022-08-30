@@ -170,7 +170,7 @@ button{
 
 .b:hover:before{
 	color: rgb(0, 0, 0);
-    box-shadow: 12px 31px 37px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 	width: 100%; 
 	left: auto; 
 	right: 0;
