@@ -136,6 +136,11 @@ h4 {
   position: relative;
   overflow: visible;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover{
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.385);
 }
 
 img {
