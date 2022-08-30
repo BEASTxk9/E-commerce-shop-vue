@@ -42,7 +42,7 @@ Nav{
   z-index: -1;
   background-image: none;
   background-color: transparent;
-  border-bottom: none;
+  border: none;
   transition: all 0.5s ease-in-out;
 }
 

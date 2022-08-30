@@ -38,7 +38,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 Nav {
   background-color: transparent;
   background-image: none;
-  border-bottom: none;
+  border: none;
   transition: all 0.5s ease-in-out;
 }
 

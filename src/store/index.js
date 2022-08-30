@@ -9,12 +9,16 @@ export default createStore({
     users: null,
     products: null,
     product: null,
+    token: null,
+    cart: null,
     message: null
   },
   getters: {
     getUsers: state => state.users,
     getProducts: state => state.products,
     getProduct: state => state.product,
+    getToken: state => state.token,
+    getCart: state => state.cart
   },
   mutations: {
     setUsers(state, users) {
@@ -28,6 +32,12 @@ export default createStore({
     },
     setMessage(state, message) {
       state.message = message
+    },
+    setToken(state, token) {
+      state.token = token
+    },
+    setCart(state, cart){
+      state.cart= cart
     }
   },
   actions: {
@@ -70,13 +80,41 @@ export default createStore({
         }),
       })
       if (result) {
-        router.push({ name: "landing" })
+        router.push({ name: "landing" });
       }
       if (!result) {
         alert('Password or Email is wrong. Please try again.')
         router.push({ name: "login" })
       }
     },
+
+    // login auth
+    // login: async (context, payload) => {
+    //   const {email,password} = payload;
+    //   fetch(RoastedBeansUrl + "login", {
+    //       method: "POST",
+    //       body: JSON.stringify({
+    //         email: email,
+    //         password: password,
+    //       }),
+    //       headers: {
+    //         "Content-type": "application/json; charset=UTF-8",
+    //         "x-auth-token": await context.state.token,
+    //       },
+    //     })
+    //     .then((response) => response.json())
+    //     .then((data) => {
+    //       alert(data.msg);
+    //       let user = data.user;
+    //       let token = data.token;
+    //       let cart = data.user.cart;
+    //       context.commit("setUsers", user);
+    //       context.commit("setToken", token);
+    //       context.commit("setCart", cart);
+    //     });
+    // },
+
+
 
     // get users
     getusers: async (context) => {
