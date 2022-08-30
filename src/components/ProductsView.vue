@@ -30,7 +30,7 @@
 
           <div class="card mt-2">
 
-            <div id="no" class="col-sm-2 b btn-layout text-start">
+            <div id="no" class="col-sm-2 text-start">
   <p>
     <span>({{product.category}})</span>
     {{product.Prod_id}}/{{products.length}} 
@@ -143,6 +143,11 @@ img {
   height: 25vh;
   width: 12vw;
   border: 1px solid goldenrod;
+  transition: all 0.3s ease-in-out;
+}
+
+img:hover{
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.547);
 }
 
 .card-img {
