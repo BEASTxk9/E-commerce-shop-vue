@@ -40,6 +40,7 @@ Nav {
   background-image: none;
   border: none;
   transition: all 0.5s ease-in-out;
+  z-index: -1;
 }
 
 #about{

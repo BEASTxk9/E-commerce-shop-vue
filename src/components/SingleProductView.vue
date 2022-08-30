@@ -61,7 +61,8 @@ export default {
         },
     },
       mounted() {
-        this.$store.dispatch("getproduct", this.$route.params.id)
+        this.$store.dispatch("getproduct", this.$route.params.id);
+        this.$store.commit('setProduct', null);
     },
 }
 </script>
@@ -71,7 +72,6 @@ export default {
   color: grey;
   min-height: 100vh;
 }
-
 
 span{
  font-family: 'Libre Baskerville', serif;
