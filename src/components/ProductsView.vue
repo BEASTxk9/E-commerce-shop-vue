@@ -139,10 +139,6 @@ h4 {
   transition: all 0.5s ease-in-out;
 }
 
-.card:hover{
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.385);
-}
-
 img {
   image-rendering: crisp-edges;
   height: 25vh;

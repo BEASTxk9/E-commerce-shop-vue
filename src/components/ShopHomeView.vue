@@ -11,7 +11,7 @@
      <h1>ROASTED BEANS</h1>
 </div>
 
-                <div id="subheading" class="col-sm-8 text-secondary">
+                <div id="subheading" class="col-sm-8">
                     <h4>"Roasted Beans was created in 2010 in the USA. Our coffee beans are imported from Colombia which is one of the top five countries with the highest quality coffee beans."</h4>
                 </div>
             </div>
@@ -80,7 +80,7 @@ iframe {
 
 #data {
   z-index: 1;
-  margin-top: -10rem;
+  margin-top: -5rem;
 }
 
 /* logo */
@@ -118,7 +118,7 @@ h1:after {
 }
 
 /* subheading */
-.subheading{
-    color: grey
+#subheading{
+    color: grey;
 }
 </style>
