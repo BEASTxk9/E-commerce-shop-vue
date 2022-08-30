@@ -1,61 +1,64 @@
 <template>
-<section v-if="products">
-<div class="container">
-  <div class="row justify-content-center text-center">
+  <section v-if="products">
+    <div class="container">
+      <div class="row justify-content-center text-center">
 
-<!-- search -->
-<div class="row">
-  <div class="col-sm-2 text-end">
-    <input type="text" placeholder="What are you looking for?" v-model="search" class="mb-5">
-  </div>
-  <div class="col-sm-2 text-start">
-<select v-model="search">
-<option></option>
-<option value="coffee">coffee</option>
-<option value="tea">Tea</option>
-<option value="burger">Burger</option>
-<option value="sandwich">Sandwich</option>
-<option value="breakfast">Breakfast</option>
-<option value="lunch">Lunch</option>
-
-
-</select>
-  </div>
-</div>
-
-  <!-- card -->
-    <div v-for="(product, index) in products" :key="index" class="col-sm-3" id="card">
+        <!-- search -->
+        <div class="row">
+          <div class="col-sm-2 text-end">
+            <input type="text" placeholder="What are you looking for?" v-model="search" class="mb-5">
+          </div>
+          <div class="col-sm-2 text-start">
+            <select v-model="search">
+              <option></option>
+              <option value="coffee">coffee</option>
+              <option value="tea">Tea</option>
+              <option value="burger">Burger</option>
+              <option value="sandwich">Sandwich</option>
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
 
 
-      
-  <div class="card mt-2">
+            </select>
+          </div>
+        </div>
 
-  <div class="card-img">
-     <img class="img-fluid rounded-pill" :src="product.img1" defer>
-  </div>
-  <div class="card-info">
-    <p class="text-title">{{product.Prod_name}}</p>
-  </div>
-  <div class="card-footer">
-  <span class="text-title">R{{product.price}}</span>
-   <router-link class="text-decoration-none bg-transparent b btn-layout" :to="{ name:'single', params: { id: product.Prod_id } }">
- View
- </router-link>
-</div>
-
-</div>
+        <!-- card -->
+        <div v-for="(product, index) in products" :key="index" class="col-sm-3" id="card">
 
 
 
+          <div class="card mt-2">
 
+            <div class="card-img">
+              <img class="img-fluid rounded-pill" :src="product.img1" defer>
+            </div>
+            <div class="card-info">
+              <p class="text-title">{{ product.Prod_name }}</p>
+            </div>
+            <div class="card-footer">
+              <span class="text-title">R{{ product.price }}</span>
+
+              <router-link class="text-decoration-none bg-transparent b btn-layout"
+                :to="{ name: 'single', params: { id: product.Prod_id } }">
+                View
+              </router-link>
+
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</section>
-  
+  </section>
+
   <div v-else class="container">
-<Load></Load>
-</div>
+    <Load></Load>
+  </div>
 
 </template>
 
@@ -64,18 +67,18 @@ import Load from './LoaderComponenetView.vue';
 
 export default {
   name: "shop",
-      props: ["product"],
-components: {
-  Load
-},
+  props: ["product"],
+  components: {
+    Load
+  },
 
-data(){
-return{
-  search: ''
-}
-},
+  data() {
+    return {
+      search: ''
+    }
+  },
 
- mounted() {
+  mounted() {
     this.$store.dispatch("getproducts");
   },
   computed: {
@@ -83,39 +86,40 @@ return{
       return this.$store.state.products?.filter(products => { let isMatch = true; if (!products.category.toLowerCase().includes(this.search.toLowerCase())) { isMatch = false; } return isMatch })
     },
   },
-  
+
 }
 </script>
 
 <style scoped>
-section{
+section {
   color: grey;
   min-height: 87vh;
   padding-bottom: 2rem;
 }
 
-input{
+input {
   padding: 3.5px;
   outline: none;
 }
 
-h4{
+h4 {
   color: goldenrod;
-    font-family: 'Libre Baskerville', serif;
-    padding-bottom: 1rem;
+  font-family: 'Libre Baskerville', serif;
+  padding-bottom: 1rem;
 }
 
 .card {
   height: 43vh;
-padding: 10px;
-background-color: rgb(29, 26, 26);
-color: grey;
- position: relative;
- overflow: visible;
- box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  padding: 10px;
+  background-color: rgb(29, 26, 26);
+  color: grey;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-img{
+img {
+  image-rendering: crisp-edges;
   height: 25vh;
   width: 12vw;
   border: 1px solid goldenrod;
@@ -123,43 +127,42 @@ img{
 
 .card-img {
   background-color: transparent;
- height: 40%;
- width: 100%;
- border-radius: .5rem;
- transition: .3s ease;
+  height: 40%;
+  width: 100%;
+  border-radius: .5rem;
+  transition: .3s ease;
 }
 
 .card-info {
- padding-top: 10vh;
+  padding-top: 10vh;
 }
 
 .card-footer {
- width: 100%;
- display: flex;
- justify-content: space-between;
- align-items: center;
- padding-top: 10px;
- border-top: 1px solid goldenrod;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid goldenrod;
 }
 
 /*Text*/
 .text-title {
- font-weight: 900;
- font-size: 0.9em;
- line-height: 1.5;
- color: goldenrod;
- font-family: 'Libre Baskerville', serif;
+  font-weight: 900;
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: goldenrod;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .text-body {
- font-size: .9em;
- padding-bottom: 10px;
- color: grey;
+  font-size: .9em;
+  padding-bottom: 10px;
+  color: grey;
 }
 
-#description{
+#description {
   font-size: 0.8rem;
   font-weight: bold;
 }
-
 </style>

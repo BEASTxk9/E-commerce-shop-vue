@@ -75,9 +75,12 @@ h1{
 }
 
 img{
+  image-rendering: auto;
   border: 1px solid goldenrod;
-  height: 80vh;
-  width: 37vw;
+  height: 73vh;
+  width: 32vw;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 </style>
