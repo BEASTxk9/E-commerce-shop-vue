@@ -33,7 +33,7 @@
               
                    <div class="col-sm-8">
 
-<form @submit.prevent="editproduct" method="PUT">
+<form>
 
 <label for="Prod_name">Prod_name</label><br>
     <input class="w-100" type="text" v-model="product.Prod_name" placeholder="Enter Prod_name" required><br>
@@ -65,7 +65,7 @@
      <label for="img2">image 2:</label><br>
     <input class="w-100" type="text" v-model="product.img2" placeholder="img2" required><br>
 
-    <button type="submit" class="mt-4 w-100 b btn-layout" @click="editproduct">Add product</button>
+    <button type="submit" class="mt-4 w-100 b btn-layout" @click.prevent="editproduct">Add product</button>
 
 </form>
 
@@ -84,10 +84,32 @@
 <script>
 export default {
 props: ["product"],
+data(){
+  return{
+    Prod_name: '',
+       category: '',
+       price: '',
+       description: '',
+       img1: '', 
+       img2: '',
+       dateAdded: ''
+  }
+ 
+},
 
-method: {
+methods: {
     editproduct(){
-      return this.$store.dispatch("editproduct", this.product);
+      console.log(this.product);
+       this.$store.dispatch("editproduct", this.product.Prod_id, {
+        Prod_name: this.Prod_name,
+       category: this.category,
+       price: this.price,
+       description: this.description,
+       img1: this.img1, 
+       img2: this.img2,
+       dateAdded: this.dateAdded
+      });
+      //  this.$store.dispatch("editproduct", this.product.Prod_id);
     },
 }
 }

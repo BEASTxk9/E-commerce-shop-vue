@@ -1,5 +1,6 @@
 import { createStore } from 'vuex';
 import router from '@/router';
+import axios from 'axios';
 
 const RoastedBeansUrl = 'https://e-commerce-shop-api.herokuapp.com/';
 
@@ -189,20 +190,25 @@ deleteProduct: async (context, Prod_id) => {
 },
 
 // edit product
-    editproduct(context, product) {
-        fetch("https://e-commerce-shop-api.herokuapp.com/products/" + product.Prod_id, {
-        method: "PUT",
-        body: JSON.stringify(product),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      })
-        .then((editproduct) => editproduct.json())
-        .then((data) => {
-          console.log(data)
-          context.dispatch("getProducts")
-        });
+async editproduct(context, Prod_id) {
+  try{
+    fetch("https://e-commerce-shop-api.herokuapp.com/products/"+Prod_id, {
+    method: "PUT",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
     },
+    body: JSON.stringify(Prod_id),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data)
+      context.dispatch("getproducts")
+    })
+    .catch(console.log('error'));
+  }catch(e){
+    console.log(e);
+  }
+},
 
     // _______
     // get cart
