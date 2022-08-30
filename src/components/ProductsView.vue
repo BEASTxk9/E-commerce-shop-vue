@@ -30,12 +30,25 @@
 
           <div class="card mt-2">
 
+            <div id="no" class="col-sm-2 b btn-layout text-start">
+  <p>{{product.Prod_id}}/{{products.length}}</p>
+  </div>
+
             <div class="card-img">
-              <img class="img-fluid rounded-pill" :src="product.img1" defer>
+
+              <router-link class="text-decoration-none bg-transparent"
+                :to="{ name: 'single', params: { id: product.Prod_id } }">
+               
+                <img class="img-fluid rounded-pill" :src="product.img1" defer>
+
+              </router-link>
+
+              
             </div>
             <div class="card-info">
               <p class="text-title">{{ product.Prod_name }}</p>
             </div>
+            
             <div class="card-footer">
               <span class="text-title">R{{ product.price }}</span>
 
@@ -109,7 +122,7 @@ h4 {
 }
 
 .card {
-  height: 43vh;
+  height: 46vh;
   padding: 10px;
   background-color: rgb(29, 26, 26);
   color: grey;
@@ -134,7 +147,7 @@ img {
 }
 
 .card-info {
-  padding-top: 10vh;
+  padding-top: 8vh;
 }
 
 .card-footer {
@@ -144,6 +157,13 @@ img {
   align-items: center;
   padding-top: 10px;
   border-top: 1px solid goldenrod;
+}
+
+#no{
+  padding: 0;
+  margin: 0;
+  width: fit-content;
+  height: 23px;
 }
 
 /*Text*/

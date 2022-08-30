@@ -16,10 +16,21 @@
 <div class="col-sm-6">
 <div class="row">
   <div class="col-sm-12 text-end">
-    <p> <span>({{product[0].category}})</span> <span class="b btn-layout">{{product[0].Prod_id}}/40</span></p>
+    <p> 
+      <span>({{product[0].category}})</span> <span class="b btn-layout">
+      {{product[0].Prod_id}}/40
+    </span>
+      <span>
+      
+       
+      </span>
+    </p>
   </div>
 </div>
-<img class="img-fluid rounded-pill" :src="product[0].img2" defer>
+<router-link to="/shop">
+  <img class="img-fluid rounded-pill" :src="product[0].img2" defer> 
+      </router-link>
+
 </div>
 
 </div>
@@ -82,5 +93,4 @@ img{
   max-width: 100%;
   max-height: 100%;
 }
-
 </style>
