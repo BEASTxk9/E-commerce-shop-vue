@@ -24,3 +24,11 @@ export default {
 }
 
 </script>
+
+<style scoped>
+Nav{
+  background-image: none;
+  background-color: transparent;
+  border: none;
+}
+</style>

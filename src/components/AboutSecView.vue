@@ -20,9 +20,8 @@
             and supper meals.</p>
 
           <p>Roasted Beans was created in 2010 in the USA. Our
-            coffee beans were imported from Colombia which is
-            one of the top five countries with the highest quality
-            of coffee beans.</p>
+            coffee beans are imported from Colombia which is
+            one of the top five countries with the highest quality coffee beans.</p>
 
           <p>
             We have recently expanded our business to Cape

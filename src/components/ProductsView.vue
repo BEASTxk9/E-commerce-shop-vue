@@ -1,4 +1,6 @@
 <template>
+<Home></Home>
+
   <section v-if="products">
     <div class="container">
       <div class="row justify-content-center text-center">
@@ -31,7 +33,10 @@
           <div class="card mt-2">
 
             <div id="no" class="col-sm-2 b btn-layout text-start">
-  <p>{{product.Prod_id}}/{{products.length}}</p>
+  <p>
+    <span>({{product.category}})</span>
+    {{product.Prod_id}}/{{products.length}} 
+  </p>
   </div>
 
             <div class="card-img">
@@ -65,6 +70,7 @@
 
 
         </div>
+
       </div>
     </div>
   </section>
@@ -77,12 +83,14 @@
 
 <script>
 import Load from './LoaderComponenetView.vue';
+import Home from './ShopHomeView.vue';
 
 export default {
   name: "shop",
   props: ["product"],
   components: {
-    Load
+    Load,
+    Home
   },
 
   data() {
@@ -108,6 +116,7 @@ section {
   color: grey;
   min-height: 87vh;
   padding-bottom: 2rem;
+
 }
 
 input {
