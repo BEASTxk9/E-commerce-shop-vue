@@ -1,5 +1,5 @@
 <template>  
-  <section class="showcase">
+  <section class="showcase fixed-top">
     <div class="video-container">
         <div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe src="https://streamable.com/e/j6ksxm?autoplay=1&nocontrols=1" frameborder="0" width="100%" height="100%" allowfullscreen allow="autoplay" style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
     </div>
@@ -31,19 +31,16 @@ export default {
 </script>
 
 <style scoped>
-section{
-    margin-bottom:10vh;
-}
-
 /* landing */
 .showcase {
   overflow-x: hidden;
-  height: 85.5vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
+  z-index: -10;
 }
 
 .video-container {
@@ -52,7 +49,7 @@ section{
   left: 0;
   width: 100vw;
   height: 100%;
-  padding-top: -0.5rem;
+  margin-top: 0rem;
   overflow: hidden;
 }
 

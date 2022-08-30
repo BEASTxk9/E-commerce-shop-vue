@@ -1,6 +1,4 @@
 <template>
-<Home></Home>
-
   <section v-if="products">
     <div class="container">
       <div class="row justify-content-center text-center">
@@ -83,14 +81,12 @@
 
 <script>
 import Load from './LoaderComponenetView.vue';
-import Home from './ShopHomeView.vue';
 
 export default {
   name: "shop",
   props: ["product"],
   components: {
     Load,
-    Home
   },
 
   data() {
@@ -115,8 +111,9 @@ export default {
 section {
   color: grey;
   min-height: 87vh;
+  margin-top: 100vh;
   padding-bottom: 2rem;
-
+  padding-top: 10rem;
 }
 
 input {
