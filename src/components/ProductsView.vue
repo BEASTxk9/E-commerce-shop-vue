@@ -16,6 +16,7 @@
 <option value="burger">Burger</option>
 <option value="sandwich">Sandwich</option>
 <option value="breakfast">Breakfast</option>
+<option value="lunch">Lunch</option>
 
 
 </select>
@@ -79,9 +80,6 @@ return{
   },
   computed: {
     products() {
-      return this.$store.state.products?.filter(products => { let isMatch = true; if (!products.Prod_name.toLowerCase().includes(this.search.toLowerCase())) { isMatch = false; } return isMatch })
-    },
-        category() {
       return this.$store.state.products?.filter(products => { let isMatch = true; if (!products.category.toLowerCase().includes(this.search.toLowerCase())) { isMatch = false; } return isMatch })
     },
   },

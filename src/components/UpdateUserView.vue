@@ -1,5 +1,5 @@
 <template>
-  <button data-bs-toggle="modal"
+  <button class="b btn-layout mx-1" data-bs-toggle="modal"
           data-bs-target="#exampleModal"><i class="fa-solid fa-pen-to-square"></i></button>
 
 
@@ -108,6 +108,9 @@ mounted(){
 }
 </script>
 
-<style>
+<style scoped>
+  button{
+    margin-right: 2rem;
+  }
 
 </style>

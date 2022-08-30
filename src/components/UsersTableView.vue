@@ -55,7 +55,7 @@
     <th>Phone Number</th>
     <th>Password</th>
     <th>Join Date</th>
-    <th class="px-2">Action</th>
+    <th class="px-3">Action</th>
 </thead>
 <tbody>
     <tr v-for="(user, index) in users" :key="index">
@@ -141,10 +141,12 @@ table{
 }
 
 thead{
-  border-left: 0.3px solid grey;
-    border-right: 0.3px solid grey;
+  border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
     padding-top: 5px;
     padding-bottom: 5px;
+    
 }
 
 h1{
@@ -153,9 +155,12 @@ h1{
 }
 
 #sidenav {
+  border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
   border-left: 1px solid grey;
     background-image: transparent;
   background: transparent;
+  width: 118.1%;
 }
 
 nav {
@@ -172,6 +177,6 @@ nav {
 }
 
 #password{
-  font-size: 10px;
+  font-size: 9px;
 }
 </style>

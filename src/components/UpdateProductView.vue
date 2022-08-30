@@ -1,12 +1,17 @@
 <template>
-  <button data-bs-toggle="modal"
-          data-bs-target="#exampleModal"><i class="fa-solid fa-pen-to-square"></i></button>
+
+
+
+  <button class="b btn-layout" data-bs-toggle="modal"
+          :data-bs-target="'#exampleModal' + product.Prod_id">
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
 
 
   <!-- Modal1 -->
     <div
       class="modal fade"
-      id="exampleModal"
+      :id="'exampleModal' + product.Prod_id"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -28,13 +33,13 @@
               
                    <div class="col-sm-8">
 
-<form @submit.prevent="editproduct" method="POST">
+<form @submit.prevent="editproduct" method="PUT">
 
 <label for="Prod_name">Prod_name</label><br>
-    <input class="w-100" type="text" v-model="Prod_name" placeholder="Enter Prod_name" required><br>
+    <input class="w-100" type="text" v-model="product.Prod_name" placeholder="Enter Prod_name" required><br>
 
 <label for="category">category:</label><br>
-   <select class="w-100" name="category" id="category">
+   <select class="w-100" v-model="product.category" id="category">
     <option value="coffee">coffee</option>
     <option value="tea">tea</option>
     <option value="hot drink">hot drink</option>
@@ -49,20 +54,18 @@
    </select><br>
 
 <label for="price">price:</label><br>
-    <input class="w-100" type="text" v-model="price" placeholder="Enter price" required><br>
+    <input class="w-100" type="text" v-model="product.price" placeholder="Enter price" required><br>
 
 <label for="description">Description:</label><br>
-    <input class="w-100" type="text" v-model="description" placeholder="Enter description" required><br>
+    <input class="w-100" type="text" v-model="product.description" placeholder="Enter description" required><br>
 
 <label for="img1">Image 1:</label><br>
-    <input class="w-100" type="text" v-model="img1" placeholder="Add image url" required><br>
+    <input class="w-100" type="text" v-model="product.img1" placeholder="Add image url" required><br>
 
      <label for="img2">image 2:</label><br>
-    <input class="w-100" type="text" v-model="img2" placeholder="img2" required><br>
+    <input class="w-100" type="text" v-model="product.img2" placeholder="img2" required><br>
 
-    <button class="mt-4 w-100 b btn-layout" @click="submit" 
-    data-bs-target="#exampleModal"  data-bs-dismiss="modal"
-              aria-label="Close">Add product</button>
+    <button type="submit" class="mt-4 w-100 b btn-layout" @click="editproduct">Add product</button>
 
 </form>
 
@@ -80,6 +83,8 @@
 
 <script>
 export default {
+props: ["product"],
+
 method: {
     editproduct(){
       return this.$store.dispatch("editproduct", this.product);
@@ -88,6 +93,9 @@ method: {
 }
 </script>
 
-<style>
+<style scoped>
+  button{
+    margin-right: 2rem;
+  }
 
 </style>

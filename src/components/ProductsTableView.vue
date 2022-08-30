@@ -74,7 +74,7 @@
                       </button>
                     </div>
                     <div class="col-sm-5">
-                      <update></update>
+                      <update :product="product"></update>
                     </div>
                   </div>
                 </td>
@@ -82,10 +82,13 @@
             </tbody>
           </table>
 
+  
+
         </div>
 
       </div>
 
+   
 
     </div>
 
@@ -124,8 +127,13 @@ export default {
   },
 
   methods: {
+
+    editproduct(){
+      return this.$store.dispatch("editproduct", this.product);
+    
+},
     reloadPage() {
-      window.location.reload();
+      window.location.reload()
     }
   }
 }
@@ -142,6 +150,7 @@ table {
 thead {
   border-left: 0.3px solid grey;
   border-right: 0.3px solid grey;
+  border-bottom: 1px solid grey;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -160,6 +169,8 @@ thead {
 
 #sidenav {
   border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  border-bottom: 1px solid grey;
   background-image: transparent;
   background: transparent;
 }
@@ -174,7 +185,6 @@ nav {
 #header {
   overflow-x: scroll;
   border: 1px solid grey;
-  width: 101.5%;
   padding-top: 10px;
 }
 
@@ -183,5 +193,8 @@ h1{
     font-family: 'Libre Baskerville', serif;
 }
 
-
+#bottom{
+  border: 0.3px solid grey;
+  border-right: 0.3px solid grey;
+}
 </style>

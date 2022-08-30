@@ -135,6 +135,8 @@ export default createStore({
           context.dispatch("getUsers");
         });
     },
+
+
     // _____________
     // get products
 getproducts: async (context) => {
@@ -209,11 +211,23 @@ deleteProduct: async (context, Prod_id) => {
       })
         .then((editproduct) => editproduct.json())
         .then((data) => {
-          console.log(data);
+          console.log(data)
           context.dispatch("getProducts")
         });
     },
 
+    // _______
+    // get cart
+getcart: async (context, id, cart) => {
+  let res = await fetch('https://e-commerce-shop-api.herokuapp.com/users/' + id + '/' + cart);
+  let data = await res.json();
+  let result = data.results;
+  if(result){
+    context.commit('setusers', result)
+  }else{
+    console.log('loading...')
+  }
+}
 
   },
   modules: {
