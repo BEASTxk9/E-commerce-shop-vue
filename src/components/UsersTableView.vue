@@ -76,7 +76,7 @@
                     </button>
         </div>
         <div class="col-sm-4">
-            <update></update>
+            <update :user="user"></update>
         </div>
     </div>
 </td>
@@ -124,7 +124,10 @@ computed: {
   methods: {
     reloadPage() {
       window.location.reload();
-    }
+    },
+    edituser(){
+      return this.$store.dispatch("edituser", this.user);
+    },
   }
 
 }

@@ -1,12 +1,12 @@
 <template>
-  <button class="b btn-layout mx-1" data-bs-toggle="modal"
-          data-bs-target="#exampleModal"><i class="fa-solid fa-pen-to-square"></i></button>
+  <button class="button b btn-layout mx-1" data-bs-toggle="modal"
+          :data-bs-target="'#exampleModal' + user.id"><i class="fa-solid fa-pen-to-square"></i></button>
 
 
   <!-- Modal1 -->
     <div
       class="modal fade"
-      id="exampleModal"
+      :id="'exampleModal' + user.id"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -14,7 +14,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">UPDATE PRODUCT FORM</h5>
+            <h5 class="modal-title" id="#exampleModal">UPDATE USER FORM</h5>
             <button
               type="button"
               class="btn-close"
@@ -28,17 +28,17 @@
               
                    <div class="col-sm-8">
 
-<form @submit.prevent="updateuser" method="PUT">
+<form @submit.prevent="edituser" method="PUT">
             <!-- fullName -->
             <label for="fullName">Fullname:</label><br>
-            <input class="w-50" type="text" v-model="fullName" placeholder="Insert your Fullname" required><br>
+            <input class="w-50" type="text" v-model="user.fullName" placeholder="Insert your Fullname" required><br>
             <!-- email -->
             <label for="email">Email:</label><br>
-            <input class="w-50" type="email" v-model="email" placeholder="Insert your email" required><br>
+            <input class="w-50" type="email" v-model="user.email" placeholder="Insert your email" required><br>
 
             <!-- gender -->
             <label for="gender">Gender:</label><br>
-            <select class="w-50" v-model="gender" required>
+            <select class="w-50" v-model="user.gender" required>
               <option value="male">Male</option>
               <option value="female">Female</option>
               <option value="non-binary">Non-Binary</option>
@@ -46,19 +46,19 @@
 
             <!-- dateOfBirth -->
             <label for="dateOfBirth">Date Of Birth:</label><br>
-            <input class="w-50" type="date" v-model="dateOfBirth" maxlength="10" placeholder="Insert your Date Of Birth"
+            <input class="w-50" type="date" v-model="user.dateOfBirth" maxlength="10" placeholder="Insert your Date Of Birth"
               required><br>
 
             <!-- phoneNo -->
             <label for="phoneNO">Phone Number:</label><br>
-            <input class="w-50" type="tel" v-model="phoneNO" placeholder="Insert your Phone Number" maxlength="10"
+            <input class="w-50" type="tel" v-model="user.phoneNO" placeholder="Insert your Phone Number" maxlength="10"
               required><br>
 
             <!-- password -->
             <label for="password">Password:</label><br>
-            <input class="w-50" type="password" v-model="password" minlength="8" maxlength="15"
+            <input class="w-50" type="password" v-model="user.password" minlength="8" maxlength="15"
               placeholder="Insert your Password" required><br>
-            <button class="mt-3" type="submit">Register</button>
+            <button class="mt-3 w-50 b btn-layout" type="submit">Register</button>
           </form>
 
         </div>
@@ -73,6 +73,7 @@
 
 <script>
 export default {
+  props: ["user"],
 computed: {
      data() {
     // insert data into empty array
@@ -87,16 +88,9 @@ computed: {
   },
 
   methods: {
-    update() {
-      this.$store.dispatch('updateuser', {
-        fullName: this.fullName,
-        email: this.email,
-        gender: this.gender,
-        dateOfBirth: this.dateOfBirth,
-        phoneNO: this.phoneNO,
-        password: this.password,
-      });
-    }
+    edituser(){
+      return this.$store.dispatch("edituser", this.user);
+    },
   },
     users(){
         return this.$store.state.users;
@@ -109,7 +103,7 @@ mounted(){
 </script>
 
 <style scoped>
-  button{
+  .button{
     margin-right: 2rem;
   }
 

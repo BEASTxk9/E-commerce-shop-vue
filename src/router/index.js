@@ -49,7 +49,8 @@ const routes = [
   {
     path: '/usersadmin',
     name: 'usersadmin',
-    component: () => import('../views/UsersAdmin.vue')
+    component: () => import('../views/UsersAdmin.vue'),
+    props:true,
   },
   // products admin
   {

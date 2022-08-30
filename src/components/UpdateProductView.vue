@@ -2,7 +2,7 @@
 
 
 
-  <button class="b btn-layout" data-bs-toggle="modal"
+  <button class="button b btn-layout" data-bs-toggle="modal"
           :data-bs-target="'#exampleModal' + product.Prod_id">
           <i class="fa-solid fa-pen-to-square"></i>
         </button>
@@ -94,7 +94,7 @@ method: {
 </script>
 
 <style scoped>
-  button{
+  .button{
     margin-right: 2rem;
   }
 
