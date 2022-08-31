@@ -95,7 +95,7 @@ export default createStore({
         swal({
           icon: 'error',
           title: `${data.msg}`,
-          button: 'Try again'
+          timer: 2000,
         })
       } else {
         context.commit("setUser", payload);
@@ -103,7 +103,8 @@ export default createStore({
         swal({
           icon: "success",
           title: `Welcome`,
-          button: 'OK'
+          buttons: false,
+          timer: 2000,
         });
         router.push({name: "landing"})
       }
