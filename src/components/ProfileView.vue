@@ -6,7 +6,7 @@
 
 <div v-if="user" class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling1" aria-labelledby="offcanvasScrollingLabel">
   <div class="offcanvas-header">
-    <h1 class="offcanvas-title" id="offcanvasScrollingLabel1">User Profile</h1>
+    <h1 class="offcanvas-title" id="offcanvasScrollingLabel1">User Profile.</h1>
     <button type="button"  class="b1" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
   </div>
   <div class="offcanvas-body">
@@ -38,11 +38,18 @@
 
       <div v-else class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling1" aria-labelledby="offcanvasScrollingLabel">
   <div class="offcanvas-header">
-    <h1 class="offcanvas-title" id="offcanvasScrollingLabel1">User Profile</h1>
+    <h1 class="offcanvas-title" id="offcanvasScrollingLabel1">User Profile.</h1>
     <button type="button"  class="b1" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
   </div>
   <div class="offcanvas-body">
-  <p>NOT LOGGED IN?</p>
+    <div class="container">
+        <div class="row justify-content-center py-3 text-center">
+    <img src="https://i.postimg.cc/XJbk7hX2/Rose-Gold-Brush-Glitter-Feminine-Boutique-Circle-Logo.png" class="rounded-pill">
+    
+    <p class="py-2">NOT LOGGED IN?</p>
+</div>
+    </div>
+  
   </div>
 </div>
 
