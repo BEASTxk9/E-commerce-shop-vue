@@ -158,7 +158,7 @@ edituser(context, user) {
   .then((edituser) => edituser.json())
   .then((data) => {
     console.log(data)
-    context.dispatch("getUsers")
+    context.dispatch("getusers")
   });
 },
 

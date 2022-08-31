@@ -65,7 +65,7 @@
      <label for="img2">image 2:</label><br>
     <input class="w-100" type="text" v-model="product.img2" placeholder="img2" required><br>
 
-    <button type="submit" class="mt-4 w-100 b btn-layout" @click.prevent="editproduct">Add product</button>
+    <button type="submit" class="mt-4 w-100 b btn-layout" @click.prevent="editproduct">SAVE</button>
 
 </form>
 

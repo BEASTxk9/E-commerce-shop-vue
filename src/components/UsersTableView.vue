@@ -122,11 +122,12 @@ computed: {
     }
 },
   methods: {
-    reloadPage() {
-      window.location.reload();
-    },
     edituser(){
       return this.$store.dispatch("edituser", this.user);
+    },
+
+    reloadPage() {
+      window.location.reload();
     },
   }
 
