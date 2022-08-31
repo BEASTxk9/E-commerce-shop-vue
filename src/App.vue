@@ -25,6 +25,7 @@ Footer
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 body{
+  scroll-margin-block-start: 0rem;
   scroll-behavior: smooth;
   margin-top: 6.4rem;
   color: grey;
