@@ -6,15 +6,30 @@
 
 <div v-if="user" class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling1" aria-labelledby="offcanvasScrollingLabel">
   <div class="offcanvas-header">
-    <h1 class="offcanvas-title" id="offcanvasScrollingLabel1">Profile</h1>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <h1 class="offcanvas-title" id="offcanvasScrollingLabel1">User Profile</h1>
+    <button type="button"  class="b1" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
   </div>
   <div class="offcanvas-body">
-    <p>{{user.fullName}}</p>
-    <p>{{user.email}}</p>
-    <p>{{user.dateOfBirth}}</p>
-    <p>{{user.phoneNO}}</p>
-    <p>{{user.joinDate}}</p>
+  
+    <div class="container">
+
+<div class="row justify-content-center py-3">
+    <img src="https://i.postimg.cc/XJbk7hX2/Rose-Gold-Brush-Glitter-Feminine-Boutique-Circle-Logo.png" class="rounded-pill">
+</div>
+
+        <div class="row justify-content-center text-start">
+     <div class="col-sm-12">
+               
+
+    <p> <span>Name:</span> {{user.fullName}}</p>
+    <p><span>Email:</span> {{user.email}}</p>
+    <p><span>DOB:</span> {{user.dateOfBirth}}</p>
+    <p><span>Phone Number:</span> 0{{user.phoneNO}}</p>
+    <p><span>Join Date:</span> {{user.joinDate}}</p>
+            </div>
+        </div>
+    </div>
+  
 
   </div>
 </div>
@@ -23,8 +38,8 @@
 
       <div v-else class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling1" aria-labelledby="offcanvasScrollingLabel">
   <div class="offcanvas-header">
-    <h1 class="offcanvas-title" id="offcanvasScrollingLabel1">Profile</h1>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <h1 class="offcanvas-title" id="offcanvasScrollingLabel1">User Profile</h1>
+    <button type="button"  class="b1" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
   </div>
   <div class="offcanvas-body">
   <p>NOT LOGGED IN?</p>
@@ -59,5 +74,35 @@ button:hover{
 
 .offcanvas{
     color: grey;
+}
+
+img{
+    height: 33vh;
+    width: 15vw;
+}
+
+.offcanvas-title{
+    color: goldenrod;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 500;
+}
+
+.b1{
+    background-color: transparent;
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.b1:hover{
+    color: goldenrod;
+}
+
+span{
+    color: grey;
+    font-weight: bold;
+}
+
+p{
+    color: goldenrod;
 }
 </style>
