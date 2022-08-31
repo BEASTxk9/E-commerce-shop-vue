@@ -1,12 +1,14 @@
 import { createStore } from 'vuex';
 import router from '@/router';
 import axios from 'axios';
+import swal from 'sweetalert';
 
 const RoastedBeansUrl = 'https://e-commerce-shop-api.herokuapp.com/';
 
 export default createStore({
   state: {
     users: null,
+    user: null,
     products: null,
     product: null,
     token: null,
@@ -15,6 +17,7 @@ export default createStore({
   },
   getters: {
     getUsers: state => state.users,
+    getUser: state => state.user,
     getProducts: state => state.products,
     getProduct: state => state.product,
     getToken: state => state.token,
@@ -23,6 +26,9 @@ export default createStore({
   mutations: {
     setUsers(state, users) {
       state.users = users
+    },
+    setUser(state, user) {
+      state.user = user
     },
     setProducts(state, products) {
       state.products = products
@@ -62,59 +68,48 @@ export default createStore({
         }),
       })
         .then((response) => response.json())
-        .then((json) => context.commit("setUser", json, e.message = "Registration was successfull."))
+        .then((json) => context.commit("setUser", json,  
+         swal({
+          icon: "success",
+          title: `Registration Successfull`,
+          button: 'OK'
+        })
+        ))
         .catch(e => context.commit('setMessage', e.message = "Email/Phone Number Already Exists."));
+        
     },
 
     // login
-    login: async (context, payload) => {
-      const { email, password } = payload;
-      let result = await fetch(RoastedBeansUrl + "login", {
+    login (context, payload){
+      // console.log(payload);
+    fetch(RoastedBeansUrl + "login", {
         method: "POST",
         headers: {
           "Content-type": "application/json; charset=UTF-8",
         },
-        body: JSON.stringify({
-          email: email,
-          password: password,
-        }),
+        body: JSON.stringify(payload),
       })
-      if (result) {
-        router.push({ name: "landing" });
+     .then((response) => response.json())
+     .then((data) => {
+      if (data.msg === "Login Failed.") {
+        swal({
+          icon: 'error',
+          title: `${data.msg}`,
+          button: 'Try again'
+        })
+      } else {
+        context.commit("setUser", payload);
+        console.log("sign in");
+        swal({
+          icon: "success",
+          title: `Welcome`,
+          button: 'OK'
+        });
+        router.push({name: "landing"})
       }
-      if (!result) {
-        alert('Password or Email is wrong. Please try again.')
-        router.push({ name: "login" })
-      }
+     })
+
     },
-
-    // login auth
-    // login: async (context, payload) => {
-    //   const {email,password} = payload;
-    //   fetch(RoastedBeansUrl + "login", {
-    //       method: "POST",
-    //       body: JSON.stringify({
-    //         email: email,
-    //         password: password,
-    //       }),
-    //       headers: {
-    //         "Content-type": "application/json; charset=UTF-8",
-    //         "x-auth-token": await context.state.token,
-    //       },
-    //     })
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //       alert(data.msg);
-    //       let user = data.user;
-    //       let token = data.token;
-    //       let cart = data.user.cart;
-    //       context.commit("setUsers", user);
-    //       context.commit("setToken", token);
-    //       context.commit("setCart", cart);
-    //     });
-    // },
-
-
 
     // get users
     getusers: async (context) => {

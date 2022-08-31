@@ -35,6 +35,8 @@ Code for noobs...like myself:)
 
 4. npm i core-js axios cors nodemon router (install in vue)
 
+5. npm i sweetalert
+
 
 ### Here is a list of HTTP status codes:
 

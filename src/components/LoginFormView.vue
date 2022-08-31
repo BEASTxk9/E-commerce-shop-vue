@@ -6,8 +6,8 @@
         <div class="col-sm-5">
 
          
-
-          <form @submit.prevent="login" method="POST" autocomplete="on">
+          <!-- @submit.prevent="login" method="POST"  -->
+          <form autocomplete="on">
            <h1>LOGIN</h1>
 
             <!-- email -->
@@ -19,7 +19,8 @@
             <input class="w-50" type="password" v-model="password" minlength="8" maxlength="15"
               placeholder="Insert your Password" required><br>
 
-            <button class="mt-3 b btn-layout w-50" type="submit" onclick="this.classList.toggle('button--loading')"><span class="button__text">Login</span></button>
+            <button class="mt-3 b btn-layout w-50" type="button" @click="login" onclick="this.classList.toggle('button--loading')"><span class="button__text">Login</span></button>
+         
 
 <p class="pt-3">Not Registered? <router-link id="link" to="/register">Create an account.</router-link> </p>
 
@@ -44,10 +45,11 @@ data(){
 },
 methods: {
 login(){
-this.$store.dispatch('login', {
-                email: this.email, 
-                password: this.password,
-            })
+  const payload = {
+    email: this.email,
+    password: this.password
+  }
+this.$store.dispatch('login', payload)
 }
 }
 
