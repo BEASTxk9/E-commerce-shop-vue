@@ -12,6 +12,9 @@
          <!-- cart -->
 <Cart></Cart> |
 
+<!-- user profile -->
+<Profile :user="user"></Profile> |
+
          <!-- user admin -->
           <router-link to="/usersadmin"><i class="fa-solid fa-user-lock"></i></router-link> |
           <!-- products admin -->
@@ -29,11 +32,21 @@
 
 <script>
 import Cart from './CartView.vue';
+import Profile from './ProfileView.vue';
 
 export default {
 components: {
-    Cart
-}
+    Cart,
+    Profile
+},
+mounted(){
+    this.$store.dispatch('getuser');
+},
+computed: {
+    users(){
+        return this.$store.state.user;
+    }
+},
 }
 </script>
 

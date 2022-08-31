@@ -6,31 +6,36 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    props:true
   },
   // register
   {
     path: '/register',
     name: 'register',
-    component: () => import('../views/RegisterView.vue')
+    component: () => import('../views/RegisterView.vue'),
+    props:true
   },
   // login
   {
     path: '/login',
     name: 'login',
-    component: () => import('../views/LoginView.vue')
+    component: () => import('../views/LoginView.vue'),
+    props:true
   },
   // home
   {
     path: '/landing',
     name: 'landing',
-    component: () => import('../views/LandingView.vue')
+    component: () => import('../views/LandingView.vue'),
+    props:true
   },
   // shop
   {
     path: '/shop',
     name: 'shop',
-    component: () => import('../views/ShopView.vue')
+    component: () => import('../views/ShopView.vue'),
+    props:true
   },
   // single
   {
@@ -43,7 +48,8 @@ const routes = [
   {
     path: '/contact',
     name: 'contact',
-    component: () => import('../views/ContactView.vue')
+    component: () => import('../views/ContactView.vue'),
+    props:true
   },
   // users admin
   {
