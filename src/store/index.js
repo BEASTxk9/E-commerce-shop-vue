@@ -98,8 +98,7 @@ export default createStore({
           timer: 2000,
         })
       } else {
-        context.commit("setUser", payload);
-        console.log("sign in");
+        context.commit("setUser", data.user[0]);
         swal({
           icon: "success",
           title: `Welcome`,

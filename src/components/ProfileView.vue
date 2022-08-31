@@ -10,10 +10,29 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <p>Try scrolling the rest of the page to see this option in action.</p>
+    <p>{{user.fullName}}</p>
     <p>{{user.email}}</p>
+    <p>{{user.dateOfBirth}}</p>
+    <p>{{user.phoneNO}}</p>
+    <p>{{user.joinDate}}</p>
+
   </div>
 </div>
+
+
+
+      <div v-else class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling1" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h1 class="offcanvas-title" id="offcanvasScrollingLabel1">Profile</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+  <p>NOT LOGGED IN?</p>
+  </div>
+</div>
+
+
+
 </template>
 
 <script>
@@ -36,5 +55,9 @@ button{
 
 button:hover{
   color: goldenrod;
+}
+
+.offcanvas{
+    color: grey;
 }
 </style>
