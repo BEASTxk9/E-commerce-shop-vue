@@ -27,6 +27,7 @@ button{
   font-size: 1.3rem;
   padding: 0;
   transition: all 0.3s ease-in-out;
+  border: none;
 }
 
 button:hover{

@@ -43,7 +43,7 @@ mounted(){
     this.$store.dispatch('getuser');
 },
 computed: {
-    users(){
+    user(){
         return this.$store.state.user;
     }
 },
