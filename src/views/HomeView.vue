@@ -49,7 +49,7 @@ Nav {
 /* landing */
 .showcase {
   overflow-x: hidden;
-  height: 85.5vh;
+  height: 87vh;
   display: flex;
   align-items: center;
   justify-content: center;
