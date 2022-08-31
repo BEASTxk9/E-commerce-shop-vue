@@ -45,8 +45,8 @@
     <div class="container">
         <div class="row justify-content-center py-3 text-center">
     <img src="https://i.postimg.cc/XJbk7hX2/Rose-Gold-Brush-Glitter-Feminine-Boutique-Circle-Logo.png" class="rounded-pill">
-    
-    <p class="py-2">NOT LOGGED IN?</p>
+
+    <p class="py-2">Your Login has Timed out.<br> Please Login Again.</p>
 </div>
     </div>
   
