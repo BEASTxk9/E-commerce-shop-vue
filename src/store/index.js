@@ -75,7 +75,11 @@ export default createStore({
           button: 'OK'
         })
         ))
-        .catch(e => context.commit('setMessage', e.message = "Email/Phone Number Already Exists."));
+        .catch(e => context.commit( swal({
+          icon: "error",
+          title: `${data.msg}`,
+          button: 'OK'
+        })));
         
     },
 
@@ -91,11 +95,11 @@ export default createStore({
       })
      .then((response) => response.json())
      .then((data) => {
-      if (data.msg === "Login Failed.") {
+      if (data.msg === "Email/Password is incorrect. Please try again.") {
         swal({
           icon: 'error',
           title: `${data.msg}`,
-          timer: 2000,
+          timer: 4000,
         })
       } else {
         context.commit("setUser", data.user[0]);
@@ -225,7 +229,7 @@ deleteProduct: async (context, Prod_id) => {
 // edit product
 async editproduct(context, Prod_id) {
   try{
-    fetch("https://e-commerce-shop-api.herokuapp.com/products/"+Prod_id, {
+    fetch("https://e-commerce-shop-api.herokuapp.com/products/"+Prod_id.Prod_id, {
     method: "PUT",
     headers: {
       "Content-type": "application/json; charset=UTF-8",

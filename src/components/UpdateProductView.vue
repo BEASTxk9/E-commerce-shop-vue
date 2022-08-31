@@ -100,16 +100,7 @@ data(){
 methods: {
     editproduct(){
       console.log(this.product);
-       this.$store.dispatch("editproduct", this.product.Prod_id, {
-        Prod_name: this.Prod_name,
-       category: this.category,
-       price: this.price,
-       description: this.description,
-       img1: this.img1, 
-       img2: this.img2,
-       dateAdded: this.dateAdded
-      });
-      //  this.$store.dispatch("editproduct", this.product.Prod_id);
+       this.$store.dispatch("editproduct", this.product);
     },
 }
 }
