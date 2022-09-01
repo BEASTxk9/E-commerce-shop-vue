@@ -24,7 +24,7 @@
           <router-link v-if="user.userRole == 'admin'" to="/usersadmin"><i class="fa-solid fa-user-lock"></i>
           </router-link>
           <!-- products admin -->
-          <router-link v-if="user.userRole == 'admin'" to="/productsadmin" class="px-1"><i class="fa-solid fa-bag-shopping"></i>
+          <router-link v-if="user.userRole == 'admin'" to="/productsadmin" class="px-2"><i class="fa-solid fa-bag-shopping"></i>
           </router-link>
         </p>
 
