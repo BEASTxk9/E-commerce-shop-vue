@@ -19,14 +19,14 @@
         <!-- logout -->
         <router-link to="/"><i class="fa-solid fa-right-from-bracket"></i></router-link>
 
-        <p v-if="user">
+        <div v-if="user">
           <!-- user admin -->
           <router-link v-if="user.userRole == 'admin'" to="/usersadmin"><i class="fa-solid fa-user-lock"></i>
           </router-link>
           <!-- products admin -->
           <router-link v-if="user.userRole == 'admin'" to="/productsadmin" class="px-2"><i class="fa-solid fa-bag-shopping"></i>
           </router-link>
-        </p>
+        </div>
 
       </div>
       
