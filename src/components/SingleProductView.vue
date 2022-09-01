@@ -60,6 +60,11 @@ export default {
             return this.$store.state.product;
         },
     },
+  
+    scrollBehavior(){
+      return {x: 0, y:0}
+    },
+    
       mounted() {
         this.$store.dispatch("getproduct", this.$route.params.id);
         this.$store.commit('setProduct', null);
@@ -68,6 +73,10 @@ export default {
 </script>
 
 <style scoped>
+body{
+  scroll-margin-block-start: -80vh;
+}
+
 .container{
   color: grey;
   min-height: 100vh;

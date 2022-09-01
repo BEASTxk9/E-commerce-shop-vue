@@ -82,6 +82,14 @@
                     required
                   /><br />
 
+                     <!-- gender -->
+                     <label for="userRole">User Role:</label><br />
+                  <select class="w-50" v-model="user.userRole" required>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                  </select
+                  ><br />
+
                   <!-- password -->
                   <label for="password">Password:</label><br />
                   <input
@@ -122,6 +130,7 @@ export default {
    gender: '',
    dateOfBirth: '',
    phoneNO: '',
+   userRole: '',
    password: '',
  }
 }, 

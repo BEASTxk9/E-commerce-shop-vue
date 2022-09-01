@@ -6,7 +6,7 @@
       <div id="header" class="row">
 
         <div class="col-sm-1 text-start">
-          <AddProduct></AddProduct>
+  
         </div>
 
         <div class="col-sm-11 text-end">
@@ -54,6 +54,7 @@
     <th>DOB</th>
     <th>Phone Number</th>
     <th>Password</th>
+    <th>user Role</th>
     <th>Join Date</th>
     <th class="px-3">Action</th>
 </thead>
@@ -66,7 +67,9 @@
 <td>{{user.dateOfBirth}}</td>
 <td>+27 {{user.phoneNO}}</td>
 <td id="password">{{user.password}}</td>
+<td>{{user.userRole}}</td>
 <td>{{user.joinDate}}</td>
+
 <td>
     <div class="row">
         <div class="col-sm-4">
