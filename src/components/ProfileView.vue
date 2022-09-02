@@ -38,7 +38,7 @@
 
       <div v-else class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling1" aria-labelledby="offcanvasScrollingLabel">
   <div class="offcanvas-header">
-    <h1 class="offcanvas-title" id="offcanvasScrollingLabel1">User Profile.</h1>
+    <h2 class="offcanvas-title" id="offcanvasScrollingLabel1">User Profile.</h2>
     <button type="button"  class="b1" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
   </div>
   <div class="offcanvas-body">

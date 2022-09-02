@@ -5,24 +5,37 @@
 
 <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
   <div class="offcanvas-header">
-    <h1 class="offcanvas-title" id="offcanvasScrollingLabel">Your Cart</h1>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <h2 class="offcanvas-title text-cener" id="offcanvasScrollingLabel">Roasted Beans<i class="fa-solid fa-basket-shopping"></i></h2>
+    <button type="button" class="b1" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+    </button>
   </div>
   <div class="offcanvas-body">
 
   <div v-for="(product, index) in cart" :key="index">
 
-{{product.productData[0].Prod_name}}
-{{product.productData[0].description}}
-{{product.productData[0].price}}
-{{product.productData[0].category}}
-{{product.productData[0].img1}}
-{{product.productData[0].img2}}
+    <div class="container">
 
-<button id="delete" class="b btn-layout"
+<div class="row justify-content-center py-3">
+    <img :src="product.productData[0].img2" class="rounded-pill">
+</div>
+
+        <div class="row justify-content-center text-start">
+     <div class="col-sm-12">
+               
+
+    <p>Name: {{product.productData[0].Prod_name}}</p>
+    <p>Price: R{{product.productData[0].price}}</p>
+    <p>Category: {{product.productData[0].category}}</p>
+
+    <button id="delete" class="b btn-layout"
                         v-on:click="deletecartitem(product.cart_id)">
                         <i class="fa-solid fa-trash" @click="reloadPage"></i>
 </button>
+
+            </div>
+        </div>
+    </div>
 
   </div>
 
@@ -78,4 +91,15 @@ button:hover{
     font-family: 'Libre Baskerville', serif;
     font-weight: 500;
 }
+
+.b1{
+    background-color: transparent;
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.b1:hover{
+    color: goldenrod;
+}
+
 </style>

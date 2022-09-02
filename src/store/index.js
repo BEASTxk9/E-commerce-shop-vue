@@ -304,7 +304,7 @@ export default createStore({
             Prod_id: Prod_id,
           }),
         })
-        context.dispatch("getcart", context.state.user.id,     swal({
+        context.dispatch("getcart", context.state.user.id, swal({
           icon: "success",
           buttons: false,
           timer: 1000,
