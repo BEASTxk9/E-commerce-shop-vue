@@ -399,5 +399,4 @@ button{
 .loader-square:nth-of-type(7) {
  animation-delay: -10s;
 }
-
 </style>

@@ -70,7 +70,7 @@
                     <div class="col-sm-5">
                       <button id="delete" class="b btn-layout"
                         v-on:click="$store.dispatch('deleteProduct', product.Prod_id,)">
-                        <i class="fa-solid fa-trash" @click="reloadPage"></i>
+                        <i class="fa-solid fa-trash"></i>
                       </button>
                     </div>
                     <div class="col-sm-5">
@@ -116,7 +116,6 @@ export default {
     update,
     Load
   },
-
   mounted() {
     this.$store.dispatch("getproducts");
   },
@@ -125,16 +124,12 @@ export default {
       return this.$store.state.products;
     },
   },
-
   methods: {
 
     editproduct(){
       return this.$store.dispatch("editproduct", this.product);
     
 },
-    reloadPage() {
-      window.location.reload()
-    }
   }
 }
 </script>

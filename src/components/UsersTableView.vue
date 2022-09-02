@@ -75,7 +75,7 @@
         <div class="col-sm-4">
                <button id="delete" class="b btn-layout" 
                v-on:click="$store.dispatch('deleteuser', user.id,)" >
-                      <i class="fa-solid fa-trash" @click="reloadPage"></i>
+                      <i class="fa-solid fa-trash"></i>
                     </button>
         </div>
         <div class="col-sm-4">
@@ -127,10 +127,6 @@ computed: {
   methods: {
     edituser(){
       return this.$store.dispatch("edituser", this.user);
-    },
-
-    reloadPage() {
-      window.location.reload();
     },
   }
 

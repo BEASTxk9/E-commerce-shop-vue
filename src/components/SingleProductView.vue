@@ -9,7 +9,7 @@
   <h4 class="pb-3 pt-1">R{{product[0].price}}</h4>
   <h3 class="pt-3">"{{product[0].description}}"</h3>
 
-<button type="submit" class="b btn-layout mt-2">Add To Cart</button>
+<button type="submit" @click="addcart" class="b btn-layout mt-2">Add To Cart</button>
 
 </div>
 
@@ -69,6 +69,15 @@ export default {
         this.$store.dispatch("getproduct", this.$route.params.id);
         this.$store.commit('setProduct', null);
     },
+
+    methods: {
+      addcart(){
+        const payload = {
+          Prod_id: this.product[0].Prod_id
+        }
+        this.$store.dispatch("addcart", payload)
+      }
+    }
 }
 </script>
 

@@ -109,6 +109,7 @@ export default createStore({
           buttons: false,
           timer: 2000,
         });
+        context.dispatch('getcart', data.user[0].id);
         router.push({name: "landing"})
       }
      })
@@ -143,7 +144,7 @@ export default createStore({
         method: "DELETE",
       })
         .then((res) => res.json())
-        .then(() => context.dispatch('getUsers'));
+        .then(() => context.dispatch('getusers'));
     },
 
 // edit user
@@ -223,7 +224,7 @@ deleteProduct: async (context, Prod_id) => {
     method: "DELETE",
   })
     .then((res) => res.json())
-    .then(() => context.dispatch('getProducts'));
+    .then(() => context.dispatch('getproducts'));
 },
 
 // edit product
@@ -247,18 +248,60 @@ async editproduct(context, Prod_id) {
   }
 },
 
-    // _______
-    // get cart
-getcart: async (context, id, cart) => {
-  let res = await fetch('https://e-commerce-shop-api.herokuapp.com/users/' + id + '/' + cart);
+// _______
+// get cart
+getcart: async (context, id) => {
+  // fetch
+  let res = await fetch('https://e-commerce-shop-api.herokuapp.com/users/'+id+'/cart');
+
   let data = await res.json();
   let result = data.results;
   if(result){
-    context.commit('setusers', result)
+    context.commit('setCart', result)
   }else{
-    console.log('loading...')
+    console.log('failed...')
   }
+},
+
+// add cart
+ addcart: async(context, payload) => {
+  const { Prod_id } = payload;
+  
+  try{
+    await fetch(RoastedBeansUrl+"users/"+context.state.user.id+"/cart", {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+    body: JSON.stringify({
+      Prod_id: Prod_id,
+    }),
+  })
+context.dispatch("getcart", context.state.user.id)
+  }catch(e) {
+  console.log(e);
 }
+},
+
+// delete cart
+deletecart: async (context, id) => {
+  fetch("https://e-commerce-shop-api.herokuapp.com/users/"+id+"/cart", {
+    method: "DELETE",
+  })
+    .then((res) => res.json())
+    .then(() => context.dispatch('getcart',   id));
+},
+
+// delete cart item
+deletecartitem: async (context, id) => {
+  fetch("https://e-commerce-shop-api.herokuapp.com/users/"+context.state.user.id+"/cart/"+id, {
+    method: "DELETE",
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      context.dispatch('getcart', context.state.user.id)
+    });
+},
 
   },
   modules: {

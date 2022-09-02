@@ -7,7 +7,6 @@
           <i class="fa-solid fa-pen-to-square"></i>
         </button>
 
-
   <!-- Modal1 -->
     <div
       class="modal fade"

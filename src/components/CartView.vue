@@ -9,7 +9,28 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <p>Try scrolling the rest of the page to see this option in action.</p>
+
+  <div v-for="(product, index) in cart" :key="index">
+
+{{product.productData[0].Prod_name}}
+{{product.productData[0].description}}
+{{product.productData[0].price}}
+{{product.productData[0].category}}
+{{product.productData[0].img1}}
+{{product.productData[0].img2}}
+
+<button id="delete" class="b btn-layout"
+                        v-on:click="deletecartitem(product.cart_id)">
+                        <i class="fa-solid fa-trash" @click="reloadPage"></i>
+</button>
+
+  </div>
+
+  <button id="delete" class="b btn-layout"
+                        v-on:click="$store.dispatch('deletecart')">
+                        Clear Cart
+</button>
+
   </div>
 </div>
 
@@ -17,7 +38,16 @@
 
 <script>
 export default {
-
+computed:{
+  cart(){
+    return this.$store.state.cart;
+  }
+},
+methods:{
+  deletecartitem(id){
+this.$store.dispatch("deletecartitem", id)
+  }
+}
 }
 </script>
 
@@ -32,5 +62,13 @@ button{
 
 button:hover{
   color: goldenrod;
+}
+
+.offcanvas{
+  z-index: 0;
+}
+
+.offcanvas-body{
+  z-index: 10;
 }
 </style>
