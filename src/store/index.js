@@ -2,6 +2,7 @@ import { createStore } from 'vuex';
 import router from '@/router';
 import axios from 'axios';
 import swal from 'sweetalert';
+import e from 'cors';
 
 const RoastedBeansUrl = 'https://e-commerce-shop-api.herokuapp.com/';
 
@@ -42,8 +43,8 @@ export default createStore({
     setToken(state, token) {
       state.token = token
     },
-    setCart(state, cart){
-      state.cart= cart
+    setCart(state, cart) {
+      state.cart = cart
     }
   },
   actions: {
@@ -68,51 +69,51 @@ export default createStore({
         }),
       })
         .then((response) => response.json())
-        .then((json) => context.commit("setUser", json,  
-         swal({
-          icon: "success",
-          title: `Registration Successfull`,
-          button: 'OK'
-        })
+        .then((json) => context.commit("setUser", json,
+          swal({
+            icon: "success",
+            title: `Registration Successfull`,
+            button: 'OK'
+          })
         ))
-        .catch(e => context.commit( swal({
+        .catch(e => context.commit(swal({
           icon: "error",
           title: `${data.msg}`,
           button: 'OK'
         })));
-        
+
     },
 
     // login
-    login (context, payload){
+    login(context, payload) {
       // console.log(payload);
-    fetch(RoastedBeansUrl + "login", {
+      fetch(RoastedBeansUrl + "login", {
         method: "POST",
         headers: {
           "Content-type": "application/json; charset=UTF-8",
         },
         body: JSON.stringify(payload),
       })
-     .then((response) => response.json())
-     .then((data) => {
-      if (data.msg === "Email/Password is incorrect. Please try again.") {
-        swal({
-          icon: 'error',
-          title: `${data.msg}`,
-          timer: 4000,
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.msg === "Email/Password is incorrect. Please try again.") {
+            swal({
+              icon: 'error',
+              title: `${data.msg}`,
+              timer: 4000,
+            })
+          } else {
+            context.commit("setUser", data.user[0]);
+            swal({
+              icon: "success",
+              title: `Welcome`,
+              buttons: false,
+              timer: 2000,
+            });
+            context.dispatch('getcart', data.user[0].id);
+            router.push({ name: "landing" })
+          }
         })
-      } else {
-        context.commit("setUser", data.user[0]);
-        swal({
-          icon: "success",
-          title: `Welcome`,
-          buttons: false,
-          timer: 2000,
-        });
-        context.dispatch('getcart', data.user[0].id);
-        router.push({name: "landing"})
-      }
-     })
 
     },
 
@@ -144,164 +145,211 @@ export default createStore({
         method: "DELETE",
       })
         .then((res) => res.json())
-        .then(() => context.dispatch('getusers'));
+        .then(() => context.dispatch('getusers',
+          swal({
+            icon: "success",
+            buttons: false,
+            timer: 1000,
+          })
+        ));
     },
 
-// edit user
-edituser(context, user) {
-  fetch("https://e-commerce-shop-api.herokuapp.com/users/" + user.id, {
-  method: "PUT",
-  body: JSON.stringify(user),
-  headers: {
-    "Content-type": "application/json; charset=UTF-8",
-  },
-})
-  .then((edituser) => edituser.json())
-  .then((data) => {
-    console.log(data)
-    context.dispatch("getusers")
-  });
-},
-
+    // edit user
+    edituser(context, user) {
+      fetch("https://e-commerce-shop-api.herokuapp.com/users/" + user.id, {
+        method: "PUT",
+        body: JSON.stringify(user),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((edituser) => edituser.json())
+        .then((data) => {
+          console.log(data)
+          context.dispatch("getusers",
+            swal({
+              icon: "success",
+              buttons: false,
+              timer: 1000,
+            })
+          )
+        });
+      // .catch(context.dispatch(
+      //   swal({
+      //     icon: "error",
+      //     buttons: false,
+      //     timer: 1000,
+      //   })
+      // ))
+    },
 
     // _____________
     // get products
-getproducts: async (context) => {
-  let res = await fetch('https://e-commerce-shop-api.herokuapp.com/products');
-  let data = await res.json();
-  let result = data.results;
-  if(result){
-    context.commit('setProducts', result)
-  }else{
-    console.log('loading...')
-  }
-},
-
-// get single product  
-getproduct: async (context, Prod_id) => {
- let res = await fetch('https://e-commerce-shop-api.herokuapp.com/products/'+ Prod_id);
-  let data = await res.json();
-  let result = data.results;
-  if(result){
-    context.commit('setProduct', result)
-  }else{
-    console.log('loading...')
-  }
-},
-
- // add product
- addProduct: async(context, payload) => {
-  const { Prod_name, category, price, description, img1, img2, dateAdded } = payload;
-  
-  try{
-    await fetch(RoastedBeansUrl+"products", {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
+    getproducts: async (context) => {
+      let res = await fetch('https://e-commerce-shop-api.herokuapp.com/products');
+      let data = await res.json();
+      let result = data.results;
+      if (result) {
+        context.commit('setProducts', result)
+      } else {
+        console.log('Get products failed')
+      }
     },
-    body: JSON.stringify({
-      Prod_name: Prod_name,
-       category: category,
-       price: price,
-       description: description,
-       img1: img1, 
-       img2: img2,
-       dateAdded: dateAdded
-    }),
-  })
-    .then((response) => response.json)
-    .then((json) => context.commit("setProducts", json.data));
-    router.push({name: "admin"});
-    
-  }catch(e) {
-  console.log(e);
-}
-},
 
-// delete product
-deleteProduct: async (context, Prod_id) => {
-  fetch("https://e-commerce-shop-api.herokuapp.com/products/" + Prod_id, {
-    method: "DELETE",
-  })
-    .then((res) => res.json())
-    .then(() => context.dispatch('getproducts'));
-},
-
-// edit product
-async editproduct(context, Prod_id) {
-  try{
-    fetch("https://e-commerce-shop-api.herokuapp.com/products/"+Prod_id.Prod_id, {
-    method: "PUT",
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
+    // get single product  
+    getproduct: async (context, Prod_id) => {
+      let res = await fetch('https://e-commerce-shop-api.herokuapp.com/products/' + Prod_id);
+      let data = await res.json();
+      let result = data.results;
+      if (result) {
+        context.commit('setProduct', result)
+      } else {
+        console.log('Get product failed')
+      }
     },
-    body: JSON.stringify(Prod_id),
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data)
-      context.dispatch("getproducts")
-    })
-    .catch(console.log('error'));
-  }catch(e){
-    console.log(e);
-  }
-},
 
-// _______
-// get cart
-getcart: async (context, id) => {
-  // fetch
-  let res = await fetch('https://e-commerce-shop-api.herokuapp.com/users/'+id+'/cart');
+    // add product
+    addProduct: async (context, payload) => {
+      const { Prod_name, category, price, description, img1, img2, dateAdded } = payload;
 
-  let data = await res.json();
-  let result = data.results;
-  if(result){
-    context.commit('setCart', result)
-  }else{
-    console.log('failed...')
-  }
-},
-
-// add cart
- addcart: async(context, payload) => {
-  const { Prod_id } = payload;
-  
-  try{
-    await fetch(RoastedBeansUrl+"users/"+context.state.user.id+"/cart", {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
+      try {
+        await fetch(RoastedBeansUrl + "products", {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+          body: JSON.stringify({
+            Prod_name: Prod_name,
+            category: category,
+            price: price,
+            description: description,
+            img1: img1,
+            img2: img2,
+            dateAdded: dateAdded
+          }),
+        })
+          .then((response) => response.json)
+          .then((json) => context.commit("setProducts", json.data));
+      } catch (e) {
+        console.log(e);
+      }
     },
-    body: JSON.stringify({
-      Prod_id: Prod_id,
-    }),
-  })
-context.dispatch("getcart", context.state.user.id)
-  }catch(e) {
-  console.log(e);
-}
-},
 
-// delete cart
-deletecart: async (context, id) => {
-  fetch("https://e-commerce-shop-api.herokuapp.com/users/"+id+"/cart", {
-    method: "DELETE",
-  })
-    .then((res) => res.json())
-    .then(() => context.dispatch('getcart',   id));
-},
+    // delete product
+    deleteProduct: async (context, Prod_id) => {
+      fetch("https://e-commerce-shop-api.herokuapp.com/products/" + Prod_id, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then(() => context.dispatch('getproducts',
+          swal({
+            icon: "success",
+            buttons: false,
+            timer: 500,
+          })));
+    },
 
-// delete cart item
-deletecartitem: async (context, id) => {
-  fetch("https://e-commerce-shop-api.herokuapp.com/users/"+context.state.user.id+"/cart/"+id, {
-    method: "DELETE",
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      context.dispatch('getcart', context.state.user.id)
-    });
-},
+    // edit product
+    async editproduct(context, Prod_id) {
+      try {
+        fetch("https://e-commerce-shop-api.herokuapp.com/products/" + Prod_id.Prod_id, {
+          method: "PUT",
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+          body: JSON.stringify(Prod_id),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data)
+            context.dispatch("getproducts", 
+            swal({
+              icon: "success",
+              buttons: false,
+              timer: 1000,
+            })
+            )
+          })
+          .catch(console.log('error'));
+      } catch (e) {
+        console.log(e);
+      }
+    },
+
+    // _______
+    // get cart
+    getcart: async (context, id) => {
+      // fetch
+      let res = await fetch('https://e-commerce-shop-api.herokuapp.com/users/' + id + '/cart');
+      let data = await res.json();
+      let result = data.results;
+      if (result) {
+        context.commit('setCart', result)
+      } else {
+        console.log('Get cart Failed.')
+      }
+    },
+
+    // add cart
+    addcart: async (context, payload) => {
+      const { Prod_id } = payload;
+
+      try {
+        await fetch(RoastedBeansUrl + "users/" + context.state.user.id + "/cart", {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+          body: JSON.stringify({
+            Prod_id: Prod_id,
+          }),
+        })
+        context.dispatch("getcart", context.state.user.id,     swal({
+          icon: "success",
+          buttons: false,
+          timer: 1000,
+        }))
+      } catch (e) {
+        console.log(e);
+        context.dispatch(
+          swal({
+          icon: "error",
+          buttons: false,
+          timer: 1000,
+        }))
+      }
+    },
+
+    // delete cart
+    deletecart: async (context, id) => {
+      fetch("https://e-commerce-shop-api.herokuapp.com/users/" + id + "/cart", {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then(() => context.dispatch('getcart', id, 
+        swal({
+          icon: "success",
+          buttons: false,
+          timer: 500,
+        })
+        ));
+    },
+
+    // delete cart item
+    deletecartitem: async (context, id) => {
+      fetch("https://e-commerce-shop-api.herokuapp.com/users/" + context.state.user.id + "/cart/" + id, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          context.dispatch('getcart', context.state.user.id, 
+          swal({
+            icon: "success",
+            buttons: false,
+            timer: 1000,
+          }))
+        });
+    },
 
   },
   modules: {

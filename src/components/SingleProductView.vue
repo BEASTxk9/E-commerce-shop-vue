@@ -9,7 +9,15 @@
   <h4 class="pb-3 pt-1">R{{product[0].price}}</h4>
   <h3 class="pt-3">"{{product[0].description}}"</h3>
 
-<button type="submit" @click="addcart" class="b btn-layout mt-2">Add To Cart</button>
+  <div v-if="user">
+
+    <button class="mt-3 b btn-layout w-50" type="button" @click="addcart" onclick="this.classList.toggle('button--loading')"><span class="button__text">Add To Cart</span></button>
+  </div>
+
+  <div v-else>
+<p id="notlog">"Login to purchase online."</p>
+  </div>
+
 
 </div>
 
@@ -53,23 +61,21 @@ export default {
   components: {
   Load
 },
-
-    computed: {
-      
+    computed: {  
+    user() {
+      return this.$store.state.user;
+    },
         product() {
             return this.$store.state.product;
         },
     },
-  
     scrollBehavior(){
       return {x: 0, y:0}
     },
-    
       mounted() {
         this.$store.dispatch("getproduct", this.$route.params.id);
         this.$store.commit('setProduct', null);
     },
-
     methods: {
       addcart(){
         const payload = {
@@ -110,5 +116,11 @@ img{
   width: 32vw;
   max-width: 100%;
   max-height: 100%;
+}
+
+#notlog{
+  color: goldenrod;
+  font-size: 1.3rem;
+  padding-top: 1.5rem;
 }
 </style>
