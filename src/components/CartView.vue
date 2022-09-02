@@ -70,5 +70,12 @@ button:hover{
 
 .offcanvas-body{
   z-index: 10;
+  color: grey;
+}
+
+.offcanvas-title{
+    color: goldenrod;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 500;
 }
 </style>
