@@ -53,6 +53,7 @@
             </div>
             
             <div class="card-footer">
+
               <span class="text-title">R{{ product.price }}</span>
 
               <router-link class="text-decoration-none bg-transparent b btn-layout"
@@ -113,7 +114,7 @@ section {
   min-height: 87vh;
   margin-top: 100vh;
   padding-bottom: 2rem;
-  padding-top: 10rem;
+  padding-top: 7rem;
 }
 
 input {

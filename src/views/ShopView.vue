@@ -43,6 +43,11 @@ Nav{
   background-color: transparent;
   border: none;
   transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+Nav:hover{
+  background-color: rgba(0, 0, 0, 0.736);
 }
 
 

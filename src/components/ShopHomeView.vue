@@ -31,6 +31,10 @@ export default {
 </script>
 
 <style scoped>
+section{
+  min-height: 89vh;
+}
+
 /* landing */
 .showcase {
   overflow-x: hidden;
