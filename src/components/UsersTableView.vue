@@ -1,5 +1,5 @@
 <template>
-  
+
 <section v-if="users">
 
     <div class="container-fluid">
@@ -8,12 +8,12 @@
       <div id="header" class="row">
 
         <!-- header -->
-        <div class="col-md-7 col-sm-12 text-start">
+        <div class="col-md-6 col-sm-12 text-start">
           <h1>USERS</h1>
         </div>
   
         <!-- admin nav switch -->
-        <div class="col-sm-12 col-md-5">
+        <div class="col-sm-12 col-md-6">
 <!-- user admin -->
             <router-link id="admin" to="/usersadmin"><i class="fa-solid fa-user-lock"></i> User Admin</router-link> |
   <!-- products admin -->
