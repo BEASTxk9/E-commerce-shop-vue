@@ -33,10 +33,10 @@
 
 <form @submit.prevent="addProduct" method="POST">
 
-<label for="Prod_name">Prod_name</label><br>
-    <input class="w-100" type="text" v-model="Prod_name" placeholder="Enter Prod_name" required><br>
+<label for="Prod_name">Product Name:</label><br>
+    <input class="w-100" type="text" v-model="Prod_name" placeholder="Insert Product Name." required><br>
 
-<label for="category">category:</label><br>
+<label for="category">Category:</label><br>
    <select class="w-100" name="category" id="category">
     <option value="coffee">coffee</option>
     <option value="tea">tea</option>
@@ -51,17 +51,17 @@
     <option value="backery items">backery items</option>
    </select><br>
 
-<label for="price">price:</label><br>
-    <input class="w-100" type="text" v-model="price" placeholder="Enter price" required><br>
+<label for="price">Price:</label><br>
+    <input class="w-100" type="text" v-model="price" placeholder="Insert price." required><br>
 
 <label for="description">Description:</label><br>
-    <input class="w-100" type="text" v-model="description" placeholder="Enter description" required><br>
+    <input class="w-100" type="text" v-model="description" placeholder="Insert description." required><br>
 
 <label for="img1">Image 1:</label><br>
-    <input class="w-100" type="text" v-model="img1" placeholder="Add image url" required><br>
+    <input class="w-100" type="text" v-model="img1" placeholder="Inser image url." required><br>
 
-     <label for="img2">image 2:</label><br>
-    <input class="w-100" type="text" v-model="img2" placeholder="img2" required><br>
+     <label for="img2">Image 2:</label><br>
+    <input class="w-100" type="text" v-model="img2" placeholder="Inser image url." required><br>
 
     <button class="mt-4 w-100 b btn-layout" @click="submit" 
     data-bs-target="#exampleModal"  data-bs-dismiss="modal"
