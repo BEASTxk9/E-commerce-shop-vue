@@ -95,6 +95,7 @@ body{
 .container{
   color: grey;
   min-height: 100vh;
+  scroll-margin-block-start: -80vh;
 }
 
 span{

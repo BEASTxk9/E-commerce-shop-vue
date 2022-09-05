@@ -69,18 +69,38 @@ export default createStore({
         }),
       })
         .then((response) => response.json())
-        .then((json) => context.commit("setUser", json,
-          swal({
-            icon: "success",
-            title: `Registration Successfull`,
-            button: 'OK'
-          })
-        ))
-        .catch(e => context.commit(swal({
-          icon: "error",
-          title: `${data.msg}`,
-          button: 'OK'
-        })));
+        .then((json) => {
+          if (json.msg === "Register Failed.") {
+            swal({
+              icon: 'error',
+              title: `${json.msg}`,
+              timer: 2000,
+            })
+          } 
+          if(json.msg === 'Register Successfull ') {
+            context.commit("setUser", json.user);
+            swal({
+              icon: "success",
+              title: `Welcome`,
+              buttons: false,
+              timer: 2000,
+            });
+            router.push({ name: "login" });
+          }
+        }
+    )
+  //   context.commit("setUser", json,
+  //   swal({
+  //     icon: "success",
+  //     title: `Registration Successfull`,
+  //     button: 'OK'
+  //   })
+  // )
+        // .catch(e => context.commit(swal({
+        //   icon: "error",
+        //   title: `${data.msg}`,
+        //   button: 'OK'
+        // })));
     },
 
     // login

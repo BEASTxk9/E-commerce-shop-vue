@@ -4,6 +4,9 @@
   
   <router-view/>
 
+  <div class="row justify-content-end">
+    <button onclick="topFunction()" id="myBtn" class="fixed-bottom rounded-pill" title="Go to top"><i class="fa-solid fa-chevron-up"></i></button>
+  </div>
 
 <Footer></Footer>
 
@@ -17,7 +20,8 @@ export default{
   components: {
 Nav,
 Footer
-  }
+  },
+
 }
 </script>
 
@@ -25,6 +29,8 @@ Footer
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 body{
+  margin: 0;
+  padding: 0;
   scroll-margin-block-start: 0;
   scroll-behavior: smooth 0;
   margin-top: 6.4rem;
@@ -76,6 +82,24 @@ nav a.router-link-exact-active {
   color: goldenrod;
   text-decoration: none;
 
+} 
+
+#myBtn{
+  font-size: 1.5rem;
+  width: 49px;
+  justify-content: end;
+  align-content: flex-end;
+  text-align: end;
+  border: 1px solid goldenrod;
+  background-color: grey;
+  transition: all 0.3s ease-in-out;
+  left: 10px;
+}
+
+#myBtn:hover{
+background-color: goldenrod;
+transform: scaleY(10px);
+transform: scale(1.3);
 }
 
 /* forms */
