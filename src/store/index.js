@@ -81,7 +81,6 @@ export default createStore({
           title: `${data.msg}`,
           button: 'OK'
         })));
-
     },
 
     // login

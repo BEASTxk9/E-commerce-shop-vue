@@ -1,7 +1,7 @@
 <template>
  
 	<!-- cart stuff -->
-  <button class="bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-cart4"></i></button>
+  <button class="bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" data-bs-placement="bottom" title="Cart."><i class="bi bi-cart4"></i></button>
 
 <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
   <div class="offcanvas-header">
@@ -70,11 +70,14 @@ button{
   font-size: 1.3rem;
   padding: 0;
   transition: all 0.3s ease-in-out;
-  border: none;
+  border: 1px solid grey;
+  border-radius: 360px;
+  width: 33px;
 }
 
 button:hover{
   color: goldenrod;
+  border: 1px solid goldenrod;
 }
 
 .offcanvas{

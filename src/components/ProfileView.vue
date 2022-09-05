@@ -1,6 +1,6 @@
 <template>
   	<!-- profile stuff -->
-      <button class="bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling1" aria-controls="offcanvasScrolling1">
+      <button class="bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling1" aria-controls="offcanvasScrolling1" data-bs-placement="bottom" title="Profile.">
         <i class="fa-solid fa-user"></i>
       </button>
 
@@ -72,11 +72,14 @@ button{
   font-size: 1.3rem;
   padding: 0;
   transition: all 0.3s ease-in-out;
-  border: none;
+  border: 1px solid grey;
+  border-radius: 360px;
+  width: 33px;
 }
 
 button:hover{
   color: goldenrod;
+  border: 1px solid goldenrod;
 }
 
 .offcanvas{

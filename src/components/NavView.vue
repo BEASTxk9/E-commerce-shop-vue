@@ -1,5 +1,6 @@
 <template>
-  <nav class="fixed-top">
+
+  <nav class="container-fluid fixed-top">
     <div class="row">
       <div class="col-sm-1">
         <img id="logo"
@@ -8,6 +9,17 @@
       </div>
 
       <div id="links" class="col-sm-11">
+
+        <!-- ADMIN -->
+        <span v-if="user">
+          <!-- user admin -->
+          <router-link id="admin" v-if="user.userRole == 'admin'" to="/usersadmin" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Users Admin Table."><i class="fa-solid fa-user-lock"></i>
+          </router-link> |
+          <!-- products admin -->
+          <router-link id="admin" v-if="user.userRole == 'admin'" to="/productsadmin" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Products Admin Table." class="text-center p"><i class="fa-solid fa-bag-shopping"></i>
+          </router-link>
+        </span>
+
         <router-link to="/landing">Home</router-link> |
         <router-link to="/shop">Shop</router-link> |
         <router-link to="/contact">Contact</router-link> |
@@ -15,18 +27,11 @@
         <Cart></Cart> |
 
         <!-- user profile -->
-        <Profile :user="user"></Profile> |
+        <Profile :user="user"></Profile>
         <!-- logout -->
-        <router-link to="/"><i class="fa-solid fa-right-from-bracket"></i></router-link>
-
-        <div v-if="user">
-          <!-- user admin -->
-          <router-link v-if="user.userRole == 'admin'" to="/usersadmin"><i class="fa-solid fa-user-lock"></i>
-          </router-link>
-          <!-- products admin -->
-          <router-link v-if="user.userRole == 'admin'" to="/productsadmin" class="px-2"><i class="fa-solid fa-bag-shopping"></i>
-          </router-link>
-        </div>
+        <router-link id="logout" to="/" data-bs-placement="bottom" title="Logout.">
+          <i class="fa-solid fa-person-running px-1"></i>
+          <i class="fa-solid fa-right-from-bracket"></i></router-link>
 
       </div>
       
@@ -71,6 +76,29 @@ export default {
 
 #links {
   padding-top: 2rem;
+}
+
+#admin{
+  color: white;
+  font-size: 1.3rem;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid grey;
+  border-radius: 360px;
+  width: 33px;
+}
+
+#admin:hover{
+  color: goldenrod;
+  border: 1px solid goldenrod;
+}
+
+#logout{
+  margin-left: 30px;
+}
+
+.p{
+  margin-right: 5px;
 }
 
 /* main */
