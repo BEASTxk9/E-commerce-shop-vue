@@ -19,7 +19,7 @@
               <div class="col-sm-2">
                 <a
                   id="netlinks"
-                  class="rounded-pill"
+                  class="rounded-pill linkin"
                   href="https://www.linkedin.com/in/shane-stevens-bb9194246/"
                   target="_blank"
                 >
@@ -29,24 +29,26 @@
 
               <!-- insta -->
               <div class="col-sm-2">
-                <a id="netlinks" class="rounded-pill" href="">
+                <a id="netlinks" class="rounded-pill insta" href="">
                   <i class="bi bi-instagram"></i>
+                </a>
+              </div>
+
+                <!-- twiter -->
+                <div class="col-sm-2">
+                <a id="netlinks" class="rounded-pill tw" href="">
+                  <i class="bi bi-twitter"></i>
                 </a>
               </div>
 
               <!-- facebook -->
               <div class="col-sm-2">
-                <a id="netlinks" class="rounded-pill" href="">
+                <a id="netlinks" class="rounded-pill fb" href="">
                   <i class="bi bi-facebook"></i>
                 </a>
               </div>
 
-              <!-- twiter -->
-              <div class="col-sm-2">
-                <a id="netlinks" class="rounded-pill" href="">
-                  <i class="bi bi-twitter"></i>
-                </a>
-              </div>
+            
             </div>
           </div>
 
@@ -54,7 +56,7 @@
 
       <!-- footer -->
       <footer class="mt-3 py-1">
-        <p>&copy; Made by Shane Stevens.</p>
+        <p id="copyrights">&copy; Made by Shane Stevens.</p>
       </footer>
     </div>
   </section>
@@ -83,10 +85,30 @@ min-width: fit-content;
   color: goldenrod;
 }
 
-#netlinks {
-  font-size: 2.5rem;
+.linkin, .insta, .fb, .tw {
+    font-size: 2.5rem;
   color: grey;
   gap: 10px;
-  margin: 10px;
+  margin: 10px; 
+  transition: all 0.5s ease-in-out;
+}
+
+.linkin:hover , .fb:hover{
+    text-shadow: 0px 1px 22px rgb(32, 32, 240);
+    color: rgb(32, 32, 240);
+}
+
+.insta:hover{
+    text-shadow: 0px 1px 22px rgb(235, 46, 78);
+    color: rgb(235, 46, 78);
+}
+
+.tw:hover{
+    text-shadow: 0px 1px 22px rgb(14, 239, 164);
+    color: rgb(14, 239, 164);
+}
+
+#copyrights{
+color: goldenrod;
 }
 </style>
