@@ -117,4 +117,9 @@ h1:after {
 		-5px -5px 10px rgba(0, 0, 0, 0.4);
 }
 
+@media only screen and (max-width: 600px) {
+iframe{
+  display: none;
+}
+}
 </style>

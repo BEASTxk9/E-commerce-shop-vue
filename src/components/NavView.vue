@@ -2,13 +2,13 @@
 
   <nav class="container-fluid fixed-top">
     <div class="row">
-      <div class="col-sm-1">
+      <div class="col-sm-12 col-md-1">
         <img id="logo"
           src="https://i.postimg.cc/wT80tLGN/Rose-Gold-Brush-Glitter-Feminine-Boutique-Circle-Logo-removebg-preview.png"
           defer>
       </div>
 
-      <div id="links" class="col-sm-11">
+      <div id="links" class="col-sm-12 col-md-11">
 
 
 
@@ -111,8 +111,7 @@ export default {
 @media only screen and (max-width: 1024px) {
 
 #logo{
-  padding: o;
-  height: 20px;
+ display: none;
 
 }
 }

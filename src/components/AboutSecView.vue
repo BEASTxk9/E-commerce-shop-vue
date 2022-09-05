@@ -1,16 +1,16 @@
 <template>
   <section class="py-1">
     <div id="data">
-    <h1>ABOUT US.</h1>
+    <h1 class="text-center">ABOUT US.</h1>
     <div class="container">
       <div class="row text-start justify-content-center">
         <!-- img col -->
-        <div class="col-sm-12 col-md-5">
+        <div id="img" class="col-sm-12 col-md-5">
 <img class="rounded" src="https://i.postimg.cc/wxk7ptDY/robert-euro-djojoseputro-ot-Eky1qwe-Cg-unsplash-2.jpg" defer>
         </div>
 
         <!-- text col -->
-        <div class="col-sm-12 col-md-5">
+        <div id="about" class="col-sm-12 col-md-5">
 
 <h2 class="text-center py-1">ROASTED BEANS</h2>
 
@@ -79,5 +79,18 @@ span{
 #data{
   position: relative;
   top: 14vh;
+}
+
+@media only screen and (max-width: 600px) {
+#about{
+text-align: start;
+justify-content: center;
+}
+
+#img{
+  padding-bottom: 3vh;
+  text-align: center;
+justify-content: center;
+}
 }
 </style>
