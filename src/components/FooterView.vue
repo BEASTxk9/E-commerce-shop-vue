@@ -56,7 +56,7 @@
 
       <!-- footer -->
       <footer class="mt-3 py-1">
-        <p id="copyrights">&copy; Made by Shane Stevens.</p>
+        <p id="copyrights">2022 &copy; Made by Shane Stevens.</p>
       </footer>
     </div>
   </section>
