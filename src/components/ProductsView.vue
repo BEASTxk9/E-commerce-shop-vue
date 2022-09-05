@@ -25,7 +25,7 @@
         </div>
 
         <!-- card -->
-        <div v-for="(product, index) in products" :key="index" class="col-sm-3" id="card">
+        <div v-for="(product, index) in products" :key="index" class="col-lg-3 col-md-5 col-sm-12" id="card">
 
 
 
@@ -211,5 +211,11 @@ transform: scale(1.1);
 #description {
   font-size: 0.8rem;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 900px) {
+ img{
+  width: 23vw;
+ }
 }
 </style>
