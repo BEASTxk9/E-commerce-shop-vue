@@ -5,7 +5,7 @@
   <router-view/>
 
   <div class="row justify-content-end">
-    <button onclick="topFunction()" id="myBtn" class="fixed-bottom rounded-pill" title="Go to top"><i class="fa-solid fa-chevron-up"></i></button>
+    <button onclick="topFunction()" id="myBtn" class="fixed-bottom rounded-pill" title="Auto Scroll Top."><i class="fa-solid fa-chevron-up"></i></button>
   </div>
 
 <Footer></Footer>
@@ -91,9 +91,10 @@ nav a.router-link-exact-active {
   align-content: flex-end;
   text-align: end;
   border: 1px solid goldenrod;
-  background-color: grey;
+  background-color: goldenrod;
   transition: all 0.3s ease-in-out;
   left: 10px;
+  box-shadow: 0px 0px 42px rgba(183, 164, 18, 1);
 }
 
 #myBtn:hover{

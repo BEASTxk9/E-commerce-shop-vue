@@ -10,21 +10,24 @@
 
       <div id="links" class="col-sm-11">
 
-        <!-- ADMIN -->
-        <span v-if="user">
+
+
+        <router-link to="/landing">Home</router-link> 
+        <router-link class="px-1" to="/shop">Shop</router-link> 
+        <router-link to="/contact">Contact</router-link> 
+
+                <!-- ADMIN -->
+                <span v-if="user">
           <!-- user admin -->
-          <router-link id="admin" v-if="user.userRole == 'admin'" to="/usersadmin" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Users Admin Table."><i class="fa-solid fa-user-lock"></i>
-          </router-link> |
+          <router-link class="mx-1" id="admin" v-if="user.userRole == 'admin'" to="/usersadmin" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Users Admin Table."><i class="fa-solid fa-user-lock"></i>
+          </router-link> 
           <!-- products admin -->
           <router-link id="admin" v-if="user.userRole == 'admin'" to="/productsadmin" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Products Admin Table." class="text-center p"><i class="fa-solid fa-bag-shopping"></i>
           </router-link>
         </span>
 
-        <router-link to="/landing">Home</router-link> |
-        <router-link to="/shop">Shop</router-link> |
-        <router-link to="/contact">Contact</router-link> |
         <!-- cart -->
-        <Cart></Cart> |
+        <Cart></Cart> 
 
         <!-- user profile -->
         <Profile :user="user"></Profile>
@@ -61,6 +64,9 @@ export default {
       return this.$store.state.user;
     }
   },
+  methods: {
+
+  }
 }
 </script>
 

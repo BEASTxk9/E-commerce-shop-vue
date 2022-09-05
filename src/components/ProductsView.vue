@@ -4,11 +4,12 @@
       <div class="row justify-content-center text-center">
 
         <!-- search -->
-        <div class="row">
-          <div class="col-sm-2 text-end">
+        <div id="search" class="row justify-content-center">
+          <h4>Search</h4>
+          <div class="col-sm-4 text-end">
             <input type="text" placeholder="What are you looking for?" v-model="search" class="mb-5">
           </div>
-          <div class="col-sm-2 text-start">
+          <div class="col-sm-4 text-start">
             <select v-model="search">
               <option></option>
               <option value="coffee">coffee</option>
@@ -115,6 +116,13 @@ section {
   margin-top: 100vh;
   padding-bottom: 2rem;
   padding-top: 7rem;
+}
+
+#search{
+  padding-top: 25px;
+  border-radius: 20px;
+  background-color: rgba(33, 33, 33, 0.488);
+  margin-bottom: 20px;
 }
 
 input {
