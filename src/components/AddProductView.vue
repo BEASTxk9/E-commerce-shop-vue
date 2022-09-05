@@ -2,7 +2,7 @@
           <button data-bs-toggle="modal"
           data-bs-target="#exampleModal" class="icon-btn add-btn">
     <div class="add-icon"></div>
-    <div class="btn-txt px-2">Add Product</div>
+    <div class="btn-txt">Add Product</div>
 </button>
 
 

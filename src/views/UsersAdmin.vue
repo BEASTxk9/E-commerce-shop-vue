@@ -1,13 +1,7 @@
 <template>
 <Nav></Nav>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-10">
-<Admin></Admin>
-    </div>
-  </div>
-</div>
 
+<Admin></Admin>
 
 </template>
 

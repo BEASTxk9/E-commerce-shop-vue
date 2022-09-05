@@ -52,20 +52,6 @@
 
         </div>
 
-        <div class="row justify-content-center">
-            <!-- right -->
-            <div class="col-sm-5">
-          <!-- info -->
-          <div class="col-sm-12 col-md-8">
-            <h5>shanestevensxk9@gmail.com</h5>
-          </div>
-            </div>
-            <!-- left -->
-            <div class="col-sm-5">
-                <h5>067 859 6682</h5>
-            </div>
-        </div>
-
       <!-- footer -->
       <footer class="mt-3 py-1">
         <p>&copy; Made by Shane Stevens.</p>
@@ -82,6 +68,7 @@ export default {
 
 <style scoped>
 section {
+min-width: fit-content;
   padding-top: 1rem;
   border-top: 0.3px solid goldenrod;
   border-bottom: 0.3px solid goldenrod;

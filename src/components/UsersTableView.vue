@@ -1,51 +1,43 @@
 <template>
+  
 <section v-if="users">
 
-    <div class="container">
+    <div class="container-fluid">
 
+      <!-- table header -->
       <div id="header" class="row">
 
-        <div class="col-sm-1 text-start">
-  
-        </div>
-
-        <div class="col-sm-11 text-end">
+        <!-- header -->
+        <div class="col-md-7 col-sm-12 text-start">
           <h1>USERS</h1>
+        </div>
+  
+        <!-- admin nav switch -->
+        <div class="col-sm-12 col-md-5">
+<!-- user admin -->
+            <router-link id="admin" to="/usersadmin"><i class="fa-solid fa-user-lock"></i> User Admin</router-link> |
+  <!-- products admin -->
+            <router-link id="admin" to="/productsadmin"><i class="fa-solid fa-bag-shopping"></i> Products Admin</router-link> 
         </div>
 
       </div>
 
-      <div id="sidenav" class="row">
-
-        <div class="col-sm-1 px-2">
+    <!-- table -->
+      <div class="row">
+  <!-- side nav -->
+        <div id="sidenav" class="col-sm-12 col-md-1 px-2">
           <nav class="text-start">
             <router-link to="/landing">Home</router-link> <br><br>
 
             <router-link to="/shop">Shop</router-link> <br><br>
 
             <router-link to="/contact">Contact</router-link> <br><br>
-            
-            <div class="row">
-
-              <div class="col-sm-5">
-                       <!-- user admin -->
-            <router-link to="/usersadmin"><i class="fa-solid fa-user-lock"></i></router-link> 
-              </div>
-
-              <div class="col-sm-5">
-                <!-- products admin -->
-            <router-link to="/productsadmin"><i class="fa-solid fa-bag-shopping"></i></router-link> 
-              </div>
-
-            </div>
-     
-
-            
           </nav>
         </div>
 
-        <div class="col-sm-10 px-2">
-         <table class="table-fluid table-bordered">
+        <!-- table -->
+        <div class="col-sm-11">
+<table class="table-fluid table-bordered">
 <thead>
     <th>ID</th>
     <th>Full Name</th>
@@ -90,13 +82,7 @@
 
       </div>
 
-
     </div>
-
-
-
-
-
 
 </section>
 
@@ -135,21 +121,38 @@ computed: {
 
 <style scoped>
 section{
-  min-height: 89vh;
+  min-height: fit-content;
+  margin-bottom: 4.3vh;
+  border: 1px solid grey;
+  overflow: scroll;
+}
+
+#header{
+  border-bottom: 1px solid grey;
 }
 
 table{
+  display: inline-block;
   background-color: rgba(0, 0, 0, 0.771);
   margin-bottom: 5rem;
+  padding-top: 10px;
 }
 
 thead{
   border-left: 1px solid grey;
-    border-right: 1px solid grey;
-    border-bottom: 1px solid grey;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    
+  border-right: 1px solid grey;
+}
+
+#admin{
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  font-family: 'Libre Baskerville', serif;
+  transition: all 0.3s ease-in-out;
+}
+
+#admin:hover{
+  color: goldenrod;
 }
 
 h1{
@@ -157,29 +160,20 @@ h1{
   font-family: 'Libre Baskerville', serif;
 }
 
-#sidenav {
+#sidenav{
   border-right: 1px solid grey;
-    border-bottom: 1px solid grey;
-  border-left: 1px solid grey;
-    background-image: transparent;
-  background: transparent;
-  width: 118.1%;
+  border-bottom: 1px solid grey;
 }
 
 nav {
   border: none;
     background-image: transparent;
   background: transparent;
-}
-
-#header {
-  overflow-x: scroll;
-  border: 1px solid grey;
-  width: 118.1%;
-  padding-top: 10px;
+  font-family: 'Libre Baskerville', serif;
 }
 
 #password{
+  display: flex;
   font-size: 9px;
 }
 </style>

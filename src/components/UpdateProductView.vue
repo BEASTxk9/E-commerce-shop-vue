@@ -106,8 +106,5 @@ methods: {
 </script>
 
 <style scoped>
-  .button{
-    margin-right: 2rem;
-  }
-
+  
 </style>
