@@ -134,13 +134,6 @@ justify-content: center;
 
 @media only screen and (max-width: 470px) {
 
-  img{
-  height: 80vh;
-  position: relative;
-  top: 1vh;
-  box-shadow: 0px 0px 21px rgba(255, 255, 255, 0.5);
-}
-
 p{
   padding-left: 10px;
   font-size: 1rem;
@@ -148,13 +141,8 @@ p{
 }
 
 @media only screen and (max-width: 372px) {
-
-img{
-height: 60vh;
-position: relative;
-top: 1vh;
-box-shadow: 0px 0px 21px rgba(255, 255, 255, 0.5);
+  img{
+  height: 50vh;
 }
-
 }
 </style>
