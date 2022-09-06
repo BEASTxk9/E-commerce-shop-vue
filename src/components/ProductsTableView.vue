@@ -15,17 +15,27 @@
         </div>
 
         <!-- admin nav switch -->
-        <div class="col-md-6 col-sm-12 text-end">
-          <!-- user admin -->
-          <router-link id="admin" to="/usersadmin"
-            ><i class="fa-solid fa-user-lock"></i> User Admin</router-link
-          >
-          |
-          <!-- products admin -->
-          <router-link id="admin" to="/productsadmin"
-            ><i class="fa-solid fa-bag-shopping"></i> Products
-            Admin</router-link
-          >
+        <div class="col-md-6 col-sm-12 text-center">
+                       <!-- ADMIN -->              
+<span class="dropdown px-1">
+  <button class="button b btn-layout dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    ADMIN
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li>   
+        <!-- user admin -->
+          <router-link class="mx-1" id="admin" to="/usersadmin" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Users Admin Table.">
+            Users Admin<i class="fa-solid fa-user-lock"></i> 
+            
+          </router-link> 
+        </li>
+    <li>        <!-- products admin -->
+          <router-link id="admin" to="/productsadmin" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Products Admin Table." class="text-center p">
+            Products Admin<i class="fa-solid fa-bag-shopping px-1"></i> 
+          </router-link> 
+        </li>
+  </ul>
+</span>
         </div>
       </div>
 
@@ -149,6 +159,10 @@ section {
   overflow: scroll;
 }
 
+.button{
+  margin-top: 10px;
+}
+
 #header {
   border-bottom: 1px solid grey;
 }
@@ -165,16 +179,25 @@ thead {
   border-right: 1px solid grey;
 }
 
-#admin {
+#admin{
+  color: grey;
+  font-size: 1.05rem;
   text-decoration: none;
-  font-size: 2rem;
-  color: white;
-  font-family: "Libre Baskerville", serif;
-  transition: all 0.3s ease-in-out;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
 }
 
-#admin:hover {
+#admin:hover{
   color: goldenrod;
+}
+
+.dropdown-menu{
+  background-color: rgb(29, 26, 26);
+  transition: all 0.2s ease-in-out;
+}
+
+li:hover{
+  background-color: grey;
 }
 
 h1 {

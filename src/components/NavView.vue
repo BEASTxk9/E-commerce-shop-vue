@@ -16,21 +16,33 @@
         <router-link class="px-1" to="/shop">Shop</router-link> 
         <router-link to="/contact">Contact</router-link> 
 
-                <!-- ADMIN -->
-                <span v-if="user">
-          <!-- user admin -->
-          <router-link class="mx-1" id="admin" v-if="user.userRole == 'admin'" to="/usersadmin" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Users Admin Table."><i class="fa-solid fa-user-lock"></i>
-          </router-link> 
-          <!-- products admin -->
-          <router-link id="admin" v-if="user.userRole == 'admin'" to="/productsadmin" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Products Admin Table." class="text-center p"><i class="fa-solid fa-bag-shopping"></i>
-          </router-link>
-        </span>
-
         <!-- cart -->
-        <Cart></Cart> 
+        <Cart></Cart>
 
         <!-- user profile -->
         <Profile :user="user"></Profile>
+
+                <!-- ADMIN -->              
+<span v-if="user" class="dropdown px-1">
+  <button class="b btn-layout dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    ADMIN
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li>   
+        <!-- user admin -->
+          <router-link class="mx-1" id="admin" v-if="user.userRole == 'admin'" to="/usersadmin" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Users Admin Table.">
+            Users Admin<i class="fa-solid fa-user-lock"></i> 
+            
+          </router-link> 
+        </li>
+    <li>        <!-- products admin -->
+          <router-link id="admin" v-if="user.userRole == 'admin'" to="/productsadmin" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Products Admin Table." class="text-center p">
+            Products Admin<i class="fa-solid fa-bag-shopping px-1"></i> 
+          </router-link> 
+        </li>
+  </ul>
+</span>
+
         <!-- logout -->
         <router-link id="logout" to="/" data-bs-placement="bottom" title="Logout.">
           <i class="fa-solid fa-person-running px-1"></i>
@@ -85,18 +97,24 @@ export default {
 }
 
 #admin{
-  color: white;
-  font-size: 1.3rem;
+  color: grey;
+  font-size: 1.05rem;
+  text-decoration: none;
   padding: 0;
-  transition: all 0.3s ease-in-out;
-  border: 1px solid grey;
-  border-radius: 360px;
-  width: 33px;
+  transition: all 0.2s ease-in-out;
 }
 
 #admin:hover{
   color: goldenrod;
-  border: 1px solid goldenrod;
+}
+
+.dropdown-menu{
+  background-color: rgb(29, 26, 26);
+  transition: all 0.2s ease-in-out;
+}
+
+li:hover{
+  background-color: grey;
 }
 
 #logout{
