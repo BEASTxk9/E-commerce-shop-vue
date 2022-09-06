@@ -24,7 +24,7 @@
 
                 <!-- ADMIN -->              
 <span v-if="user" class="dropdown px-1">
-  <button class="b btn-layout dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     ADMIN
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -97,24 +97,36 @@ export default {
 }
 
 #admin{
-  color: grey;
-  font-size: 1.05rem;
+  color: white;
+  font-size: 1rem;
   text-decoration: none;
   padding: 0;
   transition: all 0.2s ease-in-out;
 }
 
-#admin:hover{
-  color: goldenrod;
-}
-
 .dropdown-menu{
   background-color: rgb(29, 26, 26);
   transition: all 0.2s ease-in-out;
+  padding-left: 5px;
 }
 
 li:hover{
   background-color: grey;
+}
+
+.dropdown-toggle{
+  color: white;
+  background-color: transparent;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding-top: 4px;
+  padding-bottom: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-toggle:hover{
+  color: goldenrod;
+  border: 1px solid goldenrod;
 }
 
 #logout{

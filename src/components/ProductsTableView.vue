@@ -242,4 +242,12 @@ nav {
 #delete {
   margin-left: 5px;
 }
+
+tr{
+  transition: all 0.2s ease-in-out;
+}
+
+tr:hover{
+  background-color: rgb(43, 43, 43);
+}
 </style>
