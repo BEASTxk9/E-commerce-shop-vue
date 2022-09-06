@@ -74,6 +74,7 @@ export default createStore({
             swal({
               icon: 'error',
               title: `${json.msg}`,
+              buttons: false,
               timer: 2000,
             })
           } 
@@ -107,6 +108,7 @@ export default createStore({
             swal({
               icon: 'error',
               title: `${data.msg}`,
+              buttons: false,
               timer: 4000,
             })
           } else {
@@ -176,6 +178,7 @@ export default createStore({
           context.dispatch("getusers",
             swal({
               icon: "success",
+              buttons: false,
               buttons: false,
               timer: 1000,
             })
