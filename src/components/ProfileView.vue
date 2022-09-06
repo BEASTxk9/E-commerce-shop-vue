@@ -5,29 +5,44 @@
       </button>
 
 <div v-if="user" class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling1" aria-labelledby="offcanvasScrollingLabel">
-  <div class="offcanvas-header">
-    <h1 class="offcanvas-title" id="offcanvasScrollingLabel1">User Profile.</h1>
+  <div class="offcanvas-header text-center">
+    <h1 class="offcanvas-title text-center" id="offcanvasScrollingLabel1">User Profile.</h1>
+    <!-- close profile -->
     <button type="button"  class="b1" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
   </div>
   <div class="offcanvas-body">
   
+
     <div class="container">
 
 <div class="row justify-content-center py-3">
     <img src="https://i.postimg.cc/XJbk7hX2/Rose-Gold-Brush-Glitter-Feminine-Boutique-Circle-Logo.png" class="rounded-pill">
 </div>
 
+<hr>
+
         <div class="row justify-content-center text-start">
      <div class="col-sm-12">
                
 
-    <p> <span>Name:</span> {{user.fullName}}</p>
-    <p><span>Email:</span> {{user.email}}</p>
-    <p><span>DOB:</span> {{user.dateOfBirth}}</p>
-    <p><span>Phone Number:</span> 0{{user.phoneNO}}</p>
-    <p><span>Join Date:</span> {{user.joinDate}}</p>
+   <label for="name">Name:</label>
+      <p class="data">"{{user.fullName}}"</p>
+<hr>
+      <label for="email">Email:</label>
+      <p class="data">"{{user.email}}"</p>
+  <hr>
+      <label for="dateOfBirth">DOB:</label>
+      <p class="data">"{{user.dateOfBirth}}"</p>
+<hr>
+      <label for="phoneNO">Phone Number:</label>
+      <p class="data">+27 {{user.phoneNO}}</p>
+<hr>
+      <label for="joinDate">Join Date:</label>
+  <p class="data">"{{user.joinDate}}"</p>
+    <hr>
             </div>
         </div>
+
     </div>
   
 
@@ -41,14 +56,9 @@
     <h2 class="offcanvas-title" id="offcanvasScrollingLabel1">User Profile.</h2>
     <button type="button"  class="b1" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
   </div>
-  <div class="offcanvas-body">
-    <div class="container">
-        <div class="row justify-content-center py-3 text-center">
-    <img src="https://i.postimg.cc/XJbk7hX2/Rose-Gold-Brush-Glitter-Feminine-Boutique-Circle-Logo.png" class="rounded-pill">
+  <div class="offcanvas-body text-center">
 
-    <p class="py-2">Your Login has Timed out.<br> Please Login Again.</p>
-</div>
-    </div>
+    <p>Your Not Logged in?<br>Please Login To View Your Profile.</p>
   
   </div>
 </div>
@@ -58,6 +68,7 @@
 </template>
 
 <script>
+
 export default {
     props: ['user'],
     mounted(){
@@ -83,13 +94,14 @@ button:hover{
 }
 
 .offcanvas{
+  background-color: rgb(29, 26, 26);
     color: grey;
     z-index: 1;
 }
 
 img{
-    height: 33vh;
-    width: 15vw;
+    height: 25vh;
+    width: 25vh;
 }
 
 .offcanvas-title{
@@ -100,7 +112,7 @@ img{
 
 .b1{
     background-color: transparent;
-    color: black;
+    color: grey;
     transition: all 0.3s ease-in-out;
 }
 
@@ -108,12 +120,15 @@ img{
     color: goldenrod;
 }
 
-span{
+label{
     color: grey;
     font-weight: bold;
+    font-size: 1.5rem;
+    text-align: start;
 }
 
-p{
+.data{
     color: goldenrod;
 }
+
 </style>

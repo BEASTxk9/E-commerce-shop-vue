@@ -25,7 +25,7 @@ export default {
 section{
   margin: 0;
   padding: 0;
-  scroll-margin-block-start: 0vh;
+
   padding-bottom: 5vh;
 }
 </style>

@@ -89,7 +89,9 @@ export default {
 
 <style scoped>
 body{
-  scroll-margin-block-start: -80vh;
+  scroll-margin-block-start: 50vh;
+  scroll-margin-block-start: 50px;
+  scroll-margin: 50px;
 }
 
 .container{

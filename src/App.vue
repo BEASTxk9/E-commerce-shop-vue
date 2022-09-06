@@ -32,6 +32,8 @@ body{
   margin: 0;
   padding: 0;
   scroll-behavior: smooth 0;
+  scroll-margin-block-start: 0px;
+  scroll-margin: 0px;
   margin-top: 6.4rem;
   color: grey;
   background-color: #000000;
