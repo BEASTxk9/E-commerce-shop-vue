@@ -6,10 +6,10 @@
         <!-- search -->
         <div id="search" class="row justify-content-center">
           <h4>Search</h4>
-          <div class="col-sm-4 text-end">
+          <div id="sea" class="col-sm-12 col-md-4 text-end">
             <input type="text" placeholder="What are you looking for?" v-model="search" class="mb-5">
           </div>
-          <div class="col-sm-4 text-start">
+          <div id="select" class="col-sm-12 col-md-4 text-start">
             <select v-model="search">
               <option></option>
               <option value="coffee">coffee</option>
@@ -38,7 +38,7 @@
   </p>
   </div>
 
-            <div class="card-img">
+            <div class="card-img col-sm-8">
 
               <router-link class="text-decoration-none bg-transparent"
                 :to="{ name: 'single', params: { id: product.Prod_id } }">
@@ -213,9 +213,58 @@ transform: scale(1.1);
   font-weight: bold;
 }
 
-@media only screen and (max-width: 900px) {
- img{
+@media only screen and (max-width:1124px) {
+img{
+  width: 16vw;
+}
+}
+
+@media only screen and (max-width: 963px) {
+  img{
+  width: 17vw;
+}
+
+}
+
+@media only screen and (max-width: 880px) {
+  img{
+  width: 19vw;
+}
+}
+
+@media only screen and (max-width: 771px) {
+  img{
+  width: 21vw;
+}
+}
+
+@media only screen and (max-width: 700px) {
+  img{
   width: 23vw;
- }
+}
+}
+
+@media only screen and (max-width: 630px) {
+  img{
+  width: 27vw;
+}
+}
+
+@media only screen and (max-width: 570px) {
+  img{
+  width: 34vw;
+}
+}
+
+@media only screen and (max-width: 480px) {
+  img{
+  width: 40vw;
+}
+}
+
+@media only screen and (max-width: 400px) {
+  img{
+  width: 50vw;
+}
 }
 </style>
