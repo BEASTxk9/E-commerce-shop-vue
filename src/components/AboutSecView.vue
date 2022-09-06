@@ -130,9 +130,6 @@ justify-content: center;
   padding-bottom:4vh;
 }
 
-img{
-  height: 100vh;
-}
 }
 
 @media only screen and (max-width: 470px) {
