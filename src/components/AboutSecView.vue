@@ -132,6 +132,13 @@ justify-content: center;
 
 }
 
+@media only screen and (max-width: 500px) {
+img{
+  height: 55vh;
+}
+
+}
+
 @media only screen and (max-width: 470px) {
 
 p{
