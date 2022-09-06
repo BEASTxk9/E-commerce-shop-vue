@@ -2,7 +2,7 @@
 <section class="showcase fixed-top">
 
   <div class="video-container">
-<div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe src="https://streamable.com/e/kywtr1?autoplay=1&nocontrols=1" frameborder="0" width="100%" height="100%" allowfullscreen allow="autoplay" style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
+<div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe src="https://streamable.com/e/kywtr1?autoplay=1&nocontrols=1" frameborder="0" width="100%" height="100%" allowfullscreen allow="autoplay" style="position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
     </div>
 
   <div id="data" class="container">
@@ -50,11 +50,6 @@ export default {
   overflow: hidden;
 }
 
-iframe {
-   z-index: -10;
-  height: 100vh;
-  width: 100vh;
-}
 
 .video-container {
    z-index: -10;
@@ -117,9 +112,24 @@ h1:after {
 		-5px -5px 10px rgba(0, 0, 0, 0.4);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1250px) {
+
 iframe{
-  display: none;
+  margin-top: -40vh;
+  width: 400%;
+  height: 400%;
 }
+}
+
+@media only screen and (max-width: 994px) {
+
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+
+@media only screen and (max-width: 400px) {
+
 }
 </style>

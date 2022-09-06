@@ -38,4 +38,13 @@ align-items: start;
  #links{
     padding-top: 2rem;
  }
+
+ /* main */
+@media only screen and (max-width: 1024px) {
+
+#logo{
+ display: none;
+
+}
+}
 </style>

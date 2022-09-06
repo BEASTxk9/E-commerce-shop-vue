@@ -71,7 +71,6 @@ export default {
 <style scoped>
 section {
 min-width: fit-content;
-  padding-top: 1rem;
   border-top: 0.3px solid goldenrod;
   border-bottom: 0.3px solid goldenrod;
   font-family: "Libre Baskerville", serif;
@@ -110,5 +109,11 @@ min-width: fit-content;
 
 #copyrights{
 color: goldenrod;
+}
+
+@media only screen and (max-width: 450px) {
+    #copyrights{
+padding-bottom: 6vh;
+}
 }
 </style>

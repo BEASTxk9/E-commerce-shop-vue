@@ -5,12 +5,12 @@
     <div class="container">
       <div class="row text-start justify-content-center">
         <!-- img col -->
-        <div id="img" class="col-sm-12 col-md-5">
+        <div id="img" class="col-sm-12 col-md-6 col-lg-5">
 <img class="rounded" src="https://i.postimg.cc/wxk7ptDY/robert-euro-djojoseputro-ot-Eky1qwe-Cg-unsplash-2.jpg" defer>
         </div>
 
         <!-- text col -->
-        <div id="about" class="col-sm-12 col-md-5">
+        <div id="about" class="col-sm-12 col-md-6 col-lg-5 text-start">
 
 <h2 class="text-center py-1">ROASTED BEANS</h2>
 
@@ -65,7 +65,7 @@ h1, h2{
 }
 
 p{
-  font-size: 1.41rem;
+  font-size: 1.56rem;
 }
 
 span{
@@ -81,6 +81,45 @@ span{
   top: 14vh;
 }
 
+@media only screen and (max-width: 1250px) {
+  p{
+  padding-left: 10px;
+  font-size: 1.2rem;
+}
+
+#img{
+  padding-bottom: 4vh;
+  text-align: center;
+justify-content: center;
+}
+
+}
+
+@media only screen and (max-width: 1075px) {
+  p{
+  padding-left: 10px;
+  font-size: 1.15rem;
+}
+
+#img{
+  padding-bottom: 4vh;
+  text-align: center;
+justify-content: center;
+}
+
+}
+
+@media only screen and (max-width: 994px) {
+  p{
+  padding-left: 10px;
+  font-size: 1.1rem;
+}
+
+#img{
+  padding-bottom: 4vh;
+}
+}
+
 @media only screen and (max-width: 600px) {
 #about{
 text-align: start;
@@ -88,9 +127,22 @@ justify-content: center;
 }
 
 #img{
-  padding-bottom: 3vh;
-  text-align: center;
-justify-content: center;
+  padding-bottom:4vh;
+}
+}
+
+@media only screen and (max-width: 400px) {
+
+  img{
+  height: 60vh;
+  position: relative;
+  top: 1vh;
+  box-shadow: 0px 0px 21px rgba(255, 255, 255, 0.5);
+}
+
+p{
+  padding-left: 10px;
+  font-size: 1rem;
 }
 }
 </style>

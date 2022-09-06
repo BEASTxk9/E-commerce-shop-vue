@@ -31,7 +31,6 @@ Footer
 body{
   margin: 0;
   padding: 0;
-  scroll-margin-block-start: 0;
   scroll-behavior: smooth 0;
   margin-top: 6.4rem;
   color: grey;
@@ -424,4 +423,6 @@ button{
 .loader-square:nth-of-type(7) {
  animation-delay: -10s;
 }
+
+
 </style>
