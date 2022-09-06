@@ -131,14 +131,12 @@ iframe{
 
 h1{
   font-size: 6rem;
-  top: 6rem;
 }
 }
 
 @media only screen and (max-width: 994px) {
 h1{
   font-size: 5rem;
-  top: 6.5rem;
 }
 }
 

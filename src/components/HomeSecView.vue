@@ -123,14 +123,12 @@ iframe{
 h1{
   font-size: 6rem;
   position: relative;
-  top: 6vh;
 }
 }
 
 @media only screen and (max-width: 994px) {
 h1{
   font-size: 5rem;
-  top: 6.5rem;
 }
 }
 
