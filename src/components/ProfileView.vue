@@ -10,6 +10,7 @@
     <!-- close profile -->
     <button type="button"  class="b1" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
   </div>
+  <hr>
   <div class="offcanvas-body">
   
 
@@ -52,10 +53,13 @@
 
 
       <div v-else class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling1" aria-labelledby="offcanvasScrollingLabel">
+
+        <!-- headder -->
   <div class="offcanvas-header">
     <h2 class="offcanvas-title" id="offcanvasScrollingLabel1">User Profile.</h2>
     <button type="button"  class="b1" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
   </div>
+  <hr>
   <div class="offcanvas-body text-center">
 
     <p>Your Not Logged in?<br>Please Login To View Your Profile.</p>
