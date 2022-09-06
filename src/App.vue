@@ -83,7 +83,10 @@ nav a.router-link-exact-active {
 
 } 
 
+/* auto scroll top */
+
 #myBtn{
+  margin-bottom: 1rem;
   font-size: 1.5rem;
   width: 49px;
   justify-content: end;
