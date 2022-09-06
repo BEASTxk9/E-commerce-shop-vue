@@ -84,6 +84,7 @@ button:hover{
 
 .offcanvas{
     color: grey;
+    z-index: 1;
 }
 
 img{

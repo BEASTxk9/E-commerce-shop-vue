@@ -41,7 +41,7 @@ Nav{
  background-color: transparent;
 border: none;
 background-image: none;
-/* z-index: -1; */
+z-index: -1;
 
 }
 
