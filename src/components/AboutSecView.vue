@@ -129,12 +129,16 @@ justify-content: center;
 #img{
   padding-bottom:4vh;
 }
+
+img{
+  height: 60vh;
+}
 }
 
 @media only screen and (max-width: 400px) {
 
   img{
-  height: 60vh;
+  height: 55vh;
   position: relative;
   top: 1vh;
   box-shadow: 0px 0px 21px rgba(255, 255, 255, 0.5);
@@ -149,7 +153,7 @@ p{
 @media only screen and (max-width: 320px) {
 
 img{
-height: 55vh;
+height: 40vh;
 position: relative;
 top: 1vh;
 box-shadow: 0px 0px 21px rgba(255, 255, 255, 0.5);
