@@ -45,7 +45,7 @@
 
         <!-- logout -->
         <router-link id="logout" to="/" data-bs-placement="bottom" title="Logout.">
-          <i class="fa-solid fa-person-running px-1"></i>
+          <i class="fa-solid fa-person-running px-1 floating"></i>
           <i class="fa-solid fa-right-from-bracket"></i></router-link>
 
       </div>
@@ -130,11 +130,27 @@ li:hover{
 }
 
 #logout{
-  margin-left: 30px;
+  margin-left: 15px;
+  color: red;
 }
 
 .p{
   margin-right: 5px;
+}
+
+.floating { 
+    animation-name: floating;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    color: red;
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    25%  { transform: translate(0, 5px); }
+    75%  { transform: translate(0, -5px); }
+    100%   { transform: translate(0, 0px); }   
 }
 
 /* main */
@@ -143,6 +159,13 @@ li:hover{
 #logo{
  display: none;
 
+}
+}
+
+@media only screen and (max-width: 340px) {
+
+#logout{
+padding: 0;
 }
 }
 </style>
