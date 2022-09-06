@@ -151,7 +151,7 @@ h4 {
 img {
   image-rendering: crisp-edges;
   height: 25vh;
-  width: 12vw;
+  width: 25vh;
   border: 1px solid goldenrod;
   transition: all 0.3s ease-in-out;
 }
@@ -213,58 +213,4 @@ transform: scale(1.1);
   font-weight: bold;
 }
 
-@media only screen and (max-width:1124px) {
-img{
-  width: 16vw;
-}
-}
-
-@media only screen and (max-width: 963px) {
-  img{
-  width: 17vw;
-}
-
-}
-
-@media only screen and (max-width: 880px) {
-  img{
-  width: 19vw;
-}
-}
-
-@media only screen and (max-width: 771px) {
-  img{
-  width: 21vw;
-}
-}
-
-@media only screen and (max-width: 700px) {
-  img{
-  width: 23vw;
-}
-}
-
-@media only screen and (max-width: 630px) {
-  img{
-  width: 27vw;
-}
-}
-
-@media only screen and (max-width: 570px) {
-  img{
-  width: 34vw;
-}
-}
-
-@media only screen and (max-width: 480px) {
-  img{
-  width: 40vw;
-}
-}
-
-@media only screen and (max-width: 400px) {
-  img{
-  width: 50vw;
-}
-}
 </style>

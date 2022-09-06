@@ -3,9 +3,9 @@
 
 <div class="row">
 
-<div class="col-sm-6 text-start">
+<div class="col-sm-12 col-lg-6 text-start">
 
-  <h1>{{product[0].Prod_name}}.</h1>
+  <router-link class="px-1" to="/shop">Back</router-link><h1>{{product[0].Prod_name}}.</h1>
   <h4 class="pb-3 pt-1">R{{product[0].price}}</h4>
   <h3 class="pt-3">"{{product[0].description}}"</h3>
 
@@ -21,10 +21,10 @@
 
 </div>
 
-<div class="col-sm-6">
+<div class="col-sm-12 col-lg-6">
 <div class="row">
   <div class="col-sm-12 text-end">
-    <p> 
+    <p id="count"> 
       <span>({{product[0].category}})</span> <span class="b btn-layout">
       {{product[0].Prod_id}}/40
     </span>
@@ -104,6 +104,11 @@ span{
      background-color: transparent;
 }
 
+a{
+  font-size: 16px;
+  color: goldenrod;
+}
+
 h1{
   font-size: 6rem;
    font-family: 'Libre Baskerville', serif;
@@ -114,7 +119,7 @@ img{
   image-rendering: auto;
   border: 1px solid goldenrod;
   height: 73vh;
-  width: 32vw;
+  width: 73vh;
   max-width: 100%;
   max-height: 100%;
 }
@@ -123,5 +128,46 @@ img{
   color: goldenrod;
   font-size: 1.3rem;
   padding-top: 1.5rem;
+}
+
+@media only screen and (max-width: 550px) {
+  img{
+  height: 67vh;
+  width: 67vh;
+}
+
+#count{
+  display: none;
+}
+
+h1{
+  font-size: 4rem;
+}
+
+h3{
+  font-size: 1.2rem;
+}
+}
+
+@media only screen and (max-width: 450px) {
+  img{
+  height: 60vh;
+  width: 60vh;
+}
+}
+
+@media only screen and (max-width: 400px) {
+  img{
+  height: 48vh;
+  width: 48vh;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h3{
+  font-size: 1rem;
+}
 }
 </style>
