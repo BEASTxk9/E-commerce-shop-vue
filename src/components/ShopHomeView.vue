@@ -128,5 +128,27 @@ iframe{
   width: 400%;
   height: 400%;
 }
+
+h1{
+  font-size: 6rem;
+}
+}
+
+@media only screen and (max-width: 994px) {
+h1{
+  font-size: 5rem;
+}
+}
+
+@media only screen and (max-width: 600px) {
+  h1{
+  font-size: 4.5rem;
+}
+}
+
+@media only screen and (max-width: 400px) {
+  h1{
+  font-size: 4rem;
+}
 }
 </style>

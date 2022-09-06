@@ -145,4 +145,15 @@ p{
   font-size: 1rem;
 }
 }
+
+@media only screen and (max-width: 320px) {
+
+img{
+height: 55vh;
+position: relative;
+top: 1vh;
+box-shadow: 0px 0px 21px rgba(255, 255, 255, 0.5);
+}
+
+}
 </style>
