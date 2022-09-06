@@ -89,18 +89,6 @@ export default createStore({
           }
         }
     )
-  //   context.commit("setUser", json,
-  //   swal({
-  //     icon: "success",
-  //     title: `Registration Successfull`,
-  //     button: 'OK'
-  //   })
-  // )
-        // .catch(e => context.commit(swal({
-        //   icon: "error",
-        //   title: `${data.msg}`,
-        //   button: 'OK'
-        // })));
     },
 
     // login

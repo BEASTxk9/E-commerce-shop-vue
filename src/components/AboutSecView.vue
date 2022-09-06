@@ -131,14 +131,14 @@ justify-content: center;
 }
 
 img{
-  height: 60vh;
+  height: 100vh;
 }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 470px) {
 
   img{
-  height: 55vh;
+  height: 80vh;
   position: relative;
   top: 1vh;
   box-shadow: 0px 0px 21px rgba(255, 255, 255, 0.5);
@@ -150,10 +150,10 @@ p{
 }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 372px) {
 
 img{
-height: 40vh;
+height: 60vh;
 position: relative;
 top: 1vh;
 box-shadow: 0px 0px 21px rgba(255, 255, 255, 0.5);
