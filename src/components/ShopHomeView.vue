@@ -1,7 +1,7 @@
 <template>  
   <section class="showcase fixed-top">
     <div class="video-container">
-        <div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe src="https://streamable.com/e/j6ksxm?autoplay=1&nocontrols=1" frameborder="0" width="100%" height="100%" allowfullscreen allow="autoplay" style="position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
+        <div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe src="https://streamable.com/e/8e59m0?autoplay=1&nocontrols=1" frameborder="0" width="100%" height="100%" allowfullscreen allow="autoplay" style="position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
     </div>
 
     <div id="data">
@@ -10,10 +10,6 @@
 <div class="col-sm-12">      
      <h1>ROASTED BEANS</h1>
 </div>
-
-                <div id="subheading" class="col-sm-8">
-                    <h4>"Roasted Beans was created in 2010 in the USA. Our coffee beans are imported from Colombia which is one of the top five countries with the highest quality coffee beans."</h4>
-                </div>
             </div>
         </div>
 
@@ -80,40 +76,12 @@ section{
 #data {
   z-index: 1;
   margin-top: -5rem;
+  font-family: 'Libre Baskerville', serif;
+  color: goldenrod;
 }
 
-/* logo */
-div {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-h1 {
-    background: linear-gradient(to bottom, #cfc09f 22%,#634f2c 24%, #cfc09f 26%, #cfc09f 27%,#ffecb3 40%,#3a2c0f 78%); 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #fff;
-font-family: 'Playfair Display', serif;
-    position: relative;
-	text-transform: uppercase;	
-	font-size: 7rem;
-	margin: 0;
-	font-weight: 400;
-}
-
-h1:after {
-    background: none;
-    content: attr(data-heading);
-    left: 0;
-	top: 0;
-    z-index: -1;
-    position: absolute;
-    text-shadow: 
-		-1px 0 1px #c6bb9f, 
-		0 1px 1px #c6bb9f, 
-		5px 5px 10px rgba(0, 0, 0, 0.4),
-		-5px -5px 10px rgba(0, 0, 0, 0.4);
+h1{
+  font-size: 5rem;
 }
 
 /* subheading */

@@ -3,6 +3,10 @@
     <div class="container">
       <div class="row justify-content-center text-center">
 
+        <div id="subheading" class="col-sm-8">
+                    <h4>"Roasted Beans was created in 2010 in the USA. Our coffee beans are imported from Colombia which is one of the top five countries with the highest quality coffee beans."</h4>
+                </div>
+
         <!-- search -->
         <div id="search" class="row justify-content-center">
           <h4>Search</h4>
