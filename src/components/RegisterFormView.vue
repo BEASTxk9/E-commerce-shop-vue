@@ -7,16 +7,13 @@
 
           
 
-          <form @submit.prevent="register" method="POST" autocomplete="on">
+          <form @submit.prevent="register" method="POST">
 
         <h1>REGISTER</h1>
 
             <!-- fullName -->
             <label for="fullName">Full Name:</label><br>
             <input class="w-50" type="text" v-model="fullName" placeholder="Insert your Full Name" required><br>
-            <!-- email -->
-            <label for="email">Email:</label><br>
-            <input class="w-50" type="email" v-model="email" placeholder="Insert your Email" required><br>
 
             <!-- gender -->
             <label for="gender">Gender:</label><br>
@@ -35,6 +32,10 @@
             <label for="phoneNO">Phone Number:</label><br>
             <input class="w-50" type="tel" v-model="phoneNO" placeholder="Insert your Phone Number" maxlength="10"
               required><br>
+
+                          <!-- email -->
+            <label for="email">Email:</label><br>
+            <input class="w-50" type="email" v-model="email" placeholder="Insert your Email" required><br>
 
             <!-- password -->
             <label for="password">Password:</label><br>
