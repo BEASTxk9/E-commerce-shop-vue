@@ -45,6 +45,7 @@ export default {
 <style scoped>
 body {
   overflow-x: none;
+
 }
 
 Nav {
@@ -100,13 +101,38 @@ Nav {
 
 #data {
   z-index: 1;
-  margin-top: -5rem;
-  font-family: 'Libre Baskerville', serif;
-  color: goldenrod;
+  margin-top: -10rem;
 }
 
-h1{
-  font-size: 5rem;
+/* logo */
+div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+color: goldenrod;
+font-family: 'Playfair Display', serif;
+    position: relative;
+	text-transform: uppercase;	
+	font-size: 7rem;
+	margin: 0;
+	font-weight: 400;
+}
+
+h1:after {
+    background: none;
+    content: attr(data-heading);
+    left: 0;
+	top: 0;
+    z-index: -1;
+    position: absolute;
+    text-shadow: 
+		-1px 0 1px #c6bb9f, 
+		0 1px 1px #c6bb9f, 
+		5px 5px 10px rgba(0, 0, 0, 0.4),
+		-5px -5px 10px rgba(0, 0, 0, 0.4);
 }
 
 @media only screen and (max-width: 1250px) {
@@ -122,12 +148,14 @@ iframe{
 
 h1{
   font-size: 6rem;
+  top: 6rem;
 }
 }
 
 @media only screen and (max-width: 994px) {
 h1{
   font-size: 5rem;
+  top: 6.5rem;
 }
 }
 
