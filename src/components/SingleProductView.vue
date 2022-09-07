@@ -132,11 +132,17 @@ img{
   padding-top: 1.5rem;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 991.9px) {
   img{
+display: none;
+}
+
+}
+@media only screen and (max-width: 550px) {
+  /* img{
   height: 67vh;
   width: 67vh;
-}
+} */
 
 #count{
   display: none;
@@ -152,17 +158,17 @@ h3{
 }
 
 @media only screen and (max-width: 450px) {
-  img{
+  /* img{
   height: 60vh;
   width: 60vh;
-}
+} */
 }
 
 @media only screen and (max-width: 400px) {
-  img{
+  /* img{
   height: 48vh;
   width: 48vh;
-}
+} */
 
 h1{
   font-size: 3rem;
