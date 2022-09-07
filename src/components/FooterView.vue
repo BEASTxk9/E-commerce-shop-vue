@@ -75,7 +75,7 @@
       </div>
 
       <!-- footer -->
-      <footer class="mt-3 py-1">
+      <footer class="mt-3 py-1 text-center">
         <p id="copyrights">2022 &copy; Made by Shane Stevens.</p>
       </footer>
     </div>
