@@ -19,7 +19,7 @@
     <!-- data -->
     <div class="offcanvas-body">
 
-      <div class="container">
+      <div class="container py-4">
         <div class="row text-start">
           <label for="dropoff">Drop off Location:</label>
           <input id="location" type="text" placeholder="Insert Drop off Location">
@@ -36,8 +36,16 @@
               Product ID: {{product.productData[0].Prod_id}}
             </div>
 
-            <div class="col-sm-6 py-4">
-              <img :src="product.productData[0].img1" class="rounded-pill">
+            <div class="col-sm-6 py-1">
+              <img :src="product.productData[0].img1" class="rounded-pill my-2">
+
+              <button class="noselect" v-on:click="deletecartitem(product.cart_id)"><span
+                  class="text">Delete</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24">
+                    <path
+                      d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z">
+                    </path>
+                  </svg></span></button>
             </div>
 
             <div class="col-sm-6 text-start">
@@ -49,23 +57,10 @@
               <hr>
               <label for="category">Category:</label>
               <p>"{{product.productData[0].category}}"</p>
-              <hr>
+  
             </div>
 
-            <div class="col-sm-12 justify-content-center">
-
-
-              <button class="noselect" v-on:click="deletecartitem(product.cart_id)"><span
-                  class="text">Delete</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" viewBox="0 0 24 24">
-                    <path
-                      d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z">
-                    </path>
-                  </svg></span></button>
-
-            </div>
-
-            <hr class="my-3">
+            <hr class="my-1">
 
           </div>
         </div>
