@@ -31,7 +31,7 @@ export default {
 /* landing */
 .showcase {
   overflow-x: hidden;
-  height: 99.8vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
