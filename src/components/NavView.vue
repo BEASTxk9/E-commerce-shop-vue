@@ -24,7 +24,7 @@
 
                 <!-- ADMIN -->              
 <span v-if="user" class="dropdown px-1">
-  <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" v-if="user.userRole == 'admin'">
+  <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     ADMIN
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">

@@ -105,6 +105,8 @@ min-width: fit-content;
 .form-container{
   position: relative;
   top: -2.8vh;
+  padding: 0;
+  margin: 0;
 }
 
 form{
