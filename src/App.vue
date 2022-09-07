@@ -426,5 +426,9 @@ button{
  animation-delay: -10s;
 }
 
-
+@media only screen and (max-width: 440px) {
+::placeholder{
+  font-size: 0.6rem;
+}
+}
 </style>
