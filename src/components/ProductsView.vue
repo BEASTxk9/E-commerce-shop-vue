@@ -213,4 +213,17 @@ transform: scale(1.1);
   font-weight: bold;
 }
 
+@media only screen and (max-width: 600px) {
+img{
+  height: 20vh;
+  width: 20vh;
+}
+}
+
+@media only screen and (max-width: 350px) {
+img{
+  height: 10vh;
+  width: 10vh;
+}
+}
 </style>
