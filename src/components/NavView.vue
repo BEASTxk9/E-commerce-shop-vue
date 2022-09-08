@@ -130,6 +130,7 @@ export default {
 
 #v-else{
   color: goldenrod;
+  font-size: 0.7rem;
 }
 
 .dropdown-menu {
