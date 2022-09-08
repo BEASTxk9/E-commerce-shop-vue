@@ -93,7 +93,7 @@
 </div>
 
 
-<button class="noselect"><span class="text">Delete Profile</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
+<button class="noselect" v-on:click="$store.dispatch('deleteuserp', user.id)"><span class="text">Delete Profile</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
     
           </div>
         </div>
@@ -188,6 +188,7 @@ img {
   padding-top: 0;
   height: 22vh;
   width: 22vh;
+  border: 1px solid goldenrod;
 }
 
 .offcanvas-title {
@@ -203,6 +204,10 @@ img {
 }
 
 .b1:hover {
+  color: goldenrod;
+}
+
+.btn{
   color: goldenrod;
 }
 
@@ -235,7 +240,7 @@ img {
 
 .input ~ label, input:valid ~ label {
  transform: translateY(-50%) scale(0.8);
- background-color: #212121;
+ background-color: rgb(29, 26, 26);
  color: goldenrod;
 }
 
@@ -310,5 +315,9 @@ img {
 
 .noselecton:active .icon svg {
  transform: scale(0.8);
+}
+
+::placeholder{
+  font-size: 1.2rem;
 }
 </style>

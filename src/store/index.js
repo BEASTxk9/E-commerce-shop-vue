@@ -163,6 +163,22 @@ export default createStore({
         ));
     },
 
+    // delete profile
+    deleteuserp: async (context, id) => {
+      fetch("https://e-commerce-shop-api.herokuapp.com/users/" + id, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then(() => context.dispatch('getusers',
+          swal({
+            icon: "success",
+            buttons: false,
+            timer: 1000,
+          }),
+          router.push({name: "login"})
+        ));
+    },
+
     // edit user
     edituser(context, user) {
       fetch("https://e-commerce-shop-api.herokuapp.com/users/" + user.id, {

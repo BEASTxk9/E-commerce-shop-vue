@@ -1,6 +1,4 @@
 <template>
-
-
   <!-- Modal1 -->
   <div class="modal fade" id="editprofile" tabindex="-1">
     <div class="modal-dialog">
@@ -16,22 +14,20 @@
         </div>
         <div class="modal-body">
           <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-sm-8">
+            <div class="row justify-content-center text-center">
+              <div class="col-sm-12">
                 <form>
                   <!-- fullName -->
                   <label for="fullName">Fullname:</label><br />
                   <input
-                    class="w-50"
                     type="text"
                     v-model="user.fullName"
-                    placeholder="Insert your Fullname"
+                    placeholder="user"
                     required
                   /><br />
                   <!-- email -->
                   <label for="email">Email:</label><br />
                   <input
-                    class="w-50"
                     type="email"
                     v-model="user.email"
                     placeholder="Insert your email"
@@ -40,7 +36,7 @@
 
                   <!-- gender -->
                   <label for="gender">Gender:</label><br />
-                  <select class="w-50" v-model="user.gender" required>
+                  <select v-model="user.gender" required>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="non-binary">Non-Binary</option></select
@@ -49,7 +45,6 @@
                   <!-- dateOfBirth -->
                   <label for="dateOfBirth">Date Of Birth:</label><br />
                   <input
-                    class="w-50"
                     type="date"
                     v-model="user.dateOfBirth"
                     maxlength="10"
@@ -60,7 +55,6 @@
                   <!-- phoneNo -->
                   <label for="phoneNO">Phone Number:</label><br />
                   <input
-                    class="w-50"
                     type="tel"
                     v-model="user.phoneNO"
                     placeholder="Insert your Phone Number"
@@ -71,7 +65,6 @@
                   <!-- password -->
                   <label for="password">Password:</label><br />
                   <input
-                    class="w-50"
                     type="password"
                     v-model="user.password"
                     minlength="8"
@@ -95,7 +88,6 @@
       </div>
     </div>
   </div>
-  
 </template>
 
 <script>
@@ -128,5 +120,11 @@ export default {
 </script>
 
 <style scoped>
+  input, select, option{
+    width: 100%;
+  }
 
+  label{
+    text-align: center;
+  }
 </style>
