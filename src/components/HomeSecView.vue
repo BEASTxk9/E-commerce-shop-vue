@@ -17,7 +17,7 @@
           allowfullscreen
           allow="autoplay"
           style="position: absolute; left: 0px; top: 0px; overflow: hidden"
-        ></iframe>
+        defer></iframe>
       </div>
     </div>
 

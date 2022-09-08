@@ -42,5 +42,6 @@ export default {};
   #logo {
     display: none;
   }
+  
 }
 </style>

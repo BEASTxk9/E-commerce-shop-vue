@@ -19,7 +19,7 @@
           allowfullscreen
           allow="autoplay"
           style="position: absolute; left: 0px; top: 0px; overflow: hidden"
-        ></iframe>
+        defer></iframe>
       </div>
     </div>
 
@@ -108,13 +108,6 @@ Nav {
   margin-top: -10rem;
 }
 
-/* logo */
-div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 h1 {
   color: goldenrod;
   font-family: "Playfair Display", serif;
@@ -138,7 +131,7 @@ h1:after {
 
 @media only screen and (max-width: 1250px) {
   .showcase {
-    height: 70vh;
+    height: 50vh;
   }
 
   iframe {

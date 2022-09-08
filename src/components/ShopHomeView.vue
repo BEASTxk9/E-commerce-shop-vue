@@ -17,7 +17,7 @@
           allowfullscreen
           allow="autoplay"
           style="position: absolute; left: 0px; top: 0px; overflow: hidden"
-        ></iframe>
+        defer></iframe>
       </div>
     </div>
 
@@ -39,7 +39,7 @@ export default {};
 
 <style scoped>
 section {
-  min-height: 89vh;
+  min-height: 100vh;
 }
 
 /* landing */
@@ -123,6 +123,10 @@ h1:after {
 }
 
 @media only screen and (max-width: 1250px) {
+.showcase{
+  height: 70vh;
+}
+
   iframe {
     margin-top: -40vh;
     width: 400%;

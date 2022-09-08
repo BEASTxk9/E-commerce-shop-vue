@@ -33,6 +33,7 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
 
 body {
+
   margin: 0;
   padding: 0;
   scroll-behavior: smooth 0;
@@ -46,6 +47,7 @@ body {
 }
 
 #app {
+  overflow-x: hidden;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

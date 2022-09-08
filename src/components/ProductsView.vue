@@ -191,6 +191,8 @@ h4 {
 .card {
   height: 46vh;
   padding: 10px;
+  margin-left: 7.5px;
+  margin-right: 7.5px;
   margin-bottom: 15px;
   background-color: rgb(29, 26, 26);
   color: grey;
