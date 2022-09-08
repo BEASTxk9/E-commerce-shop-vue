@@ -11,23 +11,23 @@
           <h1 id="heading" class="mb-3 mt-3">ROASTED BEANS</h1>
         </div>
 
-        <div class="container">
+        <div class="container justify-content-center">
           <div class="row">
-            <div id="info" class="col-sm-12 col-md-4">
+            <div id="info" class="col-sm-4 col-md-4">
               <label>Info</label>
               <p>Our restaurant.</p>
               <p>Roasted Beans News</p>
               <p>Roasted Beans food services</p>
             </div>
 
-            <div id="info" class="col-sm-12 col-md-4">
+            <div id="info" class="col-sm-4 col-md-4">
               <label>Customer Care</label>
               <p>Contact Us.</p>
               <p>Security.</p>
               <p>Private Policy.</p>
             </div>
 
-            <div id="info" class="col-sm-12 col-md-4 form">
+            <div id="info" class="col-sm-4 col-md-4 form">
               <form action="https://formspree.io/f/xayvpewl" method="POST">
                 <p id="form_head">Get Roasted Beans Feshest news.</p>
                 <input
@@ -190,13 +190,12 @@ p {
 
 @media only screen and (max-width: 767.9px) {
   #info {
-    text-align: center;
+    text-align: start;
     padding-top: 3vh;
   }
 
   .container {
     justify-content: center;
-    text-align: center;
   }
 
   #netlinks {
@@ -211,7 +210,6 @@ p {
 
 @media only screen and (max-width: 590.9px) {
   #info {
-    text-align: center;
     padding-top: 3vh;
     font-size: 0.9rem;
   }
