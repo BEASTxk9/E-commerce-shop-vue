@@ -1,9 +1,32 @@
 <template>
-  <section id="register">
-    <div v-if="register" class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-sm-5">
-          <form @submit.prevent="register" method="POST">
+
+<section class="showcase w-100">
+
+<div class="video-container">
+  <div
+    style="
+      width: 100%;
+      height: 0px;
+      position: relative;
+      padding-bottom: 56.25%;
+    "
+  >
+    <iframe
+      src="https://streamable.com/e/8e59m0?autoplay=1&nocontrols=1"
+      frameborder="0"
+      width="100%"
+      height="100%"
+      allowfullscreen
+      allow="autoplay"
+      style="position: absolute; left: 0px; top: 0px; overflow: hidden"
+    defer></iframe>
+  </div>
+</div>
+<transition name="fade" appear>
+  <div id="data" class="container">
+  <div class="row justify-content-center text-center">
+    <div class="col-sm-5">
+      <form @submit.prevent="register" method="POST">
             <h1>REGISTER</h1>
 
             <!-- fullName -->
@@ -78,14 +101,12 @@
 
             <p v-if="message">{{ message }}</p>
           </form>
-        </div>
-      </div>
     </div>
+  </div>
+</div>
+      </transition>
 
-    <div v-else class="container">
-      <h1>loading</h1>
-    </div>
-  </section>
+</section>
 </template>
 
 <script>
@@ -124,12 +145,69 @@ export default {
 </script>
 
 <style scoped>
-#register {
-  height: 89vh;
-}
 
 h1 {
   color: goldenrod;
   font-family: "Libre Baskerville", serif;
+}
+
+/* landing */
+.showcase {
+  overflow-x: hidden;
+  height: 87vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.video-container {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-container {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.video-container:after {
+  content: "";
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+#data {
+  z-index: 1;
+  margin-top: -10rem;
+}
+
+@media only screen and (max-width: 1250px) {
+  .showcase {
+  height: 70vh;
+
+}
+
+  iframe {
+    width: 400%;
+    height: 400%;
+  }
 }
 </style>

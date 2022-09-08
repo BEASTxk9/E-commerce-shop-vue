@@ -333,7 +333,7 @@ button {
   transform: translateX(0px);
 }
 .slide-right-enter-active {
-  transition: all 2s ease;
+  transition: all 1.5s ease-in-out;
 }
 .slide-left-enter-from {
   opacity: 0;
@@ -344,7 +344,7 @@ button {
   transform: translateX(0px);
 }
 .slide-left-enter-active {
-  transition: all 2s ease;
+  transition: all 1.5s ease-in-out;
 }
 .fade-enter-from {
   opacity: 0;
@@ -355,7 +355,7 @@ button {
   transform: scale(1);
 }
 .fade-enter-active {
-  transition: all 2s ease;
+  transition: all 1.1s ease-in-out;
 }
 
 /* From uiverse.io by @Z-C-Code */

@@ -21,8 +21,8 @@
         defer></iframe>
       </div>
     </div>
-
-    <div id="data" class="container">
+    <transition name="fade" appear>
+      <div id="data" class="container">
       <div class="row justify-content-center text-center">
         <div class="col-sm-6">
           <form action="https://formspree.io/f/xayvpewl" method="POST" autocomplete="on">
@@ -51,6 +51,8 @@
         </div>
       </div>
     </div>
+          </transition>
+ 
   </section>
 
 

@@ -1,7 +1,9 @@
 <template>
   <Nav></Nav>
   <section>
-    <Register></Register>
+
+          <Register></Register> 
+          
   </section>
 </template>
 

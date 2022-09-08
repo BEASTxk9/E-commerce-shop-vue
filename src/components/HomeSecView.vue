@@ -25,7 +25,9 @@
       <div class="row justify-content-center text-center">
         <div class="col-sm-12">
           <div>
-            <h1>ROASTED BEANS</h1>
+            <transition name="fade" appear>
+              <h1>ROASTED BEANS</h1>
+          </transition>
           </div>
         </div>
       </div>

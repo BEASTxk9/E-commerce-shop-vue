@@ -1,7 +1,9 @@
 <template>
   <Nav></Nav>
   <section>
-    <Login></Login>
+
+          <Login></Login>
+
   </section>
 </template>
 
