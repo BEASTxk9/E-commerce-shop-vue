@@ -31,7 +31,7 @@
               <form action="https://formspree.io/f/xayvpewl" method="POST">
                 <p id="form_head">Get Roasted Beans Feshest news.</p>
                 <input
-                  class="mb-3 mt-1"
+                  class="mb-3 mt-1 w-50"
                   type="text"
                   name="email"
                   placeholder="Insert Your Email Here."
@@ -40,14 +40,12 @@
                   Subcribe</button
                 ><br />
                 <p>
-                  <input
+                <span>By checking the box, you agree that you are at least 16
+                    years of age. <input id="check"
                     type="checkbox"
-                    class="mx-1"
                     name="age_check"
                     required
-                  /><span
-                    >By checking the box, you agree that you are at least 16
-                    years of age.</span
+                  /></span
                   >
                 </p>
               </form>
@@ -140,6 +138,10 @@ form {
 
 input {
   border: 1px solid grey;
+}
+
+#check{
+  width: 20px;
 }
 
 label {

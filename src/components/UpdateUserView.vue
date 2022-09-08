@@ -31,7 +31,7 @@
         <div class="modal-body">
           <div class="container">
             <div class="row justify-content-center">
-              <div class="col-sm-8">
+              <div class="col-sm-12">
                 <form>
                   <!-- fullName -->
                   <label for="fullName">Fullname:</label><br />
@@ -152,4 +152,10 @@ export default {
 .button {
   margin-right: 2rem;
 }
+
+input{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 </style>

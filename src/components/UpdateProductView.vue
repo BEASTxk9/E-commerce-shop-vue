@@ -29,9 +29,9 @@
         <div class="modal-body">
           <div class="container">
             <div class="row justify-content-center">
-              <div class="col-sm-8">
+              <div class="col-sm-12">
                 <form>
-                  <label for="Prod_name">Prod_name</label><br />
+                  <label for="Prod_name">Product Name:</label><br />
                   <input
                     class="w-100"
                     type="text"
@@ -40,7 +40,7 @@
                     required
                   /><br />
 
-                  <label for="category">category:</label><br />
+                  <label for="category">Category:</label><br />
                   <select
                     class="w-100"
                     v-model="product.category"
@@ -59,7 +59,7 @@
                     <option value="backery items">backery items</option></select
                   ><br />
 
-                  <label for="price">price:</label><br />
+                  <label for="price">Price:</label><br />
                   <input
                     class="w-100"
                     type="text"
@@ -137,4 +137,9 @@ export default {
 </script>
 
 <style scoped>
+  input{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 </style>

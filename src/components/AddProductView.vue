@@ -30,7 +30,7 @@
         <div class="modal-body">
           <div class="container">
             <div class="row justify-content-center">
-              <div class="col-sm-8">
+              <div class="col-sm-12">
                 <form @submit.prevent="addProduct" method="POST">
                   <label for="Prod_name">Product Name:</label><br />
                   <input
@@ -144,11 +144,15 @@ export default {
 .modal-content {
   text-align: center;
   justify-content: center;
-  background-color: black;
 }
 
 .btn-close {
   background-color: white;
+}
+
+input{
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 /* From uiverse.io by @mrhyddenn */

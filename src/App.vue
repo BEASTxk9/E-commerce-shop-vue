@@ -107,21 +107,43 @@ nav a.router-link-exact-active {
   transform: scale(1.3);
 }
 
+/* modal */
+.modal{
+  background-color: rgba(29, 26, 26, 0.864);
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  color: grey;
+}
+
+.modal-content{
+  background-color: rgb(29, 26, 26);
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  color: white;
+  font-family: "Libre Baskerville", serif;
+}
+
+.btn-close {
+  background-color: white;
+}
+
 /* forms */
 form {
+  width: 100%;
   background-color: rgb(21, 20, 20);
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
   font-family: "Libre Baskerville", serif;
-  color: grey;
+  color: white;
   padding: 20px;
 }
 
 input {
+  width: 100%;
   outline: none;
   border-radius: 5px;
   border: none;
   background-color: rgb(29, 26, 26);
-  color: grey;
+  color: white;
 }
 
 select {
@@ -130,7 +152,7 @@ select {
   padding: 5px;
   border: none;
   background-color: rgb(29, 26, 26);
-  color: grey;
+  color: white;
   text-align: center;
 }
 
@@ -140,7 +162,7 @@ option {
   padding: 5px;
   border: 0.3px solid goldenrod;
   background-color: rgb(29, 26, 26);
-  color: grey;
+  color: white;
   transition: all 0.3s ease-in-out;
   text-align: center;
 }
@@ -151,7 +173,7 @@ option:hover {
 
 ::placeholder {
   text-align: center;
-  color: grey;
+  color: white;
   background-color: rgb(29, 26, 26);
 }
 
@@ -169,7 +191,7 @@ button {
   padding: 8px 8px;
   text-align: center;
   background-color: rgb(29, 26, 26);
-  color: grey;
+  color: white;
   border-radius: 3px;
   border: none;
   -moz-transition: 0.5s;
