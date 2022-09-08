@@ -19,13 +19,6 @@
     <!-- data -->
     <div class="offcanvas-body">
 
-      <div class="container py-4">
-        <div class="row text-start">
-          <label for="dropoff">Drop off Location:</label>
-          <input id="location" type="text" placeholder="Insert Drop off Location">
-        </div>
-      </div>
-
       <div v-for="(product, index) in cart" :key="index">
         <div class="container">
        
@@ -65,6 +58,13 @@
           </div>
         </div>
 
+      </div>
+
+      <div class="container py-4">
+        <div class="row text-start">
+          <label for="dropoff">Drop off Location:</label>
+          <input id="location" type="text" placeholder="Insert Drop off Location">
+        </div>
       </div>
 
       <!-- checkout & delete all -->
@@ -121,7 +121,7 @@
           <div class="col-sm-6 text-end">
 
 
-            <button class="noselect w-100" v-on:click="$store.dispatch('deletecart')"><span
+            <button class="noselect w-100" @click="deletecart"><span
                 class="text">Clear</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                   height="24" viewBox="0 0 24 24">
                   <path
@@ -160,12 +160,18 @@
 
 <script>
 export default {
+  props:['user'],
   computed: {
     cart() {
       return this.$store.state.cart;
     }
   },
   methods: {
+
+    deletecart() {
+      this.$store.dispatch("deletecart", this.user.id)
+    },
+
     deletecartitem(id) {
       this.$store.dispatch("deletecartitem", id)
     }

@@ -17,7 +17,7 @@
         <router-link to="/contact">Contact</router-link> 
 
         <!-- cart -->
-        <Cart></Cart>
+        <Cart :user="user"></Cart>
 
         <!-- user profile -->
         <Profile :user="user"></Profile>

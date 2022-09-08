@@ -288,9 +288,9 @@ export default createStore({
 
     // _______
     // get cart
-    getcart: async (context, id) => {
+    getcart: async (context) => {
       // fetch
-      let res = await fetch('https://e-commerce-shop-api.herokuapp.com/users/' + id + '/cart');
+      let res = await fetch('https://e-commerce-shop-api.herokuapp.com/users/' + context.state.user.id + '/cart');
       let data = await res.json();
       let result = data.results;
       if (result) {
@@ -332,19 +332,19 @@ export default createStore({
 
     // delete cart
     deletecart: async (context, id) => {
-      fetch("https://e-commerce-shop-api.herokuapp.com/users/" + id + "/cart", {
-        method: "DELETE",
-      })
-        .then((res) => res.json())
-        .then(() => context.dispatch('getcart', id, 
-        swal({
-          icon: "success",
-          buttons: false,
-          timer: 500,
+        fetch("https://e-commerce-shop-api.herokuapp.com/users/" + id + "/cart", {
+          method: "DELETE",
         })
-        ));
-    },
-
+          .then((res) => res.json())
+          .then((data) => {
+            swal({
+              icon: "success",
+              buttons: false,
+              timer: 1000,
+            })
+            context.dispatch('getcart', id); 
+          })
+        },
     // delete cart item
     deletecartitem: async (context, id) => {
       fetch("https://e-commerce-shop-api.herokuapp.com/users/" + context.state.user.id + "/cart/" + id, {
@@ -360,7 +360,6 @@ export default createStore({
           }))
         });
     },
-
   },
   modules: {
   }

@@ -109,6 +109,15 @@ export default {
       return this.$store.state.products?.filter(products => { let isMatch = true; if (!products.category.toLowerCase().includes(this.search.toLowerCase())) { isMatch = false; } return isMatch })
     },
   },
+  methods: {
+    author() {
+        const Prod_name = this.$store.state.products;
+       Prod_name.sort((a,b) => {
+            if(a.Prod_name < b.Prod_name)return -1;{
+            }
+        })
+    },
+  }
 
 }
 </script>

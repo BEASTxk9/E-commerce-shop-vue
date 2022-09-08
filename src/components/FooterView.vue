@@ -8,7 +8,7 @@
       <div class="row justify-content-center">
 
         <!-- header -->
-        <div class="col-sm-10">
+        <div class="col-sm-10 text-center">
           <h1 id="heading" class="mb-3 mt-3">ROASTED BEANS</h1>
         </div>
 
