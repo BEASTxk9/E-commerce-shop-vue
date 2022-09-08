@@ -13,7 +13,8 @@
         <!-- search -->
         <div id="search" class="row justify-content-center">
           <h4>Search</h4>
-          <div id="sea" class="col-sm-12 col-md-4 text-end">
+          <!-- search -->
+          <div id="sea" class="col-sm-12 col-md-3 text-end">
             <input
               type="text"
               placeholder="What are you looking for?"
@@ -21,7 +22,10 @@
               class="mb-5"
             />
           </div>
-          <div id="select" class="col-sm-12 col-md-4 text-start">
+
+        <!-- category -->
+          <div id="select" class="col-sm-12 col-md-3 text-start">
+<label for="category">Category</label><br>
             <select v-model="search">
               <option></option>
               <option value="coffee">coffee</option>
@@ -31,7 +35,26 @@
               <option value="breakfast">Breakfast</option>
               <option value="lunch">Lunch</option>
             </select>
+
           </div>
+
+          <!-- Price -->
+          <div class="col-sm-12 col-md-3">
+            <div class="row justify-content-center">
+              <div class="col-sm-12">
+                <label for="price">Price:</label>
+              </div>
+
+              <div class="col-sm-5 text-end">
+                <button @click="priceBS">Lowest/Higest</button>
+              </div>
+              <div class="col-sm-5 text-start">
+                <button @click="priceSB">
+                Highest/Lowest</button>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <!-- card -->
@@ -115,10 +138,18 @@ export default {
     },
   },
   methods: {
-    author() {
-      const Prod_name = this.$store.state.products;
-      Prod_name.sort((a, b) => {
-        if (a.Prod_name < b.Prod_name) return -1;
+    priceBS() {
+      const price = this.$store.state.products;
+      price.sort((a, b) => {
+        if (a.price < b.price) return -1;
+        {
+        }
+      });
+    },
+    priceSB() {
+      const price = this.$store.state.products;
+      price.sort((b, a) => {
+        if (a.price < b.price) return -1;
         {
         }
       });
@@ -137,10 +168,15 @@ section {
 }
 
 #search {
-  padding-top: 25px;
+  padding-top: 5px;
   border-radius: 20px;
-  background-color: rgba(33, 33, 33, 0.488);
+  background-color: goldenrod;
+  color: white;
   margin-bottom: 20px;
+}
+
+#search label{
+  font-size: 1.5rem;
 }
 
 input {
@@ -149,9 +185,7 @@ input {
 }
 
 h4 {
-  color: goldenrod;
   font-family: "Libre Baskerville", serif;
-  padding-bottom: 1rem;
 }
 
 .card {

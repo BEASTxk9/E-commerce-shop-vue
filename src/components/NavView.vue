@@ -10,9 +10,9 @@
       </div>
 
       <div id="links" class="col-sm-12 col-md-11">
-        <router-link to="/landing">Home</router-link>
-        <router-link class="px-1" to="/shop">Shop</router-link>
-        <router-link to="/contact">Contact</router-link>
+        <router-link class="b1 btn-layout1" to="/landing">Home</router-link>
+        <router-link class="px-1 b1 btn-layout1" to="/shop">Shop</router-link>
+        <router-link class="b1 btn-layout1" to="/contact">Contact</router-link>
 
         <!-- cart -->
         <Cart :user="user"></Cart>
@@ -127,6 +127,7 @@ export default {
   padding: 0;
   transition: all 0.2s ease-in-out;
 }
+
 
 #v-else{
   color: goldenrod;

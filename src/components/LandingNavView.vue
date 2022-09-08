@@ -10,9 +10,9 @@
       </div>
 
       <div id="links" class="col-sm-11">
-        <router-link to="/">Landing</router-link> |
-        <router-link to="/register">Register</router-link> |
-        <router-link to="/Login">Login</router-link>
+        <router-link class="b1 btn-layout1" to="/">Landing</router-link>
+        <router-link class="b1 btn-layout1 px-1" to="/register">Register</router-link>
+        <router-link class="b1 btn-layout1" to="/Login">Login</router-link>
       </div>
     </div>
   </nav>

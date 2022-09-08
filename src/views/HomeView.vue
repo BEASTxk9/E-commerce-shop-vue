@@ -138,7 +138,7 @@ h1:after {
 
 @media only screen and (max-width: 1250px) {
   .showcase {
-    height: 83vh;
+    height: 70vh;
   }
 
   iframe {

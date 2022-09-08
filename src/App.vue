@@ -69,9 +69,57 @@ nav a {
   font-size: 1.2rem;
   font-weight: bold;
   color: #ffffff;
-  text-decoration: 0.3px line-through;
+  text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
+
+/* nav a */
+.btn-layout1,
+.b1 {
+  text-align: center;
+  margin: 0 5px 0 0;
+  position: relative;
+  opacity: 0.999;
+  padding: 8px 8px;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.b1:before {
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+border-bottom: 1px solid goldenrod;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  z-index: -1;
+}
+
+.b1:hover:before {
+  width: 100%;
+  left: auto;
+  right: 0;
+}
+
+.btn-layout1:hover {
+  transition: all 0.5s ease-in-out;
+}
+
 
 nav a:hover {
   transition: all 0.3s ease-in-out;

@@ -1,11 +1,31 @@
 <template>
-<section>
-<div class="container">
-  <div class="row justify-content-center">
-  <div class="col-sm-5">
+  <section class="showcase w-100">
 
+    <div class="video-container">
+      <div
+        style="
+          width: 100%;
+          height: 0px;
+          position: relative;
+          padding-bottom: 56.25%;
+        "
+      >
+        <iframe
+          src="https://streamable.com/e/8e59m0?autoplay=1&nocontrols=1"
+          frameborder="0"
+          width="100%"
+          height="100%"
+          allowfullscreen
+          allow="autoplay"
+          style="position: absolute; left: 0px; top: 0px; overflow: hidden"
+        ></iframe>
+      </div>
+    </div>
 
-    <form action="https://formspree.io/f/xayvpewl" method="POST" autocomplete="on">
+    <div id="data" class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-sm-6">
+          <form action="https://formspree.io/f/xayvpewl" method="POST" autocomplete="on">
            <h1>CONTACT US.</h1>
 
             <!-- fullname -->
@@ -23,47 +43,112 @@
 
            
 
-            <button class="mt-3 b btn-layout w-50" type="submit" onclick="this.classList.toggle('button--loading')"><span class="button__text">Submit</span></button>
+            <button class="mt-3 mb-2 b btn-layout w-50" type="submit" onclick="this.classList.toggle('button--loading')"><span class="button__text">Submit</span></button>
 
 
           </form>
 
-          
-
-  </div>
-</div>
-</div>
-
+        </div>
+      </div>
+    </div>
+  </section>
 
 
-</section>
 </template>
 
 <script>
-export default {
+import Load from "../components/LoaderComponenetView.vue";
 
-}
+export default {
+  name: "HomeView",
+  components: {
+    Load,
+  },
+};
 </script>
 
 <style scoped>
-section{
-  min-height: 89vh;
+body {
+  overflow-x: none;
 }
 
-form{
-  position: relative;
-  top: 12vh;
+Nav {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  z-index: 1;
+}
+
+form {
+  background-color: rgba(21, 20, 20, 0.923);
+
 }
 
 textarea{
-       background-color: rgb(29, 26, 26);
-    color: grey;
-    border: none;
+  border: none;
+  background-color: transparent;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* landing */
+.showcase {
+  overflow-x: hidden;
+  height: 87vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.video-container {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-container {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.video-container:after {
+  content: "";
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+#data {
+  z-index: 1;
+  margin-top: -10rem;
+}
+
+@media only screen and (max-width: 1250px) {
+  .showcase {
+  height: 70vh;
 
 }
 
-h1{
-  font-family: 'Libre Baskerville', serif;
-  color: goldenrod;
+  iframe {
+    width: 400%;
+    height: 400%;
+  }
 }
+
 </style>
