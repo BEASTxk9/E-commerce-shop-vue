@@ -1,7 +1,7 @@
 <template>
   <!-- cart stuff -->
   <button
-    class="bg-transparent mx-1"
+    class="bg-transparent mx-1 toggle"
     type="button"
     data-bs-toggle="offcanvas"
     data-bs-target="#offcanvasScrolling"
@@ -67,9 +67,9 @@
                   >
                     <path
                       d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
-                    ></path></svg
-                >
-              </span>
+                    ></path>
+                  </svg>
+                </span>
               </button>
             </div>
 
@@ -325,75 +325,76 @@ p {
 /* clear */
 .noselect {
   outline: none;
- border: none;
- text-align: start;
- width: 100%;
- height: 50px;
- cursor: pointer;
- display: flex;
- align-items: center;
- background: red;
- border: none;
- border-radius: 5px;
- box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
- background: #e62222;
+  border: none;
+  text-align: start;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #e62222;
 }
 
-.noselect, .noselect span {
- transition: 200ms;
+.noselect,
+.noselect span {
+  transition: 200ms;
 }
 
 .noselect .text {
- transform: translateX(35px);
- color: white;
- font-weight: bold;
+  transform: translateX(35px);
+  color: white;
+  font-weight: bold;
 }
 
-.icon{
+.icon {
   text-align: end;
 }
 
 .noselect .icon {
- position: relative;
- left: -3.3vw;
- outline: none;
- border: none;
- transform: translateX(110px);
- height: 40px;
- width: 40px;
- display: flex;
- align-items: center;
- justify-content: center;
+  position: relative;
+  left: -3.3vw;
+  outline: none;
+  border: none;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .noselect svg {
- width: 15px;
- fill: #eee;
+  width: 15px;
+  fill: #eee;
 }
 
 .noselect:hover {
- background: #ff3636;
- outline: none;
- border: none;
+  background: #ff3636;
+  outline: none;
+  border: none;
 }
 
 .noselect:hover .text {
- color: transparent;
+  color: transparent;
 }
 
 .noselect:hover .icon {
- width: 150px;
- outline: none;
- border: none;
- transform: translateX(0);
+  width: 150px;
+  outline: none;
+  border: none;
+  transform: translateX(0);
 }
 
 .noselect:focus {
- outline: none;
+  outline: none;
 }
 
 .noselecton:active .icon svg {
- transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 /* checkout */
@@ -434,5 +435,23 @@ p {
 
 .checkout:active {
   transform: scale(0.98);
+}
+
+@media only screen and (max-width: 600px) {
+  .toggle {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .toggle {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 389px) {
+  .toggle {
+    font-size: 0.6rem;
+  }
 }
 </style>

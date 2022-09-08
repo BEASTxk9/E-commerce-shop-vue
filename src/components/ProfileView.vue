@@ -1,7 +1,7 @@
 <template>
   <!-- profile stuff -->
   <button
-    class="bg-transparent"
+    class="bg-transparent toggle"
     type="button"
     data-bs-toggle="offcanvas"
     data-bs-target="#offcanvasScrolling1"
@@ -323,5 +323,23 @@ img {
 
 .v-else{
   color: goldenrod;
+}
+
+@media only screen and (max-width: 600px) {
+  .toggle {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .toggle {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 389px) {
+  .toggle {
+    font-size: 0.6rem;
+  }
 }
 </style>

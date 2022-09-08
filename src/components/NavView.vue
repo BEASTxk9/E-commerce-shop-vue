@@ -192,15 +192,59 @@ li:hover {
 }
 
 /* main */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 775px) {
   #logo {
     display: none;
   }
+
+  nav{
+    justify-content: center;
+    text-align: center;
+  }
 }
 
-@media only screen and (max-width: 340px) {
+@media only screen and (max-width: 600px) {
+  #logo {
+    display: none;
+  }
+
+  a{
+    font-size: 0.9rem;
+    padding: 0;
+  }
+
+  .dropdown-toggle{
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+#logout{
+  margin: 0;
+}
+
+  a{
+    font-size: 0.7rem;
+  }
+
+  .dropdown-toggle{
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 389px) {
   #logout {
     padding: 0;
   }
+
+  a{
+    font-size: 0.6rem;
+  }
+
+  .dropdown-toggle{
+    font-size: 0.6rem;
+  }
 }
+
+
 </style>
