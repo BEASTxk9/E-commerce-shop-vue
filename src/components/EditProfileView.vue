@@ -1,6 +1,6 @@
 <template>
   <!-- Modal1 -->
-  <div class="modal fade" id="editprofile" tabindex="-1">
+  <div class="modal fade" id="editprofile" tabindex="-1" v-if="user">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -88,34 +88,38 @@
       </div>
     </div>
   </div>
+
+  <span v-else>
+  </span>
 </template>
 
 <script>
+
 export default {
-  props: ["user"],
-  data() {
-    // insert data into empty array
-    return {
-      fullName: "",
-      email: "",
-      gender: "",
-      dateOfBirth: "",
-      phoneNO: "",
-      password: "",
-    };
-  },
-  computed: {
-    users() {
-      return this.$store.state.users;
+    props: ["user"],
+    data() {
+        // insert data into empty array
+        return {
+            fullName: "",
+            email: "",
+            gender: "",
+            dateOfBirth: "",
+            phoneNO: "",
+            password: "",
+        };
     },
-  },
-  methods: {
-    edituser(e) {
-      e.preventDefault();
-      console.log(this.user);
-      return this.$store.dispatch("edituser", this.user);
+    computed: {
+        users() {
+            return this.$store.state.users;
+        },
     },
-  },
+    methods: {
+        edituser(e) {
+            e.preventDefault();
+            console.log(this.user);
+            return this.$store.dispatch("edituser", this.user);
+        },
+    },
 };
 </script>
 
@@ -127,4 +131,5 @@ export default {
   label{
     text-align: center;
   }
+
 </style>

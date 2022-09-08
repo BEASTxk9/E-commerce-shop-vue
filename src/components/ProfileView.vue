@@ -125,7 +125,7 @@
       </button>
     </div>
     <hr />
-    <div class="offcanvas-body text-center">
+    <div class="offcanvas-body text-center v-else">
       <p>Your Not Logged in?<br />Please Login To View Your Profile.</p>
     </div>
   </div>
@@ -319,5 +319,9 @@ img {
 
 ::placeholder{
   font-size: 1.2rem;
+}
+
+.v-else{
+  color: goldenrod;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
 <section>
-
-<div class="row justify-content-center">
+<div class="container">
+  <div class="row justify-content-center">
   <div class="col-sm-5">
 
 
@@ -32,6 +32,8 @@
 
   </div>
 </div>
+</div>
+
 
 
 </section>

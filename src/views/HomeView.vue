@@ -1,5 +1,5 @@
 <template>
-  <section v-if="true" class="showcase w-100">
+  <section class="showcase w-100">
     <Nav></Nav>
 
     <div class="video-container">
@@ -32,9 +32,7 @@
     </div>
   </section>
 
-  <div v-else class="container">
-    <Load></Load>
-  </div>
+
 </template>
 
 <script>

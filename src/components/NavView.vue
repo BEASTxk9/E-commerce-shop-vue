@@ -66,6 +66,10 @@
           </ul>
         </span>
 
+        <span id="v-else" v-else>
+Not logged in?
+        </span>
+
         <!-- logout -->
         <router-link
           id="logout"
@@ -122,6 +126,10 @@ export default {
   text-decoration: none;
   padding: 0;
   transition: all 0.2s ease-in-out;
+}
+
+#v-else{
+  color: goldenrod;
 }
 
 .dropdown-menu {

@@ -263,7 +263,7 @@ export default createStore({
           }),
         })
           .then((response) => response.json)
-          .then((json) => context.commit("setProducts", json.data));
+          .then((json) => context.commit("setProducts", json.data), router.push({name: "login"}));
       } catch (e) {
         console.log(e);
       }
