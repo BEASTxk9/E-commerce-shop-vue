@@ -1,26 +1,24 @@
 <template>
-<Nav></Nav>
+  <Nav></Nav>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <Admin></Admin>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <Admin></Admin>
+      </div>
     </div>
   </div>
-</div>
-
-
 </template>
 
 <script>
-import Nav from '../components/FakeNavView.vue';
-import Admin from '../components/UsersTableView.vue';
+import Nav from "../components/FakeNavView.vue";
+import Admin from "../components/UsersTableView.vue";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
-  Nav,
-  Admin
-  }
-}
+    Nav,
+    Admin,
+  },
+};
 </script>

@@ -1,20 +1,18 @@
 <template>
-
   <nav class="container-fluid fixed-top">
     <div class="row">
       <div class="col-sm-12 col-md-1">
-        <img id="logo"
+        <img
+          id="logo"
           src="https://i.postimg.cc/wT80tLGN/Rose-Gold-Brush-Glitter-Feminine-Boutique-Circle-Logo-removebg-preview.png"
-          defer>
+          defer
+        />
       </div>
 
       <div id="links" class="col-sm-12 col-md-11">
-
-
-
-        <router-link to="/landing">Home</router-link> 
-        <router-link class="px-1" to="/shop">Shop</router-link> 
-        <router-link to="/contact">Contact</router-link> 
+        <router-link to="/landing">Home</router-link>
+        <router-link class="px-1" to="/shop">Shop</router-link>
+        <router-link to="/contact">Contact</router-link>
 
         <!-- cart -->
         <Cart :user="user"></Cart>
@@ -22,64 +20,86 @@
         <!-- user profile -->
         <Profile :user="user"></Profile>
 
-                <!-- ADMIN -->              
-<span v-if="user" class="dropdown px-1">
-  <button v-if="user.userRole == 'admin'"  class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    ADMIN
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li>   
-        <!-- user admin -->
-          <router-link class="mx-1" id="admin" v-if="user.userRole == 'admin'" to="/usersadmin" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Users Admin Table.">
-            Users Admin<i class="fa-solid fa-user-lock"></i> 
-            
-          </router-link> 
-        </li>
-    <li>        <!-- products admin -->
-          <router-link id="admin" v-if="user.userRole == 'admin'" to="/productsadmin" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Products Admin Table." class="text-center p">
-            Products Admin<i class="fa-solid fa-bag-shopping px-1"></i> 
-          </router-link> 
-        </li>
-  </ul>
-</span>
+        <!-- ADMIN -->
+        <span v-if="user" class="dropdown px-1">
+          <button
+            v-if="user.userRole == 'admin'"
+            class="dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            ADMIN
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <!-- user admin -->
+              <router-link
+                class="mx-1"
+                id="admin"
+                v-if="user.userRole == 'admin'"
+                to="/usersadmin"
+                type="button"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Users Admin Table."
+              >
+                Users Admin<i class="fa-solid fa-user-lock"></i>
+              </router-link>
+            </li>
+            <li>
+              <!-- products admin -->
+              <router-link
+                id="admin"
+                v-if="user.userRole == 'admin'"
+                to="/productsadmin"
+                type="button"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Products Admin Table."
+                class="text-center p"
+              >
+                Products Admin<i class="fa-solid fa-bag-shopping px-1"></i>
+              </router-link>
+            </li>
+          </ul>
+        </span>
 
         <!-- logout -->
-        <router-link id="logout" to="/" data-bs-placement="bottom" title="Logout.">
+        <router-link
+          id="logout"
+          to="/"
+          data-bs-placement="bottom"
+          title="Logout."
+        >
           <i class="fa-solid fa-person-running px-1 floating"></i>
-          <i class="fa-solid fa-right-from-bracket"></i></router-link>
-
+          <i class="fa-solid fa-right-from-bracket"></i
+        ></router-link>
       </div>
-      
-   
     </div>
-
-
-
-
   </nav>
 </template>
 
 <script>
-import Cart from './CartView.vue';
-import Profile from './ProfileView.vue';
+import Cart from "./CartView.vue";
+import Profile from "./ProfileView.vue";
 
 export default {
   components: {
     Cart,
-    Profile
+    Profile,
   },
   mounted() {
-    this.$store.dispatch('getuser');
+    this.$store.dispatch("getuser");
   },
   computed: {
     user() {
       return this.$store.state.user;
-    }
+    },
   },
-  methods: {
-
-  }
-}
+  methods: {},
+};
 </script>
 
 <style scoped>
@@ -96,7 +116,7 @@ export default {
   padding-top: 2rem;
 }
 
-#admin{
+#admin {
   color: white;
   font-size: 1rem;
   text-decoration: none;
@@ -104,17 +124,17 @@ export default {
   transition: all 0.2s ease-in-out;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   background-color: rgb(29, 26, 26);
   transition: all 0.2s ease-in-out;
   padding-left: 5px;
 }
 
-li:hover{
+li:hover {
   background-color: grey;
 }
 
-.dropdown-toggle{
+.dropdown-toggle {
   color: white;
   background-color: transparent;
   border: 1px solid grey;
@@ -124,48 +144,53 @@ li:hover{
   transition: all 0.3s ease-in-out;
 }
 
-.dropdown-toggle:hover{
+.dropdown-toggle:hover {
   color: goldenrod;
   border: 1px solid goldenrod;
 }
 
-#logout{
+#logout {
   margin-left: 15px;
   color: red;
 }
 
-.p{
+.p {
   margin-right: 5px;
 }
 
-.floating { 
-    animation-name: floating;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    color: red;
+.floating {
+  animation-name: floating;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  color: red;
 }
- 
+
 @keyframes floating {
-    0% { transform: translate(0,  0px); }
-    25%  { transform: translate(0, 5px); }
-    75%  { transform: translate(0, -5px); }
-    100%   { transform: translate(0, 0px); }   
+  0% {
+    transform: translate(0, 0px);
+  }
+  25% {
+    transform: translate(0, 5px);
+  }
+  75% {
+    transform: translate(0, -5px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
 }
 
 /* main */
 @media only screen and (max-width: 1024px) {
-
-#logo{
- display: none;
-
-}
+  #logo {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 340px) {
-
-#logout{
-padding: 0;
-}
+  #logout {
+    padding: 0;
+  }
 }
 </style>

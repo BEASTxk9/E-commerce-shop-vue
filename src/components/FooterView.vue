@@ -6,7 +6,6 @@
 
       <!-- heading -->
       <div class="row justify-content-center">
-
         <!-- header -->
         <div class="col-sm-10 text-center">
           <h1 id="heading" class="mb-3 mt-3">ROASTED BEANS</h1>
@@ -14,64 +13,77 @@
 
         <div class="container">
           <div class="row">
-                    <div id="info" class="col-sm-12 col-md-4">
-          <label>Info</label>
-          <p>Our restaurant.</p>
-          <p>Roasted Beans News</p>
-          <p>Roasted Beans food services</p>
-        </div>
+            <div id="info" class="col-sm-12 col-md-4">
+              <label>Info</label>
+              <p>Our restaurant.</p>
+              <p>Roasted Beans News</p>
+              <p>Roasted Beans food services</p>
+            </div>
 
-        <div id="info" class="col-sm-12 col-md-4">
-          <label>Customer Care</label>
-          <p>Contact Us.</p>
-          <p>Security.</p>
-          <p>Private Policy.</p>
-        </div>
+            <div id="info" class="col-sm-12 col-md-4">
+              <label>Customer Care</label>
+              <p>Contact Us.</p>
+              <p>Security.</p>
+              <p>Private Policy.</p>
+            </div>
 
-        <div id="info" class="col-sm-12 col-md-4 form">
-          <form action="https://formspree.io/f/xayvpewl" method="POST">
-            <p id="form_head">Get Roasted Beans Feshest news.</p>
-            <input class="mb-3 mt-1" type="text" name="email" placeholder="Insert Your Email Here." required><button
-              type="submit" class="b btn-layout px-1 mx-1">Subcribe</button><br>
-            <p><input type="checkbox" class="mx-1" name="age_check" required><span>By checking the box, you agree that
-                you are at least 16 years of age.</span></p>
-          </form>
-        </div>
+            <div id="info" class="col-sm-12 col-md-4 form">
+              <form action="https://formspree.io/f/xayvpewl" method="POST">
+                <p id="form_head">Get Roasted Beans Feshest news.</p>
+                <input
+                  class="mb-3 mt-1"
+                  type="text"
+                  name="email"
+                  placeholder="Insert Your Email Here."
+                  required
+                /><button type="submit" class="b btn-layout px-1 mx-1">
+                  Subcribe</button
+                ><br />
+                <p>
+                  <input
+                    type="checkbox"
+                    class="mx-1"
+                    name="age_check"
+                    required
+                  /><span
+                    >By checking the box, you agree that you are at least 16
+                    years of age.</span
+                  >
+                </p>
+              </form>
+            </div>
           </div>
         </div>
-
 
         <!-- net links -->
         <div class="col-sm-12 col-lg-5 text-center">
           <div class="row-fluid justify-content-center">
             <!-- linkin -->
 
-              <a id="netlinks" class="rounded-pill linkin" href="https://www.linkedin.com/in/shane-stevens-bb9194246/"
-                target="_blank">
-                <i class="bi bi-linkedin"></i>
-              </a>
-    
+            <a
+              id="netlinks"
+              class="rounded-pill linkin"
+              href="https://www.linkedin.com/in/shane-stevens-bb9194246/"
+              target="_blank"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
 
             <!-- insta -->
             <a id="netlinks" class="rounded-pill insta" href="">
-                <i class="bi bi-instagram"></i>
-              </a>
-                          <!-- twiter -->
-     <a id="netlinks" class="rounded-pill tw" href="">
-                <i class="bi bi-twitter"></i>
-              </a>
-
-      
+              <i class="bi bi-instagram"></i>
+            </a>
+            <!-- twiter -->
+            <a id="netlinks" class="rounded-pill tw" href="">
+              <i class="bi bi-twitter"></i>
+            </a>
 
             <!-- facebook -->
             <a id="netlinks" class="rounded-pill fb" href="">
-                <i class="bi bi-facebook"></i>
-              </a>
-
-
+              <i class="bi bi-facebook"></i>
+            </a>
           </div>
         </div>
-
       </div>
 
       <!-- footer -->
@@ -111,7 +123,7 @@ form {
   background-color: transparent;
 }
 
-.container{
+.container {
   text-align: start;
 }
 
@@ -175,34 +187,34 @@ p {
 }
 
 @media only screen and (max-width: 767.9px) {
-  #info{
+  #info {
     text-align: center;
     padding-top: 3vh;
   }
 
-  .container{
+  .container {
     justify-content: center;
     text-align: center;
   }
 
-  #netlinks{
+  #netlinks {
     font-size: 1.4rem;
   }
 
-  form{
+  form {
     padding: 5px;
     margin: 5px;
   }
 }
 
 @media only screen and (max-width: 590.9px) {
-  #info{
+  #info {
     text-align: center;
     padding-top: 3vh;
     font-size: 0.9rem;
   }
 
-  form{
+  form {
     padding: 5px;
     margin: 5px;
   }

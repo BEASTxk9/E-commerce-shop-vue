@@ -2,16 +2,24 @@
   <section v-if="products">
     <div class="container">
       <div class="row justify-content-center text-center">
-
         <div id="subheading" class="col-sm-8">
-                    <h4>"Roasted Beans was created in 2010 in the USA. Our coffee beans are imported from Colombia which is one of the top five countries with the highest quality coffee beans."</h4>
-                </div>
+          <h4>
+            "Roasted Beans was created in 2010 in the USA. Our coffee beans are
+            imported from Colombia which is one of the top five countries with
+            the highest quality coffee beans."
+          </h4>
+        </div>
 
         <!-- search -->
         <div id="search" class="row justify-content-center">
           <h4>Search</h4>
           <div id="sea" class="col-sm-12 col-md-4 text-end">
-            <input type="text" placeholder="What are you looking for?" v-model="search" class="mb-5">
+            <input
+              type="text"
+              placeholder="What are you looking for?"
+              v-model="search"
+              class="mb-5"
+            />
           </div>
           <div id="select" class="col-sm-12 col-md-4 text-start">
             <select v-model="search">
@@ -22,59 +30,49 @@
               <option value="sandwich">Sandwich</option>
               <option value="breakfast">Breakfast</option>
               <option value="lunch">Lunch</option>
-
-
             </select>
           </div>
         </div>
 
         <!-- card -->
-        <div v-for="(product, index) in products" :key="index" class="col-lg-3 col-md-5 col-sm-12" id="card">
-
-
-
+        <div
+          v-for="(product, index) in products"
+          :key="index"
+          class="col-lg-3 col-md-5 col-sm-12"
+          id="card"
+        >
           <div class="card mt-2">
-
             <div id="no" class="col-sm-2 text-start">
-  <p>
-    <span>({{product.category}})</span>
-    {{product.Prod_id}}/{{products.length}} 
-  </p>
-  </div>
+              <p>
+                <span>({{ product.category }})</span>
+                {{ product.Prod_id }}/{{ products.length }}
+              </p>
+            </div>
 
             <div class="card-img col-sm-8">
-
-              <router-link class="text-decoration-none bg-transparent"
-                :to="{ name: 'single', params: { id: product.Prod_id } }">
-               
-                <img class="img-fluid rounded-pill" :src="product.img1" defer>
-
+              <router-link
+                class="text-decoration-none bg-transparent"
+                :to="{ name: 'single', params: { id: product.Prod_id } }"
+              >
+                <img class="img-fluid rounded-pill" :src="product.img1" defer />
               </router-link>
-
-              
             </div>
             <div class="card-info">
               <p class="text-title">{{ product.Prod_name }}</p>
             </div>
-            
-            <div class="card-footer">
 
+            <div class="card-footer">
               <span class="text-title">R{{ product.price }}</span>
 
-              <router-link class="text-decoration-none bg-transparent b btn-layout"
-                :to="{ name: 'single', params: { id: product.Prod_id } }">
+              <router-link
+                class="text-decoration-none bg-transparent b btn-layout"
+                :to="{ name: 'single', params: { id: product.Prod_id } }"
+              >
                 View
               </router-link>
-
             </div>
-
           </div>
-
-
-
-
         </div>
-
       </div>
     </div>
   </section>
@@ -82,11 +80,10 @@
   <div v-else class="container">
     <Load></Load>
   </div>
-
 </template>
 
 <script>
-import Load from './LoaderComponenetView.vue';
+import Load from "./LoaderComponenetView.vue";
 
 export default {
   name: "shop",
@@ -97,8 +94,8 @@ export default {
 
   data() {
     return {
-      search: ''
-    }
+      search: "",
+    };
   },
 
   mounted() {
@@ -106,20 +103,28 @@ export default {
   },
   computed: {
     products() {
-      return this.$store.state.products?.filter(products => { let isMatch = true; if (!products.category.toLowerCase().includes(this.search.toLowerCase())) { isMatch = false; } return isMatch })
+      return this.$store.state.products?.filter((products) => {
+        let isMatch = true;
+        if (
+          !products.category.toLowerCase().includes(this.search.toLowerCase())
+        ) {
+          isMatch = false;
+        }
+        return isMatch;
+      });
     },
   },
   methods: {
     author() {
-        const Prod_name = this.$store.state.products;
-       Prod_name.sort((a,b) => {
-            if(a.Prod_name < b.Prod_name)return -1;{
-            }
-        })
+      const Prod_name = this.$store.state.products;
+      Prod_name.sort((a, b) => {
+        if (a.Prod_name < b.Prod_name) return -1;
+        {
+        }
+      });
     },
-  }
-
-}
+  },
+};
 </script>
 
 <style scoped>
@@ -131,7 +136,7 @@ section {
   padding-top: 7rem;
 }
 
-#search{
+#search {
   padding-top: 25px;
   border-radius: 20px;
   background-color: rgba(33, 33, 33, 0.488);
@@ -145,7 +150,7 @@ input {
 
 h4 {
   color: goldenrod;
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   padding-bottom: 1rem;
 }
 
@@ -169,21 +174,21 @@ img {
   transition: all 0.3s ease-in-out;
 }
 
-img:hover{
+img:hover {
   box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.547);
   -moz-transform: scale(1.1);
--webkit-transform: scale(1.1);
--o-transform: scale(1.1);
--ms-transform: scale(1.1);
-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .card-img {
   background-color: transparent;
   height: 40%;
   width: 100%;
-  border-radius: .5rem;
-  transition: .3s ease;
+  border-radius: 0.5rem;
+  transition: 0.3s ease;
 }
 
 .card-info {
@@ -199,7 +204,7 @@ transform: scale(1.1);
   border-top: 1px solid goldenrod;
 }
 
-#no{
+#no {
   padding: 0;
   margin: 0;
   width: fit-content;
@@ -212,11 +217,11 @@ transform: scale(1.1);
   font-size: 0.9em;
   line-height: 1.5;
   color: goldenrod;
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
 }
 
 .text-body {
-  font-size: .9em;
+  font-size: 0.9em;
   padding-bottom: 10px;
   color: grey;
 }
@@ -227,16 +232,16 @@ transform: scale(1.1);
 }
 
 @media only screen and (max-width: 600px) {
-img{
-  height: 20vh;
-  width: 20vh;
-}
+  img {
+    height: 20vh;
+    width: 20vh;
+  }
 }
 
 @media only screen and (max-width: 350px) {
-img{
-  height: 10vh;
-  width: 10vh;
-}
+  img {
+    height: 10vh;
+    width: 10vh;
+  }
 }
 </style>

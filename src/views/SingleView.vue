@@ -1,28 +1,26 @@
 <template>
-<Nav></Nav>
+  <Nav></Nav>
 
-<section>
-<Card></Card>
-</section>
-  
+  <section>
+    <Card></Card>
+  </section>
 </template>
 
 <script>
-import Nav from '../components/NavView.vue';
-import Card from '../components/SingleProductView.vue';
-
+import Nav from "../components/NavView.vue";
+import Card from "../components/SingleProductView.vue";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
-  Nav,
-  Card
-  }
-}
+    Nav,
+    Card,
+  },
+};
 </script>
 
 <style scoped>
-section{
+section {
   margin: 0;
   padding: 0;
   padding-bottom: 5vh;

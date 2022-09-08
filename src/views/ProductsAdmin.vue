@@ -1,44 +1,42 @@
 <template>
-<Nav></Nav>
+  <Nav></Nav>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <Admin></Admin>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <Admin></Admin>
+      </div>
     </div>
   </div>
-</div>
-
 </template>
 
 <script>
-import Nav from '../components/FakeNavView.vue';
-import Admin from '../components/ProductsTableView.vue';
-
+import Nav from "../components/FakeNavView.vue";
+import Admin from "../components/ProductsTableView.vue";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
-  Nav,
-  Admin
-  }
-}
+    Nav,
+    Admin,
+  },
+};
 </script>
 
 <style scoped>
-#notlogged{
+#notlogged {
   min-height: 87vh;
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
 }
 
-h1, a{
+h1,
+a {
   position: relative;
   top: 25vh;
   color: goldenrod;
-
 }
 
-a{
+a {
   font-size: 1.5rem;
 }
 </style>

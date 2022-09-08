@@ -82,12 +82,11 @@
                     required
                   /><br />
 
-                     <!-- gender -->
-                     <label for="userRole">User Role:</label><br />
+                  <!-- gender -->
+                  <label for="userRole">User Role:</label><br />
                   <select class="w-50" v-model="user.userRole" required>
                     <option value="user">User</option>
-                    <option value="admin">Admin</option>
-                  </select
+                    <option value="admin">Admin</option></select
                   ><br />
 
                   <!-- password -->
@@ -123,32 +122,30 @@
 export default {
   props: ["user"],
   data() {
- // insert data into empty array
- return {
-   fullName: '',
-   email: '',
-   gender: '',
-   dateOfBirth: '',
-   phoneNO: '',
-   userRole: '',
-   password: '',
- }
-}, 
-computed: {
-  users(){
-        return this.$store.state.users;
-    }
-},
+    // insert data into empty array
+    return {
+      fullName: "",
+      email: "",
+      gender: "",
+      dateOfBirth: "",
+      phoneNO: "",
+      userRole: "",
+      password: "",
+    };
+  },
+  computed: {
+    users() {
+      return this.$store.state.users;
+    },
+  },
   methods: {
-    edituser(e){
-      e.preventDefault()
+    edituser(e) {
+      e.preventDefault();
       console.log(this.user);
       return this.$store.dispatch("edituser", this.user);
     },
   },
-   
-}
-
+};
 </script>
 
 <style scoped>

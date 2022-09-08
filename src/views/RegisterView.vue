@@ -1,30 +1,25 @@
 <template>
-<Nav></Nav>
-<section>
-
-<Register></Register>
-
-</section>
-
-
-
+  <Nav></Nav>
+  <section>
+    <Register></Register>
+  </section>
 </template>
 
 <script>
-import Nav from '../components/LandingNavView.vue';
-import Register from '../components/RegisterFormView.vue';
+import Nav from "../components/LandingNavView.vue";
+import Register from "../components/RegisterFormView.vue";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
-  Nav,
-  Register
-  }
-}
+    Nav,
+    Register,
+  },
+};
 </script>
 
 <style scoped>
-Nav{
+Nav {
   background-color: transparent;
   background-image: none;
   border: none;

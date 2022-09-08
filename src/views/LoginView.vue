@@ -1,35 +1,28 @@
 <template>
-<Nav></Nav>
-<section>
-
-  <Login></Login>
-
-</section>
-
-  
-
-
+  <Nav></Nav>
+  <section>
+    <Login></Login>
+  </section>
 </template>
 
 <script>
-import Nav from '../components/LandingNavView.vue';
-import Login from '../components/LoginFormView.vue';
+import Nav from "../components/LandingNavView.vue";
+import Login from "../components/LoginFormView.vue";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
-  Nav,
-  Login
-  }
-}
+    Nav,
+    Login,
+  },
+};
 </script>
 
 <style scoped>
-Nav{
+Nav {
   background-color: transparent;
   background-image: none;
   border: none;
   z-index: 1;
 }
-
 </style>

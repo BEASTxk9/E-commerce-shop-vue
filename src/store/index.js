@@ -77,8 +77,8 @@ export default createStore({
               buttons: false,
               timer: 2000,
             })
-          } 
-          if(json.msg === 'Register Successfull ') {
+          }
+          if (json.msg === 'Register Successfull ') {
             context.commit("setUser", json.user);
             swal({
               icon: "success",
@@ -89,7 +89,7 @@ export default createStore({
             router.push({ name: "login" });
           }
         }
-    )
+        )
     },
 
     // login
@@ -174,23 +174,31 @@ export default createStore({
       })
         .then((edituser) => edituser.json())
         .then((data) => {
-          console.log(data)
-          context.dispatch("getusers",
+
+          if (data.msg === "Edit Failed.") {
             swal({
-              icon: "success",
+              icon: 'error',
+              title: `${data.msg}`,
               buttons: false,
-              buttons: false,
-              timer: 1000,
+              timer: 2000,
             })
-          )
+          }
+          if (data.msg === "Edit Successfull.") {
+            console.log(data)
+            context.dispatch("getusers",
+              swal({
+                icon: "success",
+                title: `${data.msg}`,
+                buttons: false,
+                timer: 1000,
+              })
+            )
+          }
+
+
+
+
         });
-      // .catch(context.dispatch(
-      //   swal({
-      //     icon: "error",
-      //     buttons: false,
-      //     timer: 1000,
-      //   })
-      // ))
     },
 
     // _____________
@@ -272,12 +280,12 @@ export default createStore({
           .then((res) => res.json())
           .then((data) => {
             console.log(data)
-            context.dispatch("getproducts", 
-            swal({
-              icon: "success",
-              buttons: false,
-              timer: 1000,
-            })
+            context.dispatch("getproducts",
+              swal({
+                icon: "success",
+                buttons: false,
+                timer: 1000,
+              })
             )
           })
           .catch(console.log('error'));
@@ -323,28 +331,29 @@ export default createStore({
         console.log(e);
         context.dispatch(
           swal({
-          icon: "error",
-          buttons: false,
-          timer: 1000,
-        }))
+            icon: "error",
+            buttons: false,
+            timer: 1000,
+          }))
       }
     },
 
     // delete cart
-    deletecart: async (context, id) => {
-        fetch("https://e-commerce-shop-api.herokuapp.com/users/" + id + "/cart", {
-          method: "DELETE",
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            swal({
-              icon: "success",
-              buttons: false,
-              timer: 1000,
-            })
-            context.dispatch('getcart', id); 
+    deletecart: async (context) => {
+      fetch("https://e-commerce-shop-api.herokuapp.com/users/" + context.state.user.id + "/cart", {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          context.dispatch('getcart', context.state.user.id);
+          swal({
+            icon: "success",
+            buttons: false,
+            timer: 1000,
           })
-        },
+        router.push({name: "login"})
+        })
+    },
     // delete cart item
     deletecartitem: async (context, id) => {
       fetch("https://e-commerce-shop-api.herokuapp.com/users/" + context.state.user.id + "/cart/" + id, {
@@ -352,12 +361,12 @@ export default createStore({
       })
         .then((res) => res.json())
         .then((data) => {
-          context.dispatch('getcart', context.state.user.id, 
-          swal({
-            icon: "success",
-            buttons: false,
-            timer: 1000,
-          }))
+          context.dispatch('getcart', context.state.user.id,
+            swal({
+              icon: "success",
+              buttons: false,
+              timer: 1000,
+            }))
         });
     },
   },
