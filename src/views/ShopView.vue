@@ -36,6 +36,8 @@ Nav {
   background-color: transparent;
   border: none;
   background-image: none;
-  z-index: -1;
+  transition: all 0.3s ease-in-out;
+  background-color: #000000d6;
 }
+
 </style>

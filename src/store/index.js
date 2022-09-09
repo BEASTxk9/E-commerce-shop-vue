@@ -104,7 +104,7 @@ export default createStore({
       })
         .then((response) => response.json())
         .then((data) => {
-          if (data.msg === "Email/Password is incorrect. Please try again.") {
+          if (data.msg === "Email not found.") {
             swal({
               icon: 'error',
               title: `${data.msg}`,
@@ -112,16 +112,26 @@ export default createStore({
               timer: 4000,
             })
           } else {
-            context.commit("setUser", data.user[0]);
-            swal({
-              icon: "success",
-              title: `Welcome`,
-              buttons: false,
-              timer: 2000,
-            });
-            context.dispatch('getcart', data.user[0].id);
-            router.push({ name: "landing" })
-          }
+
+            if (data.msg === "Password is incorrect.") {
+              swal({
+                icon: 'error',
+                title: `${data.msg}`,
+                buttons: false,
+                timer: 4000,
+              })
+            } else {
+              context.commit("setUser", data.user[0]);
+              swal({
+                icon: "success",
+                title: `Welcome`,
+                buttons: false,
+                timer: 2000,
+              });
+              context.dispatch('getcart', data.user[0].id);
+              router.push({ name: "landing" })
+            }
+            }
         })
 
     },

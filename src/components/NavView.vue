@@ -1,5 +1,5 @@
 <template>
-  <nav class="container-fluid fixed-top">
+  <nav class="container-fluid fixed-top navbar-expand-lg">
     <div class="row">
       <div class="col-sm-12 col-md-1">
         <img
@@ -102,7 +102,6 @@ export default {
       return this.$store.state.user;
     },
   },
-  methods: {},
 };
 </script>
 
@@ -127,7 +126,6 @@ export default {
   padding: 0;
   transition: all 0.2s ease-in-out;
 }
-
 
 #v-else{
   color: goldenrod;

@@ -34,10 +34,15 @@ section {
 
 Nav {
   background-color: transparent;
-  background-image: none;
   border: none;
-  transition: all 0.5s ease-in-out;
-  z-index: -1;
+  background-image: none;
+  transition: all 0.3s ease-in-out;
+  background-color: #000000d6;
+}
+
+Nav:hover{
+  opacity: 1;
+  background-color: #000000bc;
 }
 
 #about {

@@ -65,6 +65,7 @@ body {
 nav {
   text-align: end;
   justify-content: end;
+  transition: all 0.3s ease-in-out;
 }
 
 nav a {
@@ -74,6 +75,19 @@ nav a {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
+
+nav a:hover {
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: goldenrod;
+}
+
+nav a.router-link-exact-active {
+  transition: all 0.3s ease-in-out;
+  color: goldenrod;
+  text-decoration: none;
+}
+
 
 /* nav a */
 .btn-layout1,
@@ -123,17 +137,6 @@ border-bottom: 1px solid goldenrod;
 }
 
 
-nav a:hover {
-  transition: all 0.3s ease-in-out;
-  text-decoration: none;
-  color: goldenrod;
-}
-
-nav a.router-link-exact-active {
-  transition: all 0.3s ease-in-out;
-  color: goldenrod;
-  text-decoration: none;
-}
 
 /* auto scroll top */
 
