@@ -67,7 +67,7 @@ Nav {
 /* landing */
 .showcase {
   overflow-x: hidden;
-  height: 86vh;
+  height: 87vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,6 +138,11 @@ h1:after {
     height: 50vh;
   }
 
+  #data {
+  z-index: 1;
+  margin-top: -18rem;
+}
+
   iframe {
     margin-top: -40vh;
     width: 400%;
@@ -155,12 +160,16 @@ h1:after {
     font-size: 5rem;
     top: 6.5rem;
   }
+
+
 }
 
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 4.5rem;
   }
+
+
 }
 
 @media only screen and (max-width: 400px) {
