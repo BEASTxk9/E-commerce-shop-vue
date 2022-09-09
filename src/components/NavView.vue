@@ -148,6 +148,7 @@ li:hover {
   border: 1px solid goldenrod;
 }
 
+
 #logout {
   margin-left: 15px;
   color: red;

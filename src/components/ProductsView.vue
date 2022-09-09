@@ -167,6 +167,12 @@ section {
   border-radius: 10px;
 }
 
+.sortby{
+  font-size: 2rem;
+  font-weight: bold;
+  color: goldenrod;
+}
+
 
 ::placeholder{
   background-color: rgba(21, 20, 20, 0.923);
