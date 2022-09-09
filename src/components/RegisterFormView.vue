@@ -196,12 +196,12 @@ h1 {
 
 #data {
   z-index: 1;
-  margin-top: -10rem;
+  margin-top: -5rem;
 }
 
 @media only screen and (max-width: 1250px) {
   .showcase {
-  height: 70vh;
+  height: 77vh;
 
 }
 

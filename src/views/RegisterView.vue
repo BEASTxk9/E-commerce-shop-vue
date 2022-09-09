@@ -3,7 +3,7 @@
   <section>
 
           <Register></Register> 
-          
+
   </section>
 </template>
 
@@ -21,10 +21,5 @@ export default {
 </script>
 
 <style scoped>
-Nav {
-  background-color: transparent;
-  background-image: none;
-  border: none;
-  z-index: 1;
-}
+
 </style>
