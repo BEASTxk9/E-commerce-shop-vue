@@ -1,6 +1,6 @@
 <template>
   <button
-    class="button b btn-layout mx-1"
+    class="button b btn-layout"
     data-bs-toggle="modal"
     :data-bs-target="'#exampleModal' + user.id"
   >
@@ -150,7 +150,7 @@ export default {
 
 <style scoped>
 .button {
-  margin-right: 2rem;
+  margin-top: 5px;
 }
 
 input{

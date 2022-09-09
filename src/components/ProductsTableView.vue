@@ -78,14 +78,14 @@
                 <td>{{ product.dateAdded }}</td>
                 <td>
                   <div class="row">
-                    <div class="col-sm-5">
+                    <div class="col-sm-12">
                       <button id="delete" class="b btn-layout" v-on:click="
                         $store.dispatch('deleteProduct', product.Prod_id)
                       ">
                         <i class="fa-solid fa-trash"></i>
                       </button>
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-sm-12">
                       <update :product="product"></update>
                     </div>
                   </div>
@@ -138,7 +138,7 @@ section {
   min-height: fit-content;
   margin-bottom: 4.3vh;
   border: 1px solid grey;
-  overflow-x: scroll;
+  overflow: scroll;
 }
 
 #header {
@@ -220,7 +220,9 @@ h1 {
 }
 
 #delete {
-  margin-left: 5px;
+  padding-right: 10px;
+  margin-bottom: 5px;
+
 }
 
 #admin {

@@ -88,7 +88,7 @@
 
                 <td>
                   <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-12">
                       <button
                         id="delete"
                         class="b btn-layout"
@@ -97,7 +97,7 @@
                         <i class="fa-solid fa-trash"></i>
                       </button>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-12">
                       <update :user="user"></update>
                     </div>
                   </div>
@@ -145,7 +145,7 @@ section {
   min-height: fit-content;
   margin-bottom: 4.3vh;
   border: 1px solid grey;
-  overflow-x: scroll;
+  overflow: scroll;
 }
 
 #header {
