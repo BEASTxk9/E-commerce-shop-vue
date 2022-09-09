@@ -202,7 +202,7 @@ h1 {
   display: block;
   object-fit: cover;
   width: 8vw;
-  height: 8vh;
+  height: 11vh;
 }
 
 #name {
