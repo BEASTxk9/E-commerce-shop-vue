@@ -183,11 +183,11 @@ border-bottom: 1px solid goldenrod;
 /* forms */
 form {
   width: 100%;
-  background-color: rgb(21, 20, 20);
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
   font-family: "Libre Baskerville", serif;
   color: white;
   padding: 20px;
+  background-color: rgba(21, 20, 20, 0.923);
 }
 
 input {
