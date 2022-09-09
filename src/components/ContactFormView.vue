@@ -93,6 +93,10 @@ textarea{
   padding-bottom: 5px;
 }
 
+h1{
+  color: goldenrod;
+}
+
 /* landing */
 .showcase {
   overflow-x: hidden;

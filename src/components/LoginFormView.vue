@@ -99,11 +99,6 @@ export default {
 
 <style scoped>
 
-form {
-  position: relative;
-  top: 12vh;
-}
-
 h1 {
   color: goldenrod;
   font-family: "Libre Baskerville", serif;
