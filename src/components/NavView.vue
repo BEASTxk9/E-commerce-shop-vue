@@ -223,16 +223,12 @@ li:hover {
 }
 
 @media only screen and (max-width: 389px) {
-  #logout {
-    padding: 0;
+  .dropdown-toggle{
+    font-size: 0.45rem;
   }
 
   a{
-    font-size: 0.6rem;
-  }
-
-  .dropdown-toggle{
-    font-size: 0.6rem;
+    font-size: 0.65rem;
   }
 }
 
