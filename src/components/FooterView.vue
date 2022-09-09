@@ -14,16 +14,16 @@
         <div class="container justify-content-center">
           <div class="row">
             <div id="info" class="col-sm-4 col-md-4">
-              <label>Info</label>
-              <p>Our restaurant.</p>
-              <p>Roasted Beans News</p>
+              <label>Infomation</label>
+              <p>067 898 6622</p>
+              <p>roastedbeanz@gmail.com</p>
               <p>Roasted Beans food services</p>
             </div>
 
             <div id="info" class="col-sm-4 col-md-4">
               <label>Customer Care</label>
-              <p>Contact Us.</p>
               <p>Security.</p>
+              <p>Contact Us.</p>
               <p>Private Policy.</p>
             </div>
 
