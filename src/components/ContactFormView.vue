@@ -96,7 +96,7 @@ textarea{
 /* landing */
 .showcase {
   overflow-x: hidden;
-  height: 87vh;
+  height: 86vh;
   display: flex;
   align-items: center;
   justify-content: center;
