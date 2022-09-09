@@ -17,7 +17,7 @@
               <label>Infomation</label>
               <p>067 898 6622</p>
               <p>roastedbeanz@gmail.com</p>
-              <p>Roasted Beans food services</p>
+              <p>Roasted Beans Co.</p>
             </div>
 
             <div id="info" class="col-sm-4 col-md-4">
