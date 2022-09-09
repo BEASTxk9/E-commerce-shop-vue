@@ -24,5 +24,6 @@ section {
   margin: 0;
   padding: 0;
   padding-bottom: 5vh;
+  overflow-y: scroll;
 }
 </style>

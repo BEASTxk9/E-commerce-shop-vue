@@ -86,8 +86,8 @@ body {
 
 .container {
   color: grey;
-  min-height: 100vh;
-  scroll-margin-block-start: -80vh;
+  min-height: 90vh;
+  overflow-y: scroll;
 }
 
 span {
@@ -110,8 +110,10 @@ h1 {
 img {
   image-rendering: auto;
   border: 1px solid goldenrod;
-  height: 73vh;
-  width: 73vh;
+  padding: 0;
+  margin: 0;
+  height: 50vh;
+  width: 50vh;
   max-width: 100%;
   max-height: 100%;
 }
@@ -123,15 +125,16 @@ img {
 }
 
 @media only screen and (max-width: 991.9px) {
-  img {
-    display: none;
-  }
+  img{
+  height: 40vh;
+  width: 40vh;
+}
+
+#count{
+  display: none;
+}
 }
 @media only screen and (max-width: 550px) {
-  /* img{
-  height: 67vh;
-  width: 67vh;
-} */
 
   #count {
     display: none;
@@ -147,17 +150,13 @@ img {
 }
 
 @media only screen and (max-width: 450px) {
-  /* img{
-  height: 60vh;
-  width: 60vh;
-} */
+  img{
+  height: 30vh;
+  width: 30vh;
+}
 }
 
 @media only screen and (max-width: 400px) {
-  /* img{
-  height: 48vh;
-  width: 48vh;
-} */
 
   h1 {
     font-size: 3rem;
