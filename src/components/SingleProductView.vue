@@ -12,7 +12,6 @@
             class="mt-3 b btn-layout w-50"
             type="button"
             @click="addcart"
-            onclick="this.classList.toggle('button--loading')"
           >
             <span class="button__text">Add To Cart</span>
           </button>

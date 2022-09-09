@@ -92,12 +92,18 @@
       <!-- drop off -->
       <div class="container py-4">
         <div class="row text-start">
-          <label for="dropoff">Drop off Location:</label>
+          <label for="dropoff" class="text-center">Drop off Location:</label>
+          <div class="col-sm-1">
+            <i class="fa-solid fa-location-pin"></i>
+          </div>
+        <div class="col-sm-10">
           <input
             id="location"
             type="text"
             placeholder="Insert Drop off Location"
           />
+        </div>
+      
         </div>
       </div>
 

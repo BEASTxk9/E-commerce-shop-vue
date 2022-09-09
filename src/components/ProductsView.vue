@@ -158,7 +158,6 @@ section {
 #subheading{
   color: goldenrod;
   margin-bottom: 20px;
-  background-color: rgba(18, 18, 18, 0.867);
   border-radius: 10px;
   padding: 5px;
 }
@@ -202,11 +201,11 @@ img {
 
 img:hover {
   box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.547);
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .card-img {
@@ -374,18 +373,25 @@ img:hover {
   transition: 0s;
 }
 
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1125px) {
   img {
-    height: 20vh;
-    width: 20vh;
+    height: 21vh;
+    width: 21vh;
   }
 }
 
+@media only screen and (max-width: 767.9px) {
+  img {
+    height: 24vh;
+    width: 24vh;
+  }
+}
+
+
 @media only screen and (max-width: 350px) {
   img {
-    height: 10vh;
-    width: 10vh;
+    height: 20vh;
+    width: 20vh;
   }
 }
 </style>
