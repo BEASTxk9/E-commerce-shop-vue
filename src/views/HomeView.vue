@@ -26,7 +26,7 @@
     <div id="data" class="container">
       <div class="row justify-content-center text-center">
         <div class="col-sm-12">
-          
+
           <transition name="fade" appear>
             <h1>ROASTED BEANS</h1>
           </transition>
@@ -67,7 +67,7 @@ Nav {
 /* landing */
 .showcase {
   overflow-x: hidden;
-  height: 87vh;
+  height: 86vh;
   display: flex;
   align-items: center;
   justify-content: center;
