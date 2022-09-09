@@ -10,7 +10,8 @@
 
         <!-- admin nav switch -->
         <div class="col-sm-12 col-md-6">
-          <router-link class="b btn-layout" to="/landing">Home</router-link>
+
+          <router-link class="b btn-layout a-tag" to="/landing">Home</router-link>
           <!-- ADMIN -->
           <span class="dropdown px-1">
             <button
@@ -160,10 +161,12 @@ table {
   padding-top: 10px;
 }
 
-a{
+.a-tag{
   background-color: transparent;
   font-size: 1rem;
   font-weight: bold;
+  border: 1px solid grey;
+  text-decoration: none;
 }
 
 thead {
