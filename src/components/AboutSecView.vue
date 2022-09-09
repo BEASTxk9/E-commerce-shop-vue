@@ -107,12 +107,20 @@ justify-content: center;
 justify-content: center;
 }
 
+img{
+height: 60vh;
+}
+
 }
 
 @media only screen and (max-width: 994px) {
   p{
   padding-left: 10px;
   font-size: 1.1rem;
+}
+
+img{
+  height: 55vh;
 }
 
 #img{
