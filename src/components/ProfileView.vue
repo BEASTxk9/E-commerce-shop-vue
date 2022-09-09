@@ -325,6 +325,12 @@ img {
   color: goldenrod;
 }
 
+@media only screen and (max-width: 1024px) {
+svg{
+  display: none;
+}
+}
+
 @media only screen and (max-width: 600px) {
   .toggle {
     font-size: 0.9rem;

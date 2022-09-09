@@ -371,13 +371,13 @@ export default createStore({
       })
         .then((res) => res.json())
         .then((data) => {
-          context.dispatch('getcart', context.state.user.id);
+          context.commit('setCart', null);
           swal({
             icon: "success",
             buttons: false,
             timer: 1000,
           })
-        router.push({name: "login"})
+   
         })
     },
     // delete cart item
