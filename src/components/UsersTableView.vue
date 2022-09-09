@@ -10,6 +10,7 @@
 
         <!-- admin nav switch -->
         <div class="col-sm-12 col-md-6">
+          <router-link class="b btn-layout" to="/landing">Home</router-link>
           <!-- ADMIN -->
           <span class="dropdown px-1">
             <button
@@ -57,19 +58,9 @@
 
       <!-- table -->
       <div class="row">
-        <!-- side nav -->
-        <div id="sidenav" class="col-sm-12 col-md-1 px-2">
-          <nav class="text-start">
-            <router-link to="/landing">Home</router-link> <br /><br />
-
-            <router-link to="/shop">Shop</router-link> <br /><br />
-
-            <router-link to="/contact">Contact</router-link> <br /><br />
-          </nav>
-        </div>
 
         <!-- table -->
-        <div class="col-sm-11">
+        <div class="col-sm-12">
           <table class="table-fluid table-bordered">
             <thead>
               <th>ID</th>
@@ -154,7 +145,7 @@ section {
   min-height: fit-content;
   margin-bottom: 4.3vh;
   border: 1px solid grey;
-  overflow: scroll;
+  overflow-x: scroll;
 }
 
 #header {
@@ -162,10 +153,17 @@ section {
 }
 
 table {
+  overflow-x: scroll;
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.771);
   margin-bottom: 5rem;
   padding-top: 10px;
+}
+
+a{
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 thead {
@@ -203,18 +201,6 @@ tr:hover {
 
 h1 {
   color: goldenrod;
-  font-family: "Libre Baskerville", serif;
-}
-
-#sidenav {
-  border-right: 1px solid grey;
-  border-bottom: 1px solid grey;
-}
-
-nav {
-  border: none;
-  background-image: transparent;
-  background: transparent;
   font-family: "Libre Baskerville", serif;
 }
 

@@ -16,6 +16,7 @@
 
         <!-- admin nav switch -->
         <div class="col-md-6 col-sm-12 text-center">
+          <router-link class="b btn-layout" to="/landing">Home</router-link>
           <!-- ADMIN -->
           <span class="dropdown px-1">
             <button class="button b btn-layout dropdown-toggle" type="button" id="dropdownMenuButton1"
@@ -45,26 +46,17 @@
 
       <!-- table -->
       <div class="row">
-        <!-- side nav -->
-        <div id="sidenav" class="col-sm-12 col-md-1 px-2">
-          <nav class="text-start">
-            <router-link to="/landing">Home</router-link> <br /><br />
 
-            <router-link to="/shop">Shop</router-link> <br /><br />
-
-            <router-link to="/contact">Contact</router-link> <br /><br />
-          </nav>
-        </div>
 
         <!-- table -->
-        <div class="col-sm-11">
+        <div class="col-sm-12">
           <table class="table-fluid table-bordered">
             <thead>
               <th class="px-2">ID</th>
               <th>Name</th>
               <th>Category</th>
               <th>Price</th>
-              <th>Description</th>
+              <th id="description-head">Description</th>
               <th>img1</th>
               <th>img2</th>
               <th>Date Added</th>
@@ -146,11 +138,7 @@ section {
   min-height: fit-content;
   margin-bottom: 4.3vh;
   border: 1px solid grey;
-  overflow: scroll;
-}
-
-.button {
-  margin-top: 10px;
+  overflow-x: scroll;
 }
 
 #header {
@@ -158,37 +146,54 @@ section {
 }
 
 table {
+  overflow-x: scroll;
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.771);
   margin-bottom: 5rem;
   padding-top: 10px;
 }
 
+a{
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 thead {
   border-left: 1px solid grey;
   border-right: 1px solid grey;
 }
+.button {
+  margin-top: 10px;
+}
 
+#admin {
+  color: grey;
+  font-size: 1.05rem;
+  text-decoration: none;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+}
 
+#admin:hover {
+  color: goldenrod;
+}
 
-li:hover {
-  background-color: grey;
+.dropdown-menu {
+  background-color: rgb(29, 26, 26);
+  transition: all 0.2s ease-in-out;
+}
+
+tr {
+  transition: all 0.2s ease-in-out;
+}
+
+tr:hover {
+  background-color: rgb(43, 43, 43);
 }
 
 h1 {
   color: goldenrod;
-  font-family: "Libre Baskerville", serif;
-}
-
-#sidenav {
-  border-right: 1px solid grey;
-  border-bottom: 1px solid grey;
-}
-
-nav {
-  border: none;
-  background-image: transparent;
-  background: transparent;
   font-family: "Libre Baskerville", serif;
 }
 
@@ -241,5 +246,17 @@ tr {
 
 tr:hover {
   background-color: rgb(43, 43, 43);
+}
+
+@media only screen and (max-width: 940px) {
+#description{
+font-size: 0.5rem;
+}
+}
+
+@media only screen and (max-width: 758px) {
+#description, #description-head{
+display: none;
+}
 }
 </style>
